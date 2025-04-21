@@ -19,6 +19,17 @@ public class MadeInChinaLanguagePage {
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
     }
+    public void closePopUp(){
+        try {
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,7);
+            helper.clickOnElement(MadeInChinaLanguagePageLocator.popup);
+            test.log(Status.PASS, "closed pop up");
+            LoggerHandler.info("closed pop up");
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Did not close pop up");
+            LoggerHandler.error("Did not close pop up");
+        }
+    }
     public void hoverOnSignIn(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.signIn,7);
@@ -219,6 +230,7 @@ public class MadeInChinaLanguagePage {
         }
     } 
     public void languageTestCases(){
+        closePopUp();
         hoverOnSignIn();
         clickOnJoinFree();
         verifyCreateAccount();
