@@ -19,7 +19,7 @@ public class TestMadeInChina extends Base{
 
     @BeforeClass
     public void report(){
-        reports = Reporter.generateExtentReport("Hot Items");
+        reports = Reporter.generateExtentReport("MADE_IN_CHINA_Report");
     }
     @BeforeMethod
     public void open(){

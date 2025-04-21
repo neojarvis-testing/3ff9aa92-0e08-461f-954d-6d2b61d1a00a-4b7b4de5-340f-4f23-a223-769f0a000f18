@@ -20,6 +20,7 @@ public class WebDriverHelper {
 	public WebDriverHelper(WebDriver driver) {
 		this.driver=driver;
 	}
+    List<String> list = new ArrayList<String>();
 	public void clickOnElement(By path) {
 		try {
 			driver.findElement(path).click();
@@ -111,6 +112,7 @@ public class WebDriverHelper {
         for (String child : set) {
             if (!child.equals(parent)) {
                 driver.switchTo().window(child);
+                list.add(child);
                 // break;
             } 
         }
@@ -167,5 +169,8 @@ public class WebDriverHelper {
         } catch (Exception e) {
             e.printStackTrace();
         }
-	}    
+	}
+    public void switchBackToWindow(int x){
+        driver.switchTo().window(list.get(x));
+    }
 }
