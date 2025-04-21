@@ -35,7 +35,7 @@ public class TestSample extends Base{
         spc.SpicesPageContactTestCase();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testCaese4(){
         test = report.createTest("testCase4");
         WiresAndFurniturePage wfp = new WiresAndFurniturePage(test);

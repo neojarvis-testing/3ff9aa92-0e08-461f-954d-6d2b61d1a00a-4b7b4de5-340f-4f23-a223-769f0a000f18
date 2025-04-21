@@ -1,0 +1,29 @@
+2025.04.21.20.23.30 INFO  utils.LoggerHandler - Clicked on the xmark
+2025.04.21.20.23.30 INFO  utils.LoggerHandler - Clicked on the search bar
+2025.04.21.20.23.30 INFO  utils.LoggerHandler - Data sent to the search bar
+2025.04.21.20.23.32 INFO  utils.LoggerHandler - Enter action performed
+2025.04.21.20.23.33 INFO  utils.LoggerHandler - Clicked on the first product
+2025.04.21.20.23.34 INFO  utils.LoggerHandler - Clicked on the contactSupplier
+2025.04.21.20.23.36 INFO  utils.LoggerHandler - Clicked on the textArea
+2025.04.21.20.23.36 INFO  utils.LoggerHandler - Data sent to the textArea
+2025.04.21.20.23.36 INFO  utils.LoggerHandler - Clicked on the emailInput
+2025.04.21.20.23.36 INFO  utils.LoggerHandler - Data sent to the emailInput
+2025.04.21.20.23.37 INFO  utils.LoggerHandler - Clicked on the sendInquryNow
+2025.04.21.20.23.42 INFO  utils.LoggerHandler - Text Not Verified
+2025.04.21.20.23.57 INFO  utils.LoggerHandler - Clicked on the accountPassword
+2025.04.21.20.24.13 INFO  utils.LoggerHandler - Data sent to the emailInput
+2025.04.21.20.24.13 INFO  utils.LoggerHandler - Clicked on the checkBox
+2025.04.21.20.24.14 INFO  utils.LoggerHandler - Clicked on the verifyEmail
+2025.04.21.20.24.16 INFO  utils.LoggerHandler - Clicked on the xmark
+2025.04.21.20.24.17 INFO  utils.LoggerHandler - Clicked on the search bar
+2025.04.21.20.24.17 INFO  utils.LoggerHandler - Data sent to the search bar
+2025.04.21.20.24.19 INFO  utils.LoggerHandler - Enter action performed
+2025.04.21.20.24.19 INFO  utils.LoggerHandler - Text Verified
+2025.04.21.20.24.20 INFO  utils.LoggerHandler - Clicked on the firstProduct
+2025.04.21.20.24.22 INFO  utils.LoggerHandler - Clicked on the logo
+2025.04.21.20.24.22 INFO  utils.LoggerHandler - Clicked on the search bar
+2025.04.21.20.24.23 INFO  utils.LoggerHandler - Data sent to the search bar
+2025.04.21.20.24.24 INFO  utils.LoggerHandler - Enter action performed
+2025.04.21.20.24.24 INFO  utils.LoggerHandler - Text Verified
+2025.04.21.20.24.25 INFO  utils.LoggerHandler - Clicked on the clickOn2InPagination
+2025.04.21.20.24.40 INFO  utils.LoggerHandler - Clicked on the logo
