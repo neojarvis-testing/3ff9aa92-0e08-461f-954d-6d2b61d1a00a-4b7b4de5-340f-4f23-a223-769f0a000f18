@@ -217,5 +217,16 @@ public class MadeInChinaLanguagePage {
             test.log(Status.FAIL, "Not changed to English");
             LoggerHandler.error("Not changed to English");
         }
-    }   
+    } 
+    public void languageTestCases(){
+        hoverOnSignIn();
+        clickOnJoinFree();
+        verifyCreateAccount();
+        clickOnSignInNow();
+        verifySignInNow();
+        changeToSpanish();
+        verifySpanish();
+        changeToFrench();
+        verifyFrench();
+    }  
 }
