@@ -26,10 +26,11 @@ public class WebDriverHelper {
 			e.printStackTrace();
 		}
 	}
+
 	public void SendKeys(By path, String value) {
 		try {
 			driver.findElement(path).sendKeys(value);
-		} catch (Exception e) {
+	    } catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
