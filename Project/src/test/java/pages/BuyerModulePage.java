@@ -1,6 +1,5 @@
 package pages;
 
-import org.checkerframework.checker.units.qual.C;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -8,7 +7,10 @@ import com.aventstack.extentreports.Status;
 
 import uistore.BuyerModulePageLocator;
 import utils.Base;
+import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class BuyerModulePage {
@@ -33,6 +35,8 @@ public class BuyerModulePage {
         try {
             helper.WaitForElementToBeVisible(BuyerModulePageLocator.HoverOnBuyer, 10);
             helper.HoverOverElement(BuyerModulePageLocator.HoverOnBuyer);
+            Screenshot.captureFullScreenshot("Buyer Services");
+            Reporter.attachScreenshotToReport("Buyer Services", test, "Screenshot Attached to the report");
             test.log(Status.PASS, "Hovered on Buyer");
             LoggerHandler.info("Hovered on  Buyer");
         } catch (Exception e) {
@@ -45,6 +49,8 @@ public class BuyerModulePage {
             helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClickNewUserGuide, 10);
             helper.clickOnElement(BuyerModulePageLocator.ClickNewUserGuide);
             helper.switchToAllTabs();
+            Screenshot.captureFullScreenshot("New User Guide");
+            Reporter.attachScreenshotToReport("New User guide", test, "Screenshot attached to the NewUserGuide Report");
             test.log(Status.PASS, "Clicked on new user guide");
             LoggerHandler.info("Clicked on new user guide");
         } catch (Exception e) {
@@ -55,7 +61,7 @@ public class BuyerModulePage {
     public void VerifyURL(){
         try {
             String url=Base.driver.getCurrentUrl();
-            Assert.assertTrue(url.contains( "how-to-source-products-on-made-in-china-com"));
+            Assert.assertTrue(url.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 1, 0)));
             test.log(Status.PASS, "URL Verified");
             LoggerHandler.info("URL Verified");
         } catch (AssertionError e) {
@@ -66,7 +72,7 @@ public class BuyerModulePage {
     public void VerifyTitle(){
         try{
             String title = Base.driver.getTitle();
-            Assert.assertTrue(title.contains("How to Source Products from China"));
+            Assert.assertTrue(title.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 2, 0)));
             test.log(Status.PASS, "Title verified successfully");
             LoggerHandler.info("Title verified successfully");
         }
@@ -79,6 +85,8 @@ public class BuyerModulePage {
         try {
             helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClickLogo, 10);
             helper.clickOnElement(BuyerModulePageLocator.ClickLogo);
+            Screenshot.captureFullScreenshot("Made in china Logo");
+            Reporter.attachScreenshotToReport("Made in china Logo", test, "Screentshot attached to the logo report");
             test.log(Status.PASS, "Clicked on Logo ");
             LoggerHandler.info("Clicked on logo");
         } catch (Exception e) {
@@ -91,6 +99,8 @@ public class BuyerModulePage {
             helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClickAuditedSuppliers, 10);
             helper.clickOnElement(BuyerModulePageLocator.ClickAuditedSuppliers);
             helper.switchToNewWindow();
+            Screenshot.captureFullScreenshot("Audited Suppliers");
+            Reporter.attachScreenshotToReport("Audited Suppliers", test, " Audited Suppliers ScreenShot Attached to the report");
             test.log(Status.PASS, "Clicked on Audited Suppliers");
             LoggerHandler.info("Clicked on Audited Suppliers");
         } catch (Exception e) {
@@ -101,7 +111,7 @@ public class BuyerModulePage {
     public void VerifyURL2(){
         try {
             String url2=Base.driver.getCurrentUrl();
-            Assert.assertTrue(url2.contains("audited-suppliers"));
+            Assert.assertTrue(url2.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 3, 0)));
             test.log(Status.PASS, "Verified Audited Suppliers");
             LoggerHandler.info("Verified Audited Suppliers");
         } catch (AssertionError e) {
@@ -112,7 +122,7 @@ public class BuyerModulePage {
     public void VerifyTitle2(){
         try {
             String title2=Base.driver.getTitle();
-            Assert.assertTrue(title2.contains("Audited Suppliers | Choose the Reliable"));
+            Assert.assertTrue(title2.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 4, 0)));
             test.log(Status.PASS, "Audited Suppliers Verified Successfully");
             LoggerHandler.info("Audites Suppliers Verified Successfully");
         } catch (AssertionError e) {
@@ -125,6 +135,8 @@ public class BuyerModulePage {
             helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClickMeetSupplier, 10);
             helper.clickOnElement(BuyerModulePageLocator.ClickMeetSupplier);
             helper.switchToAllTabs();
+            Screenshot.captureFullScreenshot("Meet Suppliers");
+            Reporter.attachScreenshotToReport("Meet suppliers", test, "Meet suppliers ScreenShot Attached to report");
             test.log(Status.PASS, "Clicked on Meet suppliers link");
             LoggerHandler.info("Clicked on Meet suppliers link");
         } catch (Exception e) {
@@ -135,7 +147,7 @@ public class BuyerModulePage {
     public void VerifyURL3(){
         try {
             String url3=Base.driver.getCurrentUrl();
-            Assert.assertTrue(url3.contains("private-sourcing-meeting"));
+            Assert.assertTrue(url3.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 5, 0)));
             test.log(Status.PASS, "Verified Private sourcing meeting url");
             LoggerHandler.info("Verified Private sourcing meeting url");
         } catch (Exception e) {
@@ -146,7 +158,7 @@ public class BuyerModulePage {
     public void VerifyTitle3(){
         try {
             String title3=Base.driver.getTitle();
-            Assert.assertTrue(title3.contains("Apply to Meet Suppliers- Made-in-China.com buyer services"));
+            Assert.assertTrue(title3.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 6, 0)));
             test.log(Status.PASS, "Meet Suppliers Verified Successfully");
             LoggerHandler.info("Meet Suppliers Verified Successfully");
         } catch (AssertionError e) {
