@@ -1,5 +1,7 @@
 package runner;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -25,6 +27,14 @@ public class TestMadeInChina extends Base{
     @Test
     public void hotItems(){
 
+    }
+    @AfterMethod
+    public void close(){
+        driver.quit();
+    }
+    @AfterClass
+    public void generate(){
+        reports.flush();
     }
     
 }
