@@ -13,8 +13,8 @@ import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
 public class MadeInChinaLedLightPage {
-    public static WebDriverHelper helper;
-    public static ExtentTest test;
+    WebDriverHelper helper;
+    ExtentTest test;
     public MadeInChinaLedLightPage(ExtentTest test){
         this.test = test;
         helper = new WebDriverHelper(Base.driver);

@@ -36,8 +36,8 @@ public class WebDriverHelper {
     public String getText(By path){
         return driver.findElement(path).getText();
     }
-    public void getTitle(){
-        driver.getTitle();
+    public String getTitle(){
+        return driver.getTitle();
     }
     public void NavBack(){
         driver.navigate().back();
@@ -45,8 +45,8 @@ public class WebDriverHelper {
     public void Refresh(){
         driver.navigate().refresh();
     }
-    public void getURL(){
-        driver.getCurrentUrl();
+    public String getURL(){
+        return driver.getCurrentUrl();
     }
 	public void EnterAction(By path){
 		driver.findElement(path).sendKeys(Keys.ENTER);

@@ -13,8 +13,8 @@ import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class MadeInChinaLanguagePage {
-    public static WebDriverHelper helper;
-    public static ExtentTest test;
+    WebDriverHelper helper;
+    ExtentTest test;
     public MadeInChinaLanguagePage(ExtentTest test){
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
