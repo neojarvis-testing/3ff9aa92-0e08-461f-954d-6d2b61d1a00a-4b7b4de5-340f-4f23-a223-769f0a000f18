@@ -135,7 +135,7 @@ public class SpicesPageContact {
     public void sendDataToEmailInput(){
         try {
             helper.WaitForElementToBeVisible(SpicesPageContactLocators.emailInput, 10);
-            helper.SendKeys(SpicesPageContactLocators.textArea, "testmic@gmail.com");
+            helper.SendKeys(SpicesPageContactLocators.emailInput, "testmic@gmail.com");
             test.log(Status.PASS, "Data sent to the emailInput");
             LoggerHandler.info("Data sent to the emailInput");
         } catch (Exception e) {

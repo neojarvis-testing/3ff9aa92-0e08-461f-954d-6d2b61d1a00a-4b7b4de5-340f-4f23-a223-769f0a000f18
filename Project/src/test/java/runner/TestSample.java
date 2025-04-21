@@ -10,6 +10,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import pages.SpicesPageContact;
+import pages.WiresAndFurniturePage;
 import utils.Base;
 import utils.Reporter;
 
@@ -27,11 +28,18 @@ public class TestSample extends Base{
         openBrowser();
     }
 
-    @Test
+    @Test(enabled = true)
     public void testCaese3(){
         test = report.createTest("testCase3");
         SpicesPageContact spc = new SpicesPageContact(test);
         spc.SpicesPageContactTestCase();
+    }
+
+    @Test(enabled = false)
+    public void testCaese4(){
+        test = report.createTest("testCase4");
+        WiresAndFurniturePage wfp = new WiresAndFurniturePage(test);
+        wfp.WiresAndFurnitureTestCase();
     }
 
     @AfterMethod

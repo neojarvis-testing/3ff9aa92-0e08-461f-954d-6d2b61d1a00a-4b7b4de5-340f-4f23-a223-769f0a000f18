@@ -8,6 +8,6 @@ public class WiresAndFurnitureLocatores {
     public static By wireResult = By.cssSelector("em[class = 'product_word']");
     public static By firstProduct =By.xpath("(//div[@class = 'prod-content']//h2[@class = 'product-name']//a)[1]");
     public static By contactSupplier = By.cssSelector("div[class = 'button-block contact-btn'] a[class = 'btns button-link-contact']");
-    public static By clickOn2InPagination = By.xpath("(//a[@href = '//www.made-in-china.com/multi-search/Wires/F1/2.html'])[1]");
+    public static By clickOn2InPagination = By.xpath("//a[text() = '2']");
     public static By logo = By.cssSelector("a[href='//www.made-in-china.com']");
 }

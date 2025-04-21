@@ -1,0 +1,14 @@
+2025.04.21.19.59.20 INFO  utils.LoggerHandler - Clicked on the xmark
+2025.04.21.19.59.21 INFO  utils.LoggerHandler - Clicked on the search bar
+2025.04.21.19.59.21 INFO  utils.LoggerHandler - Data sent to the search bar
+2025.04.21.19.59.22 INFO  utils.LoggerHandler - Enter action performed
+2025.04.21.19.59.22 INFO  utils.LoggerHandler - Text Verified
+2025.04.21.19.59.23 INFO  utils.LoggerHandler - Clicked on the firstProduct
+2025.04.21.19.59.25 INFO  utils.LoggerHandler - Clicked on the logo
+2025.04.21.19.59.25 INFO  utils.LoggerHandler - Clicked on the search bar
+2025.04.21.19.59.26 INFO  utils.LoggerHandler - Data sent to the search bar
+2025.04.21.19.59.27 INFO  utils.LoggerHandler - Enter action performed
+2025.04.21.19.59.27 INFO  utils.LoggerHandler - Text Verified
+2025.04.21.19.59.30 INFO  utils.LoggerHandler - Clicked on the clickOn2InPagination
+2025.04.21.19.59.31 INFO  utils.LoggerHandler - Clicked on the logo
+2025.04.21.19.59.31 INFO  utils.LoggerHandler - Title Verified
