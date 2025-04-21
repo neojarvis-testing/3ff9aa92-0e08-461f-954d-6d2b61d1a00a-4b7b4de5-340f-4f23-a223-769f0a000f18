@@ -1,5 +1,6 @@
 package pages;
 
+import org.checkerframework.checker.units.qual.C;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -15,6 +16,7 @@ public class BuyerModulePage {
     public static WebDriverHelper helper;
     public BuyerModulePage(ExtentTest test){
         helper=new WebDriverHelper(Base.driver);
+        this.test = test;
     }
     public void ClosePopUp(){
         try {
@@ -46,7 +48,6 @@ public class BuyerModulePage {
             test.log(Status.PASS, "Clicked on new user guide");
             LoggerHandler.info("Clicked on new user guide");
         } catch (Exception e) {
-            // TODO: handle exception
             test.log(Status.FAIL, "Couldn't click on New User Guide");
             LoggerHandler.error("Couldn't click on new user guide");
         }
@@ -103,7 +104,7 @@ public class BuyerModulePage {
             Assert.assertTrue(url2.contains("audited-suppliers"));
             test.log(Status.PASS, "Verified Audited Suppliers");
             LoggerHandler.info("Verified Audited Suppliers");
-        } catch (Exception e) {
+        } catch (AssertionError e) {
             test.log(Status.FAIL, "Invalid URL");
             LoggerHandler.error("Invalid URL");
         }
@@ -114,12 +115,45 @@ public class BuyerModulePage {
             Assert.assertTrue(title2.contains("Audited Suppliers | Choose the Reliable"));
             test.log(Status.PASS, "Audited Suppliers Verified Successfully");
             LoggerHandler.info("Audites Suppliers Verified Successfully");
-        } catch (Exception e) {
+        } catch (AssertionError e) {
             test.log(Status.FAIL, "Couldn't verify the title Audited Suppliers");
             LoggerHandler.error("Couldn't verify the title Audited Suppliers");
         }
     }
-
+    public void ClickMeetSuppliers(){
+        try {
+            helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClickMeetSupplier, 10);
+            helper.clickOnElement(BuyerModulePageLocator.ClickMeetSupplier);
+            helper.switchToAllTabs();
+            test.log(Status.PASS, "Clicked on Meet suppliers link");
+            LoggerHandler.info("Clicked on Meet suppliers link");
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Couldn't find meet suppliers link");
+            LoggerHandler.error("Clicked on Meet suppliers link");
+        }
+    }
+    public void VerifyURL3(){
+        try {
+            String url3=Base.driver.getCurrentUrl();
+            Assert.assertTrue(url3.contains("private-sourcing-meeting"));
+            test.log(Status.PASS, "Verified Private sourcing meeting url");
+            LoggerHandler.info("Verified Private sourcing meeting url");
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Invalid URL");
+            LoggerHandler.error("Invalid URL");
+        }
+    }
+    public void VerifyTitle3(){
+        try {
+            String title3=Base.driver.getTitle();
+            Assert.assertTrue(title3.contains("Apply to Meet Suppliers- Made-in-China.com buyer services"));
+            test.log(Status.PASS, "Meet Suppliers Verified Successfully");
+            LoggerHandler.info("Meet Suppliers Verified Successfully");
+        } catch (AssertionError e) {
+            test.log(Status.FAIL, "Couldn't verify the title contains Meet Suppliers");
+            LoggerHandler.error("Couldn't verify the title contains Meet Suppliers");
+        }
+    }
     public void testCase7(){
         ClosePopUp();
         HoverBuyer();
@@ -135,11 +169,10 @@ public class BuyerModulePage {
 
         ClickLogo();
         HoverBuyer();
-
-
-
-
-
+        ClickMeetSuppliers();
+        VerifyURL3();
+        VerifyTitle3();
+        ClickLogo();
 
     }
 }
