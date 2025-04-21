@@ -88,7 +88,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyApparelUrl(){
         try {
             String apparelAndClothingUrl = helper.getURL();
-            
+            system.out.println(apparelAndClothingUrl);
             //Assert.assertTrue(apparelAndClothingUrl.contains("Apparel-Clothing.html"));
             LoggerHandler.info("Verified Apparel-Clothing.html");
             test.log(Status.PASS, "Verified Apparel-Clothing.html");
