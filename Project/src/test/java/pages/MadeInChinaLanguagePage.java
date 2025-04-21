@@ -228,5 +228,13 @@ public class MadeInChinaLanguagePage {
         verifySpanish();
         changeToFrench();
         verifyFrench();
+        changeToGerman();
+        verifyGerman();
+        changeToRussian();
+        verifyRussian();
+        changeToJapanese();
+        verifyJapanese();
+        changeToEnglish();
+        verifyEnglish();
     }  
 }
