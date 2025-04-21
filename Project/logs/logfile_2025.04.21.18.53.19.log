@@ -1,0 +1,16 @@
+2025.04.21.18.53.19 INFO  utils.LoggerHandler - Clicked on the xmark
+2025.04.21.18.53.20 INFO  utils.LoggerHandler - Clicked on the search bar
+2025.04.21.18.53.20 INFO  utils.LoggerHandler - Data sent to the search bar
+2025.04.21.18.53.21 INFO  utils.LoggerHandler - Enter action performed
+2025.04.21.18.53.22 INFO  utils.LoggerHandler - Clicked on the first product
+2025.04.21.18.53.38 INFO  utils.LoggerHandler - Clicked on the contactSupplier
+2025.04.21.18.53.38 INFO  utils.LoggerHandler - Clicked on the textArea
+2025.04.21.18.53.38 INFO  utils.LoggerHandler - Data sent to the textArea
+2025.04.21.18.53.39 INFO  utils.LoggerHandler - Clicked on the emailInput
+2025.04.21.18.53.39 INFO  utils.LoggerHandler - Data sent to the emailInput
+2025.04.21.18.53.39 INFO  utils.LoggerHandler - Clicked on the sendInquryNow
+2025.04.21.18.53.44 INFO  utils.LoggerHandler - Text Not Verified
+2025.04.21.18.54.00 INFO  utils.LoggerHandler - Clicked on the accountPassword
+2025.04.21.18.54.15 INFO  utils.LoggerHandler - Data sent to the emailInput
+2025.04.21.18.54.31 INFO  utils.LoggerHandler - Clicked on the checkBox
+2025.04.21.18.54.47 INFO  utils.LoggerHandler - Clicked on the verifyEmail
