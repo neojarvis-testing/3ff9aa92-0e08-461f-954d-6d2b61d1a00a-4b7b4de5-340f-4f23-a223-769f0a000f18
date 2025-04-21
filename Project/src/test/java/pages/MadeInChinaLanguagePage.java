@@ -14,14 +14,13 @@ import utils.WebDriverHelper;
 public class MadeInChinaLanguagePage {
     public static WebDriverHelper helper;
     public static ExtentTest test;
-    public MadeInChinaLanguagePage(ExtentTest test)
-    {
+    public MadeInChinaLanguagePage(ExtentTest test){
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
     }
     public void closePopUp(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,7);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,3);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.popup);
             test.log(Status.PASS, "closed pop up");
             LoggerHandler.info("closed pop up");
@@ -32,7 +31,7 @@ public class MadeInChinaLanguagePage {
     }
     public void hoverOnSignIn(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.signIn,7);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.signIn,3);
             helper.HoverOverElement(MadeInChinaLanguagePageLocator.signIn);
             test.log(Status.PASS, "Hovered on SignIn");
             LoggerHandler.info("Hovered On SignIn");
@@ -43,8 +42,8 @@ public class MadeInChinaLanguagePage {
     }
     public void clickOnJoinFree(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,7);
-            helper.clickOnElement(MadeInChinaLanguagePageLocator.joinFree);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,3);
+            helper.ClickAndSwitch(MadeInChinaLanguagePageLocator.joinFree);
             test.log(Status.PASS, "clicked on Join Free");
             LoggerHandler.info("clicked on Join Free");
         } catch (Exception e) {
@@ -65,7 +64,7 @@ public class MadeInChinaLanguagePage {
     }
     public void clickOnSignInNow(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.signInNow,7);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.signInNow,3);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.signInNow);
             test.log(Status.PASS, "clicked on Sign in now");
             LoggerHandler.info("clicked on Sign in now");
@@ -87,7 +86,7 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToSpanish(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,7);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
             helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.spanish);
             test.log(Status.PASS, "clicked on spanish");
@@ -111,7 +110,7 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToGerman(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,7);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
             helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.german);
             test.log(Status.PASS, "clicked on German");
@@ -135,7 +134,7 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToFrench(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,7);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
             helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.french);
             test.log(Status.PASS, "clicked on French");
@@ -159,7 +158,7 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToRussian(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,7);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
             helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.russian);
             test.log(Status.PASS, "clicked on Russian");
@@ -183,7 +182,7 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToJapanese(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,7);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
             helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.japanese);
             test.log(Status.PASS, "clicked on Japanese");
@@ -207,7 +206,7 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToEnglish(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,7);
+            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
             helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.english);
             test.log(Status.PASS, "clicked on English");

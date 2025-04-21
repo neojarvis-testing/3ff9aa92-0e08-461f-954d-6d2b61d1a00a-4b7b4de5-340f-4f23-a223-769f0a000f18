@@ -10,6 +10,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import pages.MadeInChinaLanguagePage;
+import pages.MadeInChinaLedLightPage;
 import utils.Base;
 import utils.Reporter;
 
@@ -26,12 +27,19 @@ public class MadeInChinaTest extends Base {
     {
         openBrowser();
     }
+    // @Test
+    // public void language()
+    // {
+    //     test = report.createTest("Test Case 5");
+    //     MadeInChinaLanguagePage language = new MadeInChinaLanguagePage(test);
+    //     language.languageTestCases();
+    // }
     @Test
-    public void language()
+    public void lights()
     {
-        test = report.createTest("Test Case 5");
-        MadeInChinaLanguagePage language = new MadeInChinaLanguagePage(test);
-        language.languageTestCases();
+        test = report.createTest("Test Case 6");
+        MadeInChinaLedLightPage led = new MadeInChinaLedLightPage(test);
+        led.ledTestCases();
     }
     @AfterMethod
     public void close()
