@@ -27,13 +27,13 @@ public class MadeInChinaTest extends Base {
     {
         openBrowser();
     }
-    // @Test
-    // public void language()
-    // {
-    //     test = report.createTest("Test Case 5");
-    //     MadeInChinaLanguagePage language = new MadeInChinaLanguagePage(test);
-    //     language.languageTestCases();
-    // }
+    @Test
+    public void language()
+    {
+        test = report.createTest("Test Case 5");
+        MadeInChinaLanguagePage language = new MadeInChinaLanguagePage(test);
+        language.languageTestCases();
+    }
     @Test
     public void lights()
     {

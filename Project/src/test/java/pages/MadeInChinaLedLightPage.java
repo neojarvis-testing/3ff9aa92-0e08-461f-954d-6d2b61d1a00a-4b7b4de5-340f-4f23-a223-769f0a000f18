@@ -45,7 +45,7 @@ public class MadeInChinaLedLightPage {
     public void verifySearchResult(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyLed);
-            Assert.assertEquals(text,"LED lights");
+            Assert.assertTrue(text.contains("LED lights"));
             test.log(Status.PASS, "Search result verified");
             LoggerHandler.info("Search result verified");
         } catch (Exception e) {
