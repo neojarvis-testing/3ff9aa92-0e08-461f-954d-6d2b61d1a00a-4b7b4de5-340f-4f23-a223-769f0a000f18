@@ -1,6 +1,7 @@
 package utils;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -19,6 +20,7 @@ public class WebDriverHelper {
 	public WebDriverHelper(WebDriver driver) {
 		this.driver=driver;
 	}
+    List<String> list=new ArrayList<String>();
 	public void clickOnElement(By path) {
 		try {
 			driver.findElement(path).click();
@@ -37,17 +39,17 @@ public class WebDriverHelper {
     public String getText(By path){
         return driver.findElement(path).getText();
     }
-    public void getTitle(){
-        driver.getTitle();
+    public String getTitle(){
+        return driver.getTitle();
     }
-    public void NavBack(){
+    public void navigateBack(){
         driver.navigate().back();
     }
     public void Refresh(){
         driver.navigate().refresh();
     }
-    public void getURL(){
-        driver.getCurrentUrl();
+    public String getURL(){
+        return driver.getCurrentUrl();
     }
 	public void EnterAction(By path){
 		driver.findElement(path).sendKeys(Keys.ENTER);
@@ -111,7 +113,7 @@ public class WebDriverHelper {
         for (String child : set) {
             if (!child.equals(parent)) {
                 driver.switchTo().window(child);
-                break;
+                // list.add(child);
             } 
         }
     }
@@ -121,6 +123,7 @@ public class WebDriverHelper {
             for (String windowHandle : windowHandles) {
                 if (!windowHandle.isEmpty()) {
                     driver.switchTo().window(windowHandle);
+                    list.add(windowHandle);
                 } else {
                     throw new Exception("New window could not be retrieved");
                 }
@@ -158,6 +161,9 @@ public class WebDriverHelper {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public void switchBackTowindow(int x){
+       driver.switchTo().window(list.get(x));
     }
 	public void selectDropDown(By path, String value) {
         try {

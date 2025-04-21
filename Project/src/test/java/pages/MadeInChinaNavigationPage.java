@@ -34,7 +34,7 @@ public class MadeInChinaNavigationPage {
     public void navigateBack(){
         try {
 
-            helper.NavBack();
+            helper.navigateBack();
             LoggerHandler.info("Successfully  navigated Back");
             test.log(Status.PASS,"Successfully navigated Back");
         } catch (Exception e) {
