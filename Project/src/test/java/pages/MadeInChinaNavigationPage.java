@@ -87,6 +87,5 @@ public class MadeInChinaNavigationPage {
         clickOnCategory(MadeInChinaHomePageLocators.sportingGoodsRecreation,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "pruthvi", 9, 0));
         verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "pruthvi", 9, 0));
         
-        
     }
 }
