@@ -6,6 +6,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import uistore.MadeInChinaHotItemsPageLocator;
 import utils.Base;
+import utils.ExcelReader;
 import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.WebDriverHelper;
@@ -32,8 +33,8 @@ public class MadeInChinaHotItemsPage {
     public void clickOnLogo(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.logo,10);
-            //helper.clickOnElement(MadeInChinaHotItemsPageLocator.logo);
-            helper.switchBackToWindow(0);
+            helper.clickOnElement(MadeInChinaHotItemsPageLocator.logo);
+            //helper.switchBackToWindow(0);
             LoggerHandler.info("Clicked On logo");
             test.log(Status.PASS, "Clicked On logo");
         } catch (Exception e) {
@@ -58,7 +59,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyFurnitureUrl(){
         try {
             String furnitureUrl = helper.getURL();
-            Assert.assertTrue(furnitureUrl.contains("Furniture.html"));
+            Assert.assertTrue(furnitureUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 0)));
             LoggerHandler.info("Verified Furniture.html");
             test.log(Status.PASS, "Verified Furniture.html");
         } catch (Exception e) {
@@ -69,7 +70,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyFurnitureTitle(){
         try {
             String furnitureUrl = helper.getTitle();
-            Assert.assertTrue(furnitureUrl.contains("Furniture"));
+            Assert.assertTrue(furnitureUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 1)));
             LoggerHandler.info("Verified Furniture title");
             test.log(Status.PASS, "Verified Furniture title");
         } catch (Exception e) {
@@ -93,7 +94,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyApparelUrl(){
         try {
             String apparelAndClothingUrl = helper.getURL();
-            Assert.assertTrue(apparelAndClothingUrl.contains("Apparel-Clothing.html"));
+            Assert.assertTrue(apparelAndClothingUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 2)));
             LoggerHandler.info("Verified Apparel-Clothing.html");
             test.log(Status.PASS, "Verified Apparel-Clothing.html");
         } catch (Exception e) {
@@ -104,7 +105,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyApparelTitle(){
         try {
             String apparelAndClothingTitle = helper.getTitle();
-            Assert.assertTrue(apparelAndClothingTitle.contains("Apparel & Clothing"));
+            Assert.assertTrue(apparelAndClothingTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 3)));
             LoggerHandler.info("Verified Apparel Title");
             test.log(Status.PASS, "Verified Apparel Title");
         } catch (Exception e) {
@@ -128,7 +129,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyAutoPartsUrl(){
         try {
             String autoPartsUrl = helper.getURL();
-            Assert.assertTrue(autoPartsUrl.contains("Auto-Parts-Accessories.html"));
+            Assert.assertTrue(autoPartsUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 4)));
             LoggerHandler.info("Verified Auto-Parts-Accessories.html");
             test.log(Status.PASS, "Verified Auto-Parts-Accessories.html");
         } catch (Exception e) {
@@ -139,7 +140,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyAutoPartsTitle(){
         try {
             String autoPartsTitle = helper.getTitle();
-            Assert.assertTrue(autoPartsTitle.contains("Auto Parts & Accessories"));
+            Assert.assertTrue(autoPartsTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 5)));
             LoggerHandler.info("Verified Auto Parts & Accessories Title");
             test.log(Status.PASS, "Verified Auto Parts & Accessories Title");
         } catch (Exception e) {
@@ -163,7 +164,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyBagsCasesUrl(){
         try {
             String bagsUrl = helper.getURL();
-            Assert.assertTrue(bagsUrl.contains("Bags-Cases-Luggages.html"));
+            Assert.assertTrue(bagsUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 6)));
             LoggerHandler.info("Verified Bags-Cases-Luggages.html");
             test.log(Status.PASS, "Verified Bags-Cases-Luggages.html");
         } catch (Exception e) {
@@ -174,7 +175,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyBagsCasesTitle(){
         try {
             String bagsTitle = helper.getTitle();
-            Assert.assertTrue(bagsTitle.contains("Bags, Cases & Luggages"));
+            Assert.assertTrue(bagsTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 7)));
             LoggerHandler.info("Verified Bags, Cases & Luggages title");
             test.log(Status.PASS, "Verified Bags, Cases & Luggages title");
         } catch (Exception e) {
@@ -198,7 +199,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyComputerProductsUrl(){
         try {
             String computerUrl = helper.getURL();
-            Assert.assertTrue(computerUrl.contains("Computer-Products.html"));
+            Assert.assertTrue(computerUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 8)));
             LoggerHandler.info("Verified Computer-Products.html");
             test.log(Status.PASS, "Verified Computer-Products.html");
         } catch (Exception e) {
@@ -209,7 +210,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyComputerProductsTitle(){
         try {
             String computerTitle = helper.getTitle();
-            Assert.assertTrue(computerTitle.contains("Computer Products"));
+            Assert.assertTrue(computerTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 9)));
             LoggerHandler.info("Verified Computer Products title");
             test.log(Status.PASS, "Verified Computer Products title");
         } catch (Exception e) {
@@ -233,7 +234,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyConsumerElectronicsUrl(){
         try {
             String electronicsUrl = helper.getURL();
-            Assert.assertTrue(electronicsUrl.contains("Consumer-Electronics.html"));
+            Assert.assertTrue(electronicsUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 10)));
             LoggerHandler.info("Verified Consumer-Electronics.html");
             test.log(Status.PASS, "Verified Consumer-Electronics.html");
         } catch (Exception e) {
@@ -244,7 +245,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyConsumerElectronicsTitle(){
         try {
             String electronicsTitle = helper.getTitle();
-            Assert.assertTrue(electronicsTitle.contains("Consumer Electronics"));
+            Assert.assertTrue(electronicsTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 11)));
             LoggerHandler.info("Verified Consumer Electronics title");
             test.log(Status.PASS, "Verified Consumer Electronics title");
         } catch (Exception e) {
@@ -268,7 +269,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyElectricalEquipmentUrl(){
         try {
             String electricalUrl = helper.getURL();
-            Assert.assertTrue(electricalUrl.contains("Electrical-Equipments.html"));
+            Assert.assertTrue(electricalUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 12)));
             LoggerHandler.info("Verified Electrical-Equipments.html");
             test.log(Status.PASS, "Verified Electrical-Equipments.html");
         } catch (Exception e) {
@@ -279,7 +280,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyElectricalEquipmentTitle(){
         try {
             String electricalTitle = helper.getTitle();
-            Assert.assertTrue(electricalTitle.contains("Electrical Equipment"));
+            Assert.assertTrue(electricalTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 13)));
             LoggerHandler.info("Verified Electrical Equipment title");
             test.log(Status.PASS, "Verified Electrical Equipment title");
         } catch (Exception e) {
@@ -303,7 +304,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyElectronicComponentsUrl(){
         try {
             String componentsUrl = helper.getURL();
-            Assert.assertTrue(componentsUrl.contains("Electronic-Components.html"));
+            Assert.assertTrue(componentsUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 14)));
             LoggerHandler.info("Verified Electronic-Components.html");
             test.log(Status.PASS, "Verified Electronic-Components.html");
         } catch (Exception e) {
@@ -314,7 +315,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyElectronicComponentsTitle(){
         try {
             String componentsTitle = helper.getTitle();
-            Assert.assertTrue(componentsTitle.contains("Electronic Components"));
+            Assert.assertTrue(componentsTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 15)));
             LoggerHandler.info("Verified Electronic Components title");
             test.log(Status.PASS, "Verified Electronic Components title");
         } catch (Exception e) {
@@ -338,7 +339,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyGiftsCraftsUrl(){
         try {
             String giftsUrl = helper.getURL();
-            Assert.assertTrue(giftsUrl.contains("Gifts-Crafts-Collectibles.html"));
+            Assert.assertTrue(giftsUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 16)));
             LoggerHandler.info("Verified Gifts-Crafts-Collectibles.html");
             test.log(Status.PASS, "Verified Gifts-Crafts-Collectibles.html");
         } catch (Exception e) {
@@ -349,7 +350,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyGiftsCraftsTitle(){
         try {
             String giftTitle = helper.getTitle();
-            Assert.assertTrue(giftTitle.contains("Gifts, Crafts & Collectibles"));
+            Assert.assertTrue(giftTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 17)));
             LoggerHandler.info("Verified Gifts, Crafts & Collectibles title");
             test.log(Status.PASS, "Verified Gifts, Crafts & Collectibles title");
         } catch (Exception e) {
@@ -373,7 +374,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyMotorCyclesUrl(){
         try {
             String motorCyclesUrl = helper.getURL();
-            Assert.assertTrue(motorCyclesUrl.contains("Motorcycles-Scooters.html"));
+            Assert.assertTrue(motorCyclesUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 18)));
             LoggerHandler.info("Verified Motorcycles-Scooters.html");
             test.log(Status.PASS, "Verified Motorcycles-Scooters.html");
         } catch (Exception e) {
@@ -384,7 +385,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyMotorCyclesTitle(){
         try {
             String motorCyclesTitle = helper.getTitle();
-            Assert.assertTrue(motorCyclesTitle.contains("Motorcycles & Scooters"));
+            Assert.assertTrue(motorCyclesTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 19)));
             LoggerHandler.info("Verified Motorcycles & Scooters title");
             test.log(Status.PASS, "Verified Motorcycles & Scooters title");
         } catch (Exception e) {
@@ -408,7 +409,7 @@ public class MadeInChinaHotItemsPage {
     public void verifySealingPackageUrl(){
         try {
             String sealingPackageUrl = helper.getURL();
-            Assert.assertTrue(sealingPackageUrl.contains("Sealing-Packaging-Storage-Shelving.html"));
+            Assert.assertTrue(sealingPackageUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 20)));
             LoggerHandler.info("Verified Sealing-Packaging-Storage-Shelving.html");
             test.log(Status.PASS, "Verified Sealing-Packaging-Storage-Shelving.html");
         } catch (Exception e) {
@@ -419,7 +420,7 @@ public class MadeInChinaHotItemsPage {
     public void verifySealingPackageTitle(){
         try {
             String sealingPackageTitle = helper.getTitle();
-            Assert.assertTrue(sealingPackageTitle.contains("Sealing, Packaging, Storage & Shelving"));
+            Assert.assertTrue(sealingPackageTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 21)));
             LoggerHandler.info("Verified Sealing, Packaging, Storage & Shelving title");
             test.log(Status.PASS, "Verified Sealing, Packaging, Storage & Shelving title");
         } catch (Exception e) {
@@ -443,7 +444,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyBuildingMaterialsUrl(){
         try {
             String sealingPackageUrl = helper.getURL();
-            Assert.assertTrue(sealingPackageUrl.contains("Building-Materials-Supplies.html"));
+            Assert.assertTrue(sealingPackageUrl.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 22)));
             LoggerHandler.info("Verified Building-Materials-Supplies.html");
             test.log(Status.PASS, "Verified Building-Materials-Supplies.html");
         } catch (Exception e) {
@@ -454,7 +455,7 @@ public class MadeInChinaHotItemsPage {
     public void verifyBuildingMaterialsTitle(){
         try {
             String sealingPackageTitle = helper.getTitle();
-            Assert.assertTrue(sealingPackageTitle.contains("Building Materials & Supplies"));
+            Assert.assertTrue(sealingPackageTitle.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Krishna", 0, 22)));
             LoggerHandler.info("Verified Building Materials & Supplies title");
             test.log(Status.PASS, "Verified Building Materials & Supplies title");
         } catch (Exception e) {

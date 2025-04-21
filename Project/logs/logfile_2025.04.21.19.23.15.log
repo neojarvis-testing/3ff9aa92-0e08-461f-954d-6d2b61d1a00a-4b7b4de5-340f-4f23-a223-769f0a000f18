@@ -1,0 +1,48 @@
+2025.04.21.19.23.15 INFO  utils.LoggerHandler - Clicked On popUp
+2025.04.21.19.23.17 INFO  utils.LoggerHandler - Clicked On Furniture
+2025.04.21.19.23.17 INFO  utils.LoggerHandler - Verified Furniture.html
+2025.04.21.19.23.18 INFO  utils.LoggerHandler - Verified Furniture title
+2025.04.21.19.23.19 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.21 INFO  utils.LoggerHandler - Clicked On Apparel Clothing
+2025.04.21.19.23.22 INFO  utils.LoggerHandler - Verified Apparel-Clothing.html
+2025.04.21.19.23.22 INFO  utils.LoggerHandler - Verified Apparel Title
+2025.04.21.19.23.23 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.25 INFO  utils.LoggerHandler - Clicked On Auto Parts
+2025.04.21.19.23.25 INFO  utils.LoggerHandler - Verified Auto-Parts-Accessories.html
+2025.04.21.19.23.26 INFO  utils.LoggerHandler - Verified Auto Parts & Accessories Title
+2025.04.21.19.23.27 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.30 INFO  utils.LoggerHandler - Clicked On Bags Cases
+2025.04.21.19.23.30 INFO  utils.LoggerHandler - Verified Bags-Cases-Luggages.html
+2025.04.21.19.23.30 INFO  utils.LoggerHandler - Verified Bags, Cases & Luggages title
+2025.04.21.19.23.31 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.33 INFO  utils.LoggerHandler - Clicked On Computer Products
+2025.04.21.19.23.34 INFO  utils.LoggerHandler - Verified Computer-Products.html
+2025.04.21.19.23.34 INFO  utils.LoggerHandler - Verified Computer Products title
+2025.04.21.19.23.35 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.37 INFO  utils.LoggerHandler - Clicked On Consumer Electronic
+2025.04.21.19.23.37 INFO  utils.LoggerHandler - Verified Consumer-Electronics.html
+2025.04.21.19.23.37 INFO  utils.LoggerHandler - Verified Consumer Electronics title
+2025.04.21.19.23.39 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.42 INFO  utils.LoggerHandler - Clicked On Electrical Equipment
+2025.04.21.19.23.42 INFO  utils.LoggerHandler - Verified Electrical-Equipments.html
+2025.04.21.19.23.42 INFO  utils.LoggerHandler - Verified Electrical Equipment title
+2025.04.21.19.23.43 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.46 INFO  utils.LoggerHandler - Clicked On Electronic Components
+2025.04.21.19.23.46 INFO  utils.LoggerHandler - Verified Electronic-Components.html
+2025.04.21.19.23.46 INFO  utils.LoggerHandler - Verified Electronic Components title
+2025.04.21.19.23.47 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.50 INFO  utils.LoggerHandler - Clicked On Gift Crafts
+2025.04.21.19.23.51 INFO  utils.LoggerHandler - Verified Gifts-Crafts-Collectibles.html
+2025.04.21.19.23.51 INFO  utils.LoggerHandler - Verified Gifts, Crafts & Collectibles title
+2025.04.21.19.23.52 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.55 INFO  utils.LoggerHandler - Clicked On MotorCycles
+2025.04.21.19.23.55 INFO  utils.LoggerHandler - Verified Motorcycles-Scooters.html
+2025.04.21.19.23.55 INFO  utils.LoggerHandler - Verified Motorcycles & Scooters title
+2025.04.21.19.23.56 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.23.59 INFO  utils.LoggerHandler - Clicked On Sealing Package
+2025.04.21.19.24.00 INFO  utils.LoggerHandler - Verified Sealing-Packaging-Storage-Shelving.html
+2025.04.21.19.24.00 INFO  utils.LoggerHandler - Verified Sealing, Packaging, Storage & Shelving title
+2025.04.21.19.24.01 INFO  utils.LoggerHandler - Clicked On logo
+2025.04.21.19.24.04 INFO  utils.LoggerHandler - Clicked On Building Materials
+2025.04.21.19.24.04 INFO  utils.LoggerHandler - Verified Building-Materials-Supplies.html
+2025.04.21.19.24.04 INFO  utils.LoggerHandler - Verified Building Materials & Supplies title
