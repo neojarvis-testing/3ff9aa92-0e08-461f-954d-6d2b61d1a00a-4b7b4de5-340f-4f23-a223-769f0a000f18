@@ -34,6 +34,7 @@ public class MadeInChinaLedLightPage {
             helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.searchbar,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.searchbar);
             helper.SendKeys(MadeInChinaLedLightLocator.searchbar,"LED lights");
+            helper.EnterAction(MadeInChinaLedLightLocator.searchbar);
             test.log(Status.PASS, "clicked and sent data to search bar");
             LoggerHandler.info("clicked and sent data to search bar");
         } catch (Exception e) {
