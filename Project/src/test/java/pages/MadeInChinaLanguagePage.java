@@ -7,6 +7,7 @@ import com.aventstack.extentreports.Status;
 
 import uistore.MadeInChinaLanguagePageLocator;
 import utils.Base;
+import utils.ExcelReader;
 import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.WebDriverHelper;
@@ -76,7 +77,8 @@ public class MadeInChinaLanguagePage {
     public void verifySignInNow(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.verifySignIn);
-            Assert.assertEquals(text,"Sign in with Email Code");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 3, 0);
+            Assert.assertEquals(text,value);
             test.log(Status.PASS, "Verified that we are on sign in page");
             LoggerHandler.info("Verified that we are on sign in page");
         } catch (Exception e) {
@@ -99,7 +101,8 @@ public class MadeInChinaLanguagePage {
     public void verifySpanish(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            Assert.assertEquals(text,"Cuenta");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 4, 0);
+            Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("Spanish");
             test.log(Status.PASS, "changed to spanish");
             LoggerHandler.info("changed to spanish");
@@ -123,7 +126,8 @@ public class MadeInChinaLanguagePage {
     public void verifyGerman(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            Assert.assertEquals(text,"Konto");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 5, 0);
+            Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("German");
             test.log(Status.PASS, "changed to German");
             LoggerHandler.info("changed to German");
@@ -147,7 +151,8 @@ public class MadeInChinaLanguagePage {
     public void verifyFrench(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            Assert.assertEquals(text,"Compte");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 6, 0);
+            Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("French");
             test.log(Status.PASS, "changed to French");
             LoggerHandler.info("changed to French");
@@ -171,7 +176,8 @@ public class MadeInChinaLanguagePage {
     public void verifyRussian(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            Assert.assertEquals(text,"Аккаунт");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 7, 0);
+            Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("Russian");
             test.log(Status.PASS, "changed to Russian");
             LoggerHandler.info("changed to Russian");
@@ -195,7 +201,8 @@ public class MadeInChinaLanguagePage {
     public void verifyJapanese(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            Assert.assertEquals(text,"アカウント");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 8, 0);
+            Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("Japanese");
             test.log(Status.PASS, "changed to Japanese");
             LoggerHandler.info("changed to Japanese");
@@ -219,7 +226,8 @@ public class MadeInChinaLanguagePage {
     public void verifyEnglish(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            Assert.assertEquals(text,"Account");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 9, 0);
+            Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("English");
             test.log(Status.PASS, "changed to English");
             LoggerHandler.info("changed to English");

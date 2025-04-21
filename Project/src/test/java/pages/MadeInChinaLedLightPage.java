@@ -8,6 +8,7 @@ import com.aventstack.extentreports.Status;
 import uistore.MadeInChinaLanguagePageLocator;
 import uistore.MadeInChinaLedLightLocator;
 import utils.Base;
+import utils.ExcelReader;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
@@ -33,7 +34,8 @@ public class MadeInChinaLedLightPage {
         try {
             helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.searchbar,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.searchbar);
-            helper.SendKeys(MadeInChinaLedLightLocator.searchbar,"LED lights");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 0, 0);
+            helper.SendKeys(MadeInChinaLedLightLocator.searchbar,value);
             helper.EnterAction(MadeInChinaLedLightLocator.searchbar);
             test.log(Status.PASS, "clicked and sent data to search bar");
             LoggerHandler.info("clicked and sent data to search bar");
@@ -112,7 +114,8 @@ public class MadeInChinaLedLightPage {
         try {
             helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.content,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.content);
-            helper.SendKeys(MadeInChinaLedLightLocator.content,"wyiq dgwidgeuigdiugduwod uhguoawd");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 1, 0);
+            helper.SendKeys(MadeInChinaLedLightLocator.content,value);
             test.log(Status.PASS, "clicked and sent data to content field");
             LoggerHandler.info("clicked and sent data to content field");
         } catch (Exception e) {
@@ -124,7 +127,8 @@ public class MadeInChinaLedLightPage {
         try {
             helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.email,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.email);
-            helper.SendKeys(MadeInChinaLedLightLocator.email,"abc");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 2, 0);
+            helper.SendKeys(MadeInChinaLedLightLocator.email,value);
             test.log(Status.PASS, "clicked and sent data to email field");
             LoggerHandler.info("clicked and sent data to email field");
         } catch (Exception e) {
@@ -223,7 +227,6 @@ public class MadeInChinaLedLightPage {
     public void clickOnColorTemprature(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.colorTemp,3);
-            helper.ScrollByPixel(0, 1500);
             helper.clickOnElement(MadeInChinaLedLightLocator.colorTemp);
             test.log(Status.PASS, "clicked on color Temprature");
             LoggerHandler.info("clicked on color Temprature");
