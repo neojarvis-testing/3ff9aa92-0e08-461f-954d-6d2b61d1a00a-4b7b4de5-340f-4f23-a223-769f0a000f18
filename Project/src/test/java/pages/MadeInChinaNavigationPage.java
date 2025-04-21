@@ -43,9 +43,17 @@ public class MadeInChinaNavigationPage {
         }
     }
     public void verifyheading(String heading){
-        String text=helper .getText(MadeInChinaHomePageLocators.title);
-        Assert.assertEquals(text,text);
-        System.out.println(text);
+        try {
+            String text=helper .getText(MadeInChinaHomePageLocators.title);
+            Assert.assertEquals(text,heading);
+            LoggerHandler.info("Successfully  verified the heading "+heading);
+            test.log(Status.PASS,"Successfully verified the heading "+heading);
+        } catch (Exception e) {
+            LoggerHandler.info("Failed to verified the heading "+heading);
+            test.log(Status.FAIL,"Failed to verified the heading "+heading);
+        }
+        
+        
     }
     public void navigation(){
         
