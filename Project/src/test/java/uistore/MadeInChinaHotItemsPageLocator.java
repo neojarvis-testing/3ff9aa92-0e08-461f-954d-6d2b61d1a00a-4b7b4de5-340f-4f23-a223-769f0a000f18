@@ -3,7 +3,8 @@ package uistore;
 import org.openqa.selenium.By;
 
 public class MadeInChinaHotItemsPageLocator {
-    public static By furniture = By.cssSelector("a[href = 'https://www.made-in-china.com/quick-products/Furniture.html?pv_id=1ipboqgrf0d0&faw_id=1ipbq21osec&bv_id=1ipbq21ouc3b']");
+    public static By furniture = By.cssSelector("a[href='/quick-products/Furniture.html']");
+    //public static By furniture = By.cssSelector("a[href='https://www.made-in-china.com/quick-products/Furniture.html?pv_id=1ipc75nvgaa4&faw_id=1ipch4f9f3a6&bv_id=1ipch4f9pc83&pbv_id=1ipc75kvj1c8']");
     public static By apparelAndClothing = By.cssSelector("a[href = '/quick-products/Apparel-Clothing.html']");
     public static By autoParts = By.cssSelector("a[href='/quick-products/Auto-Parts-Accessories.html']");
     public static By bagsCasesAndLuggages = By.cssSelector("a[href = '/quick-products/Bags-Cases-Luggages.html']");
@@ -16,6 +17,6 @@ public class MadeInChinaHotItemsPageLocator {
     public static By sealingPackaging = By.cssSelector("a[href = '/quick-products/Sealing-Packaging-Storage-Shelving.html']");
     public static By buildingMaterials = By.cssSelector("a[href = '/quick-products/Building-Materials-Supplies.html']");
     public static By logo = By.cssSelector("a[href='//www.made-in-china.com']");
-    
+    public static By popUp = By.cssSelector("span[class = 'campaign-pop-close J-campaign-pop-close']");
 }
 

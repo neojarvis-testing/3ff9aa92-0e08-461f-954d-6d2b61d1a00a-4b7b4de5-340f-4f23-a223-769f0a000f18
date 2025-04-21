@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import pages.MadeInChinaHotItemsPage;
 import utils.Base;
 import utils.Reporter;
 
@@ -24,9 +25,11 @@ public class TestMadeInChina extends Base{
     public void open(){
         openBrowser();
     }
-    @Test
+    @Test(priority = 8,enabled = true)
     public void hotItems(){
-
+        test = reports.createTest("All Hot Items");
+        MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);
+        hotItems.hoteItems();
     }
     @AfterMethod
     public void close(){
