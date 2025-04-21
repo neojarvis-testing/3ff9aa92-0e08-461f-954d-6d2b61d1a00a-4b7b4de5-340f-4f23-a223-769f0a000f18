@@ -1,0 +1,7 @@
+2025.04.21.20.29.09 ERROR utils.LoggerHandler - SignIn verification failed
+2025.04.21.20.29.10 INFO  utils.LoggerHandler - Hovering SignIn success
+2025.04.21.20.29.10 INFO  utils.LoggerHandler - Clicking SignIn success
+2025.04.21.20.29.12 INFO  utils.LoggerHandler - entering data to email success
+2025.04.21.20.29.12 INFO  utils.LoggerHandler - Clicking I agree to checkbox success
+2025.04.21.20.29.13 INFO  utils.LoggerHandler - Clicking verify box success
+2025.04.21.20.29.28 INFO  utils.LoggerHandler - Clicking next box success

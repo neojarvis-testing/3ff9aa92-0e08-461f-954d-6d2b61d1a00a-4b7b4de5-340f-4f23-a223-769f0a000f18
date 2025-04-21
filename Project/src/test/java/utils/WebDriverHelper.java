@@ -81,7 +81,8 @@ public class WebDriverHelper {
 		try {
 			Actions action= new Actions(driver);
 			WebElement webelement=driver.findElement(path);
-			action.click(webelement).build().perform();
+            action.click(webelement).build().perform();
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
