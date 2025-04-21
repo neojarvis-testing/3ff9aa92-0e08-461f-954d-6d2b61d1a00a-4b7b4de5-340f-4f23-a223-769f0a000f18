@@ -16,7 +16,7 @@ public class MadeInChinaHotItemsPageLocator {
     public static By motorCycles = By.cssSelector("a[href = '/quick-products/Motorcycles-Scooters.html']");
     public static By sealingPackaging = By.cssSelector("a[href = '/quick-products/Sealing-Packaging-Storage-Shelving.html']");
     public static By buildingMaterials = By.cssSelector("a[href = '/quick-products/Building-Materials-Supplies.html']");
-    public static By logo = By.cssSelector("a[href='//www.made-in-china.com']");
+    public static By logo = By.cssSelector("a[class = 'm-logo']");
     public static By popUp = By.cssSelector("span[class = 'campaign-pop-close J-campaign-pop-close']");
 }
 
