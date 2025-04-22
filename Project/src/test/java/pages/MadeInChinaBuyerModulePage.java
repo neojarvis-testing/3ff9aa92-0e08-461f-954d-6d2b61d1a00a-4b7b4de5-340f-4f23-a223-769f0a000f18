@@ -5,24 +5,24 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.BuyerModulePageLocator;
+import uistore.MadeInChinaBuyerModulePageLocator;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-public class BuyerModulePage {
+public class MadeInChinaBuyerModulePage {
     public static ExtentTest test;
     public static WebDriverHelper helper;
-    public BuyerModulePage(ExtentTest test){
+    public MadeInChinaBuyerModulePage(ExtentTest test){
         helper=new WebDriverHelper(Base.driver);
         this.test = test;
     }
     public void ClosePopUp(){
         try {
-            helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClosePopUp, 10);
-            helper.clickOnElement(BuyerModulePageLocator.ClosePopUp);
+            helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClosePopUp, 10);
+            helper.clickOnElement(MadeInChinaBuyerModulePageLocator.ClosePopUp);
             test.log(Status.PASS, "pop up closed");
             LoggerHandler.info("pop up closed");
         } catch (Exception e) {
@@ -32,8 +32,8 @@ public class BuyerModulePage {
     }
     public void HoverBuyer(){
         try {
-            helper.WaitForElementToBeVisible(BuyerModulePageLocator.HoverOnBuyer, 10);
-            helper.HoverOverElement(BuyerModulePageLocator.HoverOnBuyer);
+            helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.HoverOnBuyer, 10);
+            helper.hoverOverElement(MadeInChinaBuyerModulePageLocator.HoverOnBuyer);
             Screenshot.captureFullScreenshot("Buyer Services");
             Reporter.attachScreenshotToReport("Buyer Services", test, "Screenshot Attached to the report");
             test.log(Status.PASS, "Hovered on Buyer");
@@ -45,8 +45,8 @@ public class BuyerModulePage {
     }
     public void ClickNewUserGuide(){
         try {
-            helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClickNewUserGuide, 10);
-            helper.clickOnElement(BuyerModulePageLocator.ClickNewUserGuide);
+            helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClickNewUserGuide, 10);
+            helper.clickOnElement(MadeInChinaBuyerModulePageLocator.ClickNewUserGuide);
             helper.switchToAllTabs();
             Screenshot.captureFullScreenshot("New User Guide");
             Reporter.attachScreenshotToReport("New User guide", test, "Screenshot attached to the NewUserGuide Report");
@@ -82,8 +82,8 @@ public class BuyerModulePage {
     }
     public void ClickLogo(){
         try {
-            helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClickLogo, 10);
-            helper.clickOnElement(BuyerModulePageLocator.ClickLogo);
+            helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClickLogo, 10);
+            helper.clickOnElement(MadeInChinaBuyerModulePageLocator.ClickLogo);
             Screenshot.captureFullScreenshot("Made in china Logo");
             Reporter.attachScreenshotToReport("Made in china Logo", test, "Screentshot attached to the logo report");
             test.log(Status.PASS, "Clicked on Logo ");
@@ -95,8 +95,8 @@ public class BuyerModulePage {
     }
     public void ClickAuditedSuppliers(){
         try {
-            helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClickAuditedSuppliers, 10);
-            helper.clickOnElement(BuyerModulePageLocator.ClickAuditedSuppliers);
+            helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClickAuditedSuppliers, 10);
+            helper.clickOnElement(MadeInChinaBuyerModulePageLocator.ClickAuditedSuppliers);
             helper.switchToNewWindow();
             Screenshot.captureFullScreenshot("Audited Suppliers");
             Reporter.attachScreenshotToReport("Audited Suppliers", test, " Audited Suppliers ScreenShot Attached to the report");
@@ -131,8 +131,8 @@ public class BuyerModulePage {
     }
     public void ClickMeetSuppliers(){
         try {
-            helper.WaitForElementToBeVisible(BuyerModulePageLocator.ClickMeetSupplier, 10);
-            helper.clickOnElement(BuyerModulePageLocator.ClickMeetSupplier);
+            helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClickMeetSupplier, 10);
+            helper.clickOnElement(MadeInChinaBuyerModulePageLocator.ClickMeetSupplier);
             helper.switchToAllTabs();
             Screenshot.captureFullScreenshot("Meet Suppliers");
             Reporter.attachScreenshotToReport("Meet suppliers", test, "Meet suppliers ScreenShot Attached to report");

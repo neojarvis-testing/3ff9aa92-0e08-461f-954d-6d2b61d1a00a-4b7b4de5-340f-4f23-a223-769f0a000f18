@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class BuyerModulePageLocator {
+public class MadeInChinaBuyerModulePageLocator {
     public static By ClosePopUp=By.xpath("//span[@class='campaign-pop-close J-campaign-pop-close']");
     public static By HoverOnBuyer=By.xpath("//a[text()='Buyer']");
     public static By ClickNewUserGuide=By.xpath("//a[text()='New User Guide']");
