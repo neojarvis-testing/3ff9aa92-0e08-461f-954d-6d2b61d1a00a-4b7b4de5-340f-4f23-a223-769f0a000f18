@@ -27,7 +27,7 @@ public class MadeInChinaSignInPage {
    */
     public void verifySignIn(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.popup,6);
+            helper.waitForElementToBeVisible(MadeInChinaSignInPageLocator.popup,6);
             helper.clickOnElement(MadeInChinaSignInPageLocator.popup);
 
             String text = helper.getText(MadeInChinaSignInPageLocator.signintext);
@@ -49,8 +49,8 @@ public class MadeInChinaSignInPage {
    */
     public void hoverSignIn(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.signintext,6);
-            helper.HoverOverElement(MadeInChinaSignInPageLocator.signintext);
+            helper.waitForElementToBeVisible(MadeInChinaSignInPageLocator.signintext,6);
+            helper.hoverOverElement(MadeInChinaSignInPageLocator.signintext);
 
             test.log(Status.PASS,"Hovering SignIn success");
             LoggerHandler.info("Hovering SignIn success");
@@ -69,7 +69,7 @@ public class MadeInChinaSignInPage {
    */
     public void clickSignIn(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.joinfree, 10);
+            helper.waitForElementToBeVisible(MadeInChinaSignInPageLocator.joinfree, 10);
             helper.clickOnElement(MadeInChinaSignInPageLocator.joinfree);
             helper.switchToNewWindow();
             test.log(Status.PASS,"Clicking SignIn success");
@@ -90,7 +90,7 @@ public class MadeInChinaSignInPage {
    */
     public void clickemailbar(){
         try {
-            helper.WaitForElementToBeClickable(MadeInChinaSignInPageLocator.email,6);
+            helper.waitForElementToBeClickable(MadeInChinaSignInPageLocator.email,6);
             helper.clickOnElement(MadeInChinaSignInPageLocator.email);
             test.log(Status.PASS,"Clicking email success");
             LoggerHandler.info("Clicking email success");
@@ -110,7 +110,7 @@ public class MadeInChinaSignInPage {
    */
     public void enterdatatoemail(){
         try {
-            helper.SendKeys(MadeInChinaSignInPageLocator.email,"sair27774@gmail.com");
+            helper.sendKeys(MadeInChinaSignInPageLocator.email,"sair27774@gmail.com");
             test.log(Status.PASS,"entering data to email success");
             LoggerHandler.info("entering data to email success");
 
@@ -148,7 +148,7 @@ public class MadeInChinaSignInPage {
    */
     public void clickverify(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.verify,6);
+            helper.waitForElementToBeVisible(MadeInChinaSignInPageLocator.verify,6);
             helper.clickOnElement(MadeInChinaSignInPageLocator.verify);
             helper.switchToNewWindow();
             test.log(Status.PASS,"Clicking verify box success");
@@ -211,7 +211,7 @@ public class MadeInChinaSignInPage {
     public void clicksignInNOw(){
         try {
             Base.driver.navigate().refresh();
-            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.signnow,6);
+            helper.waitForElementToBeVisible(MadeInChinaSignInPageLocator.signnow,6);
             helper.clickOnElement(MadeInChinaSignInPageLocator.signnow);
             test.log(Status.PASS,"Clicking sign in success");
             LoggerHandler.info("Clicking sign in success");
@@ -231,7 +231,7 @@ public class MadeInChinaSignInPage {
     public void enteremailtologin(){
         try {
             helper.clickOnElement(MadeInChinaSignInPageLocator.inputemail);
-            helper.SendKeys(MadeInChinaSignInPageLocator.inputemail,"rdfghjkjhg@gmail.com");
+            helper.sendKeys(MadeInChinaSignInPageLocator.inputemail,"rdfghjkjhg@gmail.com");
             test.log(Status.PASS,"entering data in email success");
             LoggerHandler.info("entering data in email success");
             
@@ -251,7 +251,7 @@ public class MadeInChinaSignInPage {
     public void enterpasswordtologin(){
         try {
             helper.clickOnElement(MadeInChinaSignInPageLocator.password);
-            helper.SendKeys(MadeInChinaSignInPageLocator.password,"rdfghjk");
+            helper.sendKeys(MadeInChinaSignInPageLocator.password,"rdfghjk");
             test.log(Status.PASS,"entering data in password success");
             LoggerHandler.info("entering data in password success");
                 
@@ -381,7 +381,7 @@ public class MadeInChinaSignInPage {
         }
 
     }
-    public void testcase1(){
+    public void case1(){
         verifySignIn();
         hoverSignIn();
         clickSignIn();

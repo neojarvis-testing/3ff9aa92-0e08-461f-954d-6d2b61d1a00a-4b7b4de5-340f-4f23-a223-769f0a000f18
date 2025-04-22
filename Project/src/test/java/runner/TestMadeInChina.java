@@ -26,7 +26,7 @@ public class TestMadeInChina extends Base{
      */
     @BeforeClass
     public void initializeReport(){
-        report = Reporter.generateExtentReport("signin");
+        report = Reporter.generateExtentReport("MADE_IN_CHINA_Report");
 
     }
     /*
@@ -41,11 +41,11 @@ public class TestMadeInChina extends Base{
         openBrowser();
 
     }
-    @Test
-    public void case1(){
+    @Test(priority = 2)
+    public void testcase2(){
         test = report.createTest("signin");
         MadeInChinaSignInPage sp = new MadeInChinaSignInPage(test);
-        sp.testcase1();
+        sp.case1();
     }
     /*
      * a. Method Name: closeTheBrowser
