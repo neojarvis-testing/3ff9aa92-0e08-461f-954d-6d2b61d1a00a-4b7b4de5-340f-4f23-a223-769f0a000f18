@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class SpicesPageContactLocators {
+public class MadeInChinaSpicesPageContactLocators {
     public static By xmark = By.cssSelector("span[class='campaign-pop-close J-campaign-pop-close']"); 
     public static By searchBar = By.cssSelector("input[class='nail-search-input']");
     public static By contactNow = By.xpath("(//a[@class='btn btn-main'])[1]");

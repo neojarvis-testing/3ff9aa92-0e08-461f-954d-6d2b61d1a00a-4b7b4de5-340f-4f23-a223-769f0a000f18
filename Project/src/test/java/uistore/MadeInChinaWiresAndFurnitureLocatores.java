@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class WiresAndFurnitureLocatores {
+public class MadeInChinaWiresAndFurnitureLocatores {
     public static By searchBar = By.cssSelector("input[class = 'nail-search-input']");
     public static By searIcon = By.id("J-nail-search-submit");
     public static By wireResult = By.cssSelector("em[class = 'product_word']");

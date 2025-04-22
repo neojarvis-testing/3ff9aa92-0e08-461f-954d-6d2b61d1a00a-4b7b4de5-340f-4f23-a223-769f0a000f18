@@ -5,26 +5,26 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.SpicesPageContactLocators;
+import uistore.MadeInChinaSpicesPageContactLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
-public class SpicesPageContact {
-    public static WebDriverHelper helper;
-    public ExtentTest test;
+public class MadeInChinaSpicesPageContact {
+     WebDriverHelper helper;
+     ExtentTest test;
 
-    public SpicesPageContact(ExtentTest test){
+    public MadeInChinaSpicesPageContact(ExtentTest test){
         helper = new WebDriverHelper(Base.driver);
         this.test = test;
     }
 
     public void clickOnXmark(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.xmark, 10);
-            helper.clickOnElement(SpicesPageContactLocators.xmark);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.xmark, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.xmark);
             test.log(Status.PASS, "Clicked on the xmark");
             LoggerHandler.info("Clicked on the xmark");
         } catch (Exception e) {
@@ -35,8 +35,8 @@ public class SpicesPageContact {
 
     public void clickOnSearchBar(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.searchBar, 10);
-            helper.clickOnElement(SpicesPageContactLocators.searchBar);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.searchBar, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.searchBar);
             test.log(Status.PASS, "Clicked on the search bar");
             LoggerHandler.info("Clicked on the search bar");
         } catch (Exception e) {
@@ -47,8 +47,8 @@ public class SpicesPageContact {
 
     public void sendData(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.searchBar, 10);
-            helper.SendKeys(SpicesPageContactLocators.searchBar, "spices");
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.searchBar, 10);
+            helper.SendKeys(MadeInChinaSpicesPageContactLocators.searchBar, "spices");
             test.log(Status.PASS, "Data sent to the search bar");
             LoggerHandler.info("Data sent to the search bar");
         } catch (Exception e) {
@@ -59,8 +59,8 @@ public class SpicesPageContact {
 
     public void enterData(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.searchBar, 10);
-            helper.EnterAction(SpicesPageContactLocators.searchBar);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.searchBar, 10);
+            helper.EnterAction(MadeInChinaSpicesPageContactLocators.searchBar);
             test.log(Status.PASS, "Enter action performed");
             LoggerHandler.info("Enter action performed");
         } catch (Exception e) {
@@ -71,8 +71,8 @@ public class SpicesPageContact {
 
     public void clickOnContactNow(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.contactNow, 10);
-            helper.clickOnElement(SpicesPageContactLocators.contactNow);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.contactNow, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.contactNow);
             helper.switchToNewWindow();
             test.log(Status.PASS, "Clicked on the first contactNow");
             LoggerHandler.info("Clicked on the first contactNow");
@@ -84,8 +84,8 @@ public class SpicesPageContact {
 
     public void clickOnFirstProduct(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.firstProduct, 10);
-            helper.clickOnElement(SpicesPageContactLocators.firstProduct);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.firstProduct, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.firstProduct);
             helper.switchToNewWindow();
             test.log(Status.PASS, "Clicked on the first product");
             LoggerHandler.info("Clicked on the first product");
@@ -97,8 +97,8 @@ public class SpicesPageContact {
 
     public void clickOnContactSupplier(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.contactSeller, 10);
-            helper.clickOnElement(SpicesPageContactLocators.contactSeller);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.contactSeller, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.contactSeller);
             helper.switchToNewWindow();
             test.log(Status.PASS, "Clicked on the contactSupplier");
             LoggerHandler.info("Clicked on the contactSupplier");
@@ -111,8 +111,8 @@ public class SpicesPageContact {
 
     public void clickOnTextArea(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.textArea, 10);
-            helper.clickOnElement(SpicesPageContactLocators.textArea);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.textArea, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.textArea);
             test.log(Status.PASS, "Clicked on the textArea");
             LoggerHandler.info("Clicked on the textArea");
         } catch (Exception e) {
@@ -123,8 +123,8 @@ public class SpicesPageContact {
 
     public void sendDataToTextArea(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.textArea, 10);
-            helper.SendKeys(SpicesPageContactLocators.textArea, "I want to know more details about the item. ");
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.textArea, 10);
+            helper.SendKeys(MadeInChinaSpicesPageContactLocators.textArea, "I want to know more details about the item. ");
             test.log(Status.PASS, "Data sent to the textArea");
             LoggerHandler.info("Data sent to the textArea");
         } catch (Exception e) {
@@ -135,8 +135,8 @@ public class SpicesPageContact {
 
     public void clickOnEmailInput(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.emailInput, 10);
-            helper.clickOnElement(SpicesPageContactLocators.emailInput);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.emailInput, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.emailInput);
             test.log(Status.PASS, "Clicked on the emailInput");
             LoggerHandler.info("Clicked on the emailInput");
         } catch (Exception e) {
@@ -147,8 +147,8 @@ public class SpicesPageContact {
 
     public void sendDataToEmailInput(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.emailInput, 10);
-            helper.SendKeys(SpicesPageContactLocators.emailInput, "testmic@gmail.com");
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.emailInput, 10);
+            helper.SendKeys(MadeInChinaSpicesPageContactLocators.emailInput, "testmic@gmail.com");
             test.log(Status.PASS, "Data sent to the emailInput");
             LoggerHandler.info("Data sent to the emailInput");
         } catch (Exception e) {
@@ -159,8 +159,8 @@ public class SpicesPageContact {
 
     public void clickOnSendInquireNow(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.sendInquryNow, 10);
-            helper.clickOnElement(SpicesPageContactLocators.sendInquryNow);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.sendInquryNow, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.sendInquryNow);
             test.log(Status.PASS, "Clicked on the sendInquryNow");
             LoggerHandler.info("Clicked on the sendInquryNow");
         } catch (Exception e) {
@@ -171,7 +171,7 @@ public class SpicesPageContact {
 
     public void verifyTextSuccessfullySended(){
         try {
-            String text = helper.getText(SpicesPageContactLocators.sentSuccessfully);
+            String text = helper.getText(MadeInChinaSpicesPageContactLocators.sentSuccessfully);
             Assert.assertEquals("text, Sent Successfully!", text);
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
@@ -183,8 +183,8 @@ public class SpicesPageContact {
 
     public void clickOnAccountPassword(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.accountPassword, 10);
-            helper.clickOnElement(SpicesPageContactLocators.accountPassword);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.accountPassword, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.accountPassword);
             test.log(Status.PASS, "Clicked on the accountPassword");
             LoggerHandler.info("Clicked on the accountPassword");
         } catch (Exception e) {
@@ -195,8 +195,8 @@ public class SpicesPageContact {
 
     public void sendDataToAccountPassword(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.accountPassword, 10);
-            helper.SendKeys(SpicesPageContactLocators.accountPassword, "testadmin@123");
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.accountPassword, 10);
+            helper.SendKeys(MadeInChinaSpicesPageContactLocators.accountPassword, "testadmin@123");
             test.log(Status.PASS, "Data sent to the accountPassword");
             LoggerHandler.info("Data sent to the emailInput");
         } catch (Exception e) {
@@ -207,8 +207,8 @@ public class SpicesPageContact {
 
     public void clickOncheckBox(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.checkBox, 10);
-            helper.clickOnElement(SpicesPageContactLocators.checkBox);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.checkBox, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.checkBox);
             test.log(Status.PASS, "Clicked on the checkBox");
             LoggerHandler.info("Clicked on the checkBox");
         } catch (Exception e) {
@@ -219,8 +219,8 @@ public class SpicesPageContact {
 
     public void clickOnVerifyEmail(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.verifyEmail, 10);
-            helper.clickOnElement(SpicesPageContactLocators.verifyEmail);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.verifyEmail, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.verifyEmail);
             Screenshot.captureFullScreenshot("otp");
             Reporter.attachScreenshotToReport("otp page", test, "report of the otp page");
             test.log(Status.PASS, "Clicked on the verifyEmail");

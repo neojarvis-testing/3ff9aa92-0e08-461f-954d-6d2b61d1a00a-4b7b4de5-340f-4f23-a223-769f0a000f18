@@ -5,25 +5,25 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.SpicesPageContactLocators;
-import uistore.WiresAndFurnitureLocatores;
+import uistore.MadeInChinaSpicesPageContactLocators;
+import uistore.MadeInChinaWiresAndFurnitureLocatores;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
-public class WiresAndFurniturePage {
-    public static WebDriverHelper helper;
-    public ExtentTest test;
+public class MadeInChinaWiresAndFurniturePage {
+    WebDriverHelper helper;
+    ExtentTest test;
 
-    public WiresAndFurniturePage(ExtentTest test){
+    public MadeInChinaWiresAndFurniturePage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver);
         this.test = test;
     }
 
     public void clickOnXmark(){
         try {
-            helper.WaitForElementToBeVisible(SpicesPageContactLocators.xmark, 10);
-            helper.clickOnElement(SpicesPageContactLocators.xmark);
+            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.xmark, 10);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.xmark);
             test.log(Status.PASS, "Clicked on the xmark");
             LoggerHandler.info("Clicked on the xmark");
         } catch (Exception e) {
@@ -34,8 +34,8 @@ public class WiresAndFurniturePage {
 
     public void clickOnSearchBar(){
         try {
-            helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.searchBar, 10);
-            helper.clickOnElement(WiresAndFurnitureLocatores.searchBar);
+            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
+            helper.clickOnElement(MadeInChinaWiresAndFurnitureLocatores.searchBar);
             test.log(Status.PASS, "Clicked on the search bar");
             LoggerHandler.info("Clicked on the search bar");
         } catch (Exception e) {
@@ -46,8 +46,8 @@ public class WiresAndFurniturePage {
 
     public void sendData(String value){
         try {
-            helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.searchBar, 10);
-            helper.SendKeys(WiresAndFurnitureLocatores.searchBar, value);
+            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
+            helper.SendKeys(MadeInChinaWiresAndFurnitureLocatores.searchBar, value);
             test.log(Status.PASS, "Data sent to the search bar");
             LoggerHandler.info("Data sent to the search bar");
         } catch (Exception e) {
@@ -58,8 +58,8 @@ public class WiresAndFurniturePage {
 
     public void enterData(){
         try {
-            helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.searchBar, 10);
-            helper.EnterAction(WiresAndFurnitureLocatores.searchBar);
+            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
+            helper.EnterAction(MadeInChinaWiresAndFurnitureLocatores.searchBar);
             test.log(Status.PASS, "Enter action performed");
             LoggerHandler.info("Enter action performed");
         } catch (Exception e) {
@@ -70,7 +70,7 @@ public class WiresAndFurniturePage {
 
     public void veirfyTextContainsWire(){
         try {
-            String text = helper.getText(WiresAndFurnitureLocatores.firstProduct);
+            String text = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
             Assert.assertTrue(text.contains("Wire"));
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
@@ -82,8 +82,8 @@ public class WiresAndFurniturePage {
 
     public void clickOnFirstProductWire(){
         try {
-            helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.firstProduct, 10);
-            helper.clickOnElement(WiresAndFurnitureLocatores.firstProduct);
+            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.firstProduct, 10);
+            helper.clickOnElement(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
             helper.switchToNewWindow();
             test.log(Status.PASS, "Clicked on the firstProduct");
             LoggerHandler.info("Clicked on the firstProduct");
@@ -95,7 +95,7 @@ public class WiresAndFurniturePage {
 
     public void verifyContactSupplier(){
         try {
-            String contactText = helper.getText(WiresAndFurnitureLocatores.firstProduct);
+            String contactText = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
             Assert.assertTrue(contactText.contains("Contact Supplier"));
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
@@ -107,8 +107,8 @@ public class WiresAndFurniturePage {
 
     public void clickOnLogo(){
         try {
-            helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.logo, 10);
-            helper.clickOnElement(WiresAndFurnitureLocatores.logo);
+            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.logo, 10);
+            helper.clickOnElement(MadeInChinaWiresAndFurnitureLocatores.logo);
             test.log(Status.PASS, "Clicked on the logo");
             LoggerHandler.info("Clicked on the logo");
         } catch (Exception e) {
@@ -119,7 +119,7 @@ public class WiresAndFurniturePage {
 
     public void veirfyTextContainsFurniture(){
         try {
-            String text = helper.getText(WiresAndFurnitureLocatores.firstProduct);
+            String text = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
             Assert.assertTrue(text.contains("Furniture"));
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
@@ -133,8 +133,8 @@ public class WiresAndFurniturePage {
         try {
             // helper.ScrollByPixel(0, 5000);
             // Thread.sleep(3000);
-            helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.clickOn2InPagination, 10);
-            helper.clickOnElement(WiresAndFurnitureLocatores.clickOn2InPagination);
+            // helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.clickOn2InPagination, 10);
+            helper.clickOnElement(MadeInChinaWiresAndFurnitureLocatores.clickOn2InPagination);
             test.log(Status.PASS, "Clicked on the clickOn2InPagination");
             LoggerHandler.info("Clicked on the clickOn2InPagination");
         } catch (Exception e) {
