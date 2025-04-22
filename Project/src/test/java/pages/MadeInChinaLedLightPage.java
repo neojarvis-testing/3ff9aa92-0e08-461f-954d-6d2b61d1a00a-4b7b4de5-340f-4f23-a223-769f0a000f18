@@ -21,7 +21,7 @@ public class MadeInChinaLedLightPage {
     }
     public void closePopUp(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,3);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,3);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.popup);
             test.log(Status.PASS, "closed pop up");
             LoggerHandler.info("closed pop up");
@@ -32,11 +32,11 @@ public class MadeInChinaLedLightPage {
     }
     public void clickAndSendData(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.searchbar,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.searchbar,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.searchbar);
             String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 0, 0);
-            helper.SendKeys(MadeInChinaLedLightLocator.searchbar,value);
-            helper.EnterAction(MadeInChinaLedLightLocator.searchbar);
+            helper.sendKeys(MadeInChinaLedLightLocator.searchbar,value);
+            helper.enterAction(MadeInChinaLedLightLocator.searchbar);
             test.log(Status.PASS, "clicked and sent data to search bar");
             LoggerHandler.info("clicked and sent data to search bar");
         } catch (Exception e) {
@@ -57,7 +57,7 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnMore(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.more,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.more,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.more);
             test.log(Status.PASS, "clicked on more");
             LoggerHandler.info("clicked on more");
@@ -68,7 +68,7 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnLedStripLight(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.ledStripFilter,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.ledStripFilter,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.ledStripFilter);
             test.log(Status.PASS, "clicked on ledStripFilter");
             LoggerHandler.info("clicked on ledStripFilter");
@@ -90,8 +90,8 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnContactNow(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.contactNow,3);
-            helper.ClickAndSwitch(MadeInChinaLedLightLocator.contactNow);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.contactNow,3);
+            helper.clickAndSwitch(MadeInChinaLedLightLocator.contactNow);
             test.log(Status.PASS, "clicked on contact Now");
             LoggerHandler.info("clicked on contact Now");
         } catch (Exception e) {
@@ -112,10 +112,10 @@ public class MadeInChinaLedLightPage {
     }
     public void clickAndSendInquiry(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.content,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.content,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.content);
             String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 1, 0);
-            helper.SendKeys(MadeInChinaLedLightLocator.content,value);
+            helper.sendKeys(MadeInChinaLedLightLocator.content,value);
             test.log(Status.PASS, "clicked and sent data to content field");
             LoggerHandler.info("clicked and sent data to content field");
         } catch (Exception e) {
@@ -125,10 +125,10 @@ public class MadeInChinaLedLightPage {
     }
     public void clickAndSendEmail(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.email,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.email,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.email);
             String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 2, 0);
-            helper.SendKeys(MadeInChinaLedLightLocator.email,value);
+            helper.sendKeys(MadeInChinaLedLightLocator.email,value);
             test.log(Status.PASS, "clicked and sent data to email field");
             LoggerHandler.info("clicked and sent data to email field");
         } catch (Exception e) {
@@ -138,7 +138,7 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnSendInquiryNow(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.sendEnquiry,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.sendEnquiry,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.sendEnquiry);
             test.log(Status.PASS, "clicked on sendEnquiry");
             LoggerHandler.info("clicked on sendEnquiry");
@@ -149,7 +149,7 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnCrossMark(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.crossMark,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.crossMark,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.crossMark);
             test.log(Status.PASS, "clicked on crossMark");
             LoggerHandler.info("clicked on crossMark");
@@ -160,7 +160,7 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnLogo(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.logo,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.logo,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.logo);
             test.log(Status.PASS, "clicked on logo");
             LoggerHandler.info("clicked on logo");
@@ -182,8 +182,8 @@ public class MadeInChinaLedLightPage {
     }
     public void hoverOnLigtsAndLightning(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.lightsAndLighting,3);
-            helper.HoverOverElement(MadeInChinaLedLightLocator.lightsAndLighting);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.lightsAndLighting,3);
+            helper.hoverOverElement(MadeInChinaLedLightLocator.lightsAndLighting);
             test.log(Status.PASS, "Hovered on lights And Lighting ");
             LoggerHandler.info("Hovered On lights And Lighting");
         } catch (Exception e) {
@@ -193,7 +193,7 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnLedTube(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.ledTube,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.ledTube,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.ledTube);
             test.log(Status.PASS, "clicked on ledTube");
             LoggerHandler.info("clicked on ledTube");
@@ -215,7 +215,7 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnLedTubeFilter(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.ledTubeLightFilter,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.ledTubeLightFilter,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.ledTubeLightFilter);
             test.log(Status.PASS, "clicked on ledTubeLightFilter");
             LoggerHandler.info("clicked on ledTubeLightFilter");
@@ -226,7 +226,7 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnColorTemprature(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.colorTemp,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.colorTemp,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.colorTemp);
             test.log(Status.PASS, "clicked on color Temprature");
             LoggerHandler.info("clicked on color Temprature");
@@ -237,7 +237,7 @@ public class MadeInChinaLedLightPage {
     }
     public void clickOnWarmWhite(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLedLightLocator.warmwhite,3);
+            helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.warmwhite,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.warmwhite);
             test.log(Status.PASS, "clicked on color warm white");
             LoggerHandler.info("clicked on color warm white");

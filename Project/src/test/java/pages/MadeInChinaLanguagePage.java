@@ -19,9 +19,16 @@ public class MadeInChinaLanguagePage {
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
     }
+    /*
+     * Method name: closePopUp.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will help us to close the pop up.
+     * Parameters: None.
+     * return type: void.
+     */
     public void closePopUp(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,3);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,3);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.popup);
             test.log(Status.PASS, "closed pop up");
             LoggerHandler.info("closed pop up");
@@ -30,10 +37,17 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not close pop up");
         }
     }
+    /*
+     * Method name: hoverOnSignIn.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will over to SignIn.
+     * Parameters: None.
+     * return type: void.
+     */
     public void hoverOnSignIn(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.signIn,3);
-            helper.HoverOverElement(MadeInChinaLanguagePageLocator.signIn);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.signIn,3);
+            helper.hoverOverElement(MadeInChinaLanguagePageLocator.signIn);
             test.log(Status.PASS, "Hovered on SignIn");
             LoggerHandler.info("Hovered On SignIn");
         } catch (Exception e) {
@@ -41,10 +55,17 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not hover over SignIn");
         }
     }
+     /*
+     * Method name: clickOnJoinFree.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on Join Free.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnJoinFree(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,3);
-            helper.ClickAndSwitch(MadeInChinaLanguagePageLocator.joinFree);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,3);
+            helper.clickAndSwitch(MadeInChinaLanguagePageLocator.joinFree);
             test.log(Status.PASS, "clicked on Join Free");
             LoggerHandler.info("clicked on Join Free");
         } catch (Exception e) {
@@ -52,6 +73,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not click on Join Free");
         }
     }
+     /*
+     * Method name: verifyCreateAccount.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify the heading.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyCreateAccount(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.verifyCreateAccount);
@@ -63,9 +91,16 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Create account is not displayed");
         }
     }
+     /*
+     * Method name: clickOnSignInNow.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on Sign in Now.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnSignInNow(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.signInNow,3);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.signInNow,3);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.signInNow);
             test.log(Status.PASS, "clicked on Sign in now");
             LoggerHandler.info("clicked on Sign in now");
@@ -74,6 +109,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not click on Sign in now");
         }
     }
+     /*
+     * Method name: verifySignInNow.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify Sign In Now Page.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifySignInNow(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.verifySignIn);
@@ -86,10 +128,17 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Not verified that we are on sign in page");
         }
     }
+     /*
+     * Method name: hoverOnSignIn.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will over to SignIn.
+     * Parameters: None.
+     * return type: void.
+     */
     public void changeToSpanish(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
-            helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
+            helper.hoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.spanish);
             test.log(Status.PASS, "clicked on spanish");
             LoggerHandler.info("clicked on spanish");
@@ -113,8 +162,8 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToGerman(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
-            helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
+            helper.hoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.german);
             test.log(Status.PASS, "clicked on German");
             LoggerHandler.info("clicked on German");
@@ -138,8 +187,8 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToFrench(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
-            helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
+            helper.hoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.french);
             test.log(Status.PASS, "clicked on French");
             LoggerHandler.info("clicked on French");
@@ -163,8 +212,8 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToRussian(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
-            helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
+            helper.hoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.russian);
             test.log(Status.PASS, "clicked on Russian");
             LoggerHandler.info("clicked on Russian");
@@ -188,8 +237,8 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToJapanese(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
-            helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
+            helper.hoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.japanese);
             test.log(Status.PASS, "clicked on Japanese");
             LoggerHandler.info("clicked on Japanese");
@@ -213,8 +262,8 @@ public class MadeInChinaLanguagePage {
     }
     public void changeToEnglish(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
-            helper.HoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
+            helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
+            helper.hoverOverElement(MadeInChinaLanguagePageLocator.languageSelect);
             helper.clickOnElement(MadeInChinaLanguagePageLocator.english);
             test.log(Status.PASS, "clicked on English");
             LoggerHandler.info("clicked on English");
