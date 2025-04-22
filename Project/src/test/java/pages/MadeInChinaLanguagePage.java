@@ -147,6 +147,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not click on spanish");
         }
     }
+    /*
+     * Method name: verifySpanish.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify the changed language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifySpanish(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
@@ -160,6 +167,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Not changed to spanish");
         }
     }
+    /*
+     * Method name: changeToGerman.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will change the language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void changeToGerman(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
@@ -172,6 +186,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not click on German");
         }
     }
+    /*
+     * Method name: verifyGerman.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify the changed language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyGerman(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
@@ -185,6 +206,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Not changed to German");
         }
     }
+    /*
+     * Method name: changeToFrench.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will change the language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void changeToFrench(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
@@ -197,6 +225,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not click on French");
         }
     }
+    /*
+     * Method name: verifyFrench.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify the changed language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyFrench(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
@@ -210,6 +245,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Not changed to French");
         }
     }
+    /*
+     * Method name: changeToRussian.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will change the language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void changeToRussian(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
@@ -222,6 +264,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not click on Russian");
         }
     }
+    /*
+     * Method name: verifyRussian.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify the changed language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyRussian(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
@@ -235,6 +284,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Not changed to Russian");
         }
     }
+    /*
+     * Method name: changeToJapanese.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will change the language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void changeToJapanese(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
@@ -247,6 +303,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not click on Japanese");
         }
     }
+    /*
+     * Method name: verifyJapanese.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify the changed language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyJapanese(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
@@ -260,6 +323,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Not changed to Japanese");
         }
     }
+    /*
+     * Method name: changeToEnglish.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will change the language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void changeToEnglish(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.languageSelect,3);
@@ -272,6 +342,13 @@ public class MadeInChinaLanguagePage {
             LoggerHandler.error("Did not click on English");
         }
     }
+    /*
+     * Method name: verifyEnglish.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify the changed language.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyEnglish(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
@@ -284,7 +361,14 @@ public class MadeInChinaLanguagePage {
             test.log(Status.FAIL, "Not changed to English");
             LoggerHandler.error("Not changed to English");
         }
-    } 
+    }
+    /*
+     * Method name: languageTestCases.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will call all the methods.
+     * Parameters: None.
+     * return type: void.
+     */ 
     public void languageTestCases(){
         closePopUp();
         hoverOnSignIn();
