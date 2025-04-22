@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import pages.DiamondMembershipMadeInChinaPage;
 import pages.MadeInChinaHotItemsPage;
 import utils.Base;
 import utils.Reporter;
@@ -30,6 +31,12 @@ public class TestMadeInChina extends Base{
         test = reports.createTest("All Hot Items");
         MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);
         hotItems.hoteItems();
+    }
+    @Test(priority = 1,enabled = true)
+    public void diamond(){
+        test = reports.createTest("Diamond Membership");
+        DiamondMembershipMadeInChinaPage diamond = new DiamondMembershipMadeInChinaPage(test);
+        diamond.diamondMember();
     }
     @AfterMethod
     public void close(){
