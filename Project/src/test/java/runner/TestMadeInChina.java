@@ -39,7 +39,6 @@ public class TestMadeInChina extends Base{
 	public void openTheBrowser() {
 		openBrowser();
 	}
-    
    /*
     * a.Method Name: navigation
     * b.Author Name: Pruthviraj Batti
@@ -53,7 +52,6 @@ public class TestMadeInChina extends Base{
         MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
         madeInChinaNavigationPage.navigation();
     }
-    
    /*
     * a.Method Name: productCategory
     * b.Author Name: Pruthviraj Batti
