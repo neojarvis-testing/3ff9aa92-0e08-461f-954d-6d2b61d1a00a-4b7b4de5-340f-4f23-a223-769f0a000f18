@@ -16,6 +16,13 @@ public class ExcelReader {
     public static XSSFCell col;
     public static int rowvalue;
     public static int colvalue;
+    /*
+     * Method name: readData
+     * AuthorName: Rishi Prashar
+     * Description: This method will help us to read the data from the excel.
+     * Parameters: Path of the excel file, sheetName, rowNumber, colNumber
+     * return type: String
+     */
     public static String readData(String path, String sheetName, int rowIndex, int colIndex)
     {
         String cellData = "";

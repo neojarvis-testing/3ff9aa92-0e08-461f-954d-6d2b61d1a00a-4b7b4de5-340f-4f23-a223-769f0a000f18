@@ -1,6 +1,5 @@
 package runner;
 
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -10,12 +9,14 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import pages.MadeInChinaBuyerModulePage;
 import utils.Base;
 import utils.Reporter;
 
 import pages.DiamondMembershipMadeInChinaPage;
+import pages.MadeInChinaBuyerModulePage;
 import pages.MadeInChinaHotItemsPage;
+import pages.MadeInChinaLanguagePage;
+import pages.MadeInChinaLedLightPage;
 import pages.MadeInChinaNavigationPage;
 import pages.MadeInChinaProductDirectoryPage;
 import pages.MadeInChinaSpicesPageContact;
@@ -33,16 +34,11 @@ public class TestMadeInChina extends Base{
      * e.Paramenter List:none
      */
     @BeforeClass
-    public void GenerateReport(){
-        report=Reporter.generateExtentReport("MADE_IN_CHINA_Report");
-    }
-    /* a. Method Name: open
     public void initializeReport() {
         report=Reporter.generateExtentReport("MADE_IN_CHINA_Report");
     }
-    
-	/*
-     * a. Method Name: openTheBrowser
+    /*
+     * a. Method Name: open
      * b. Author Name: Team_09
      * c. Description: Opens the browser before each test.
      * d. Return Type: void
@@ -52,6 +48,21 @@ public class TestMadeInChina extends Base{
     public void openTheBrowser() {
         openBrowser();
     }
+    @Test(priority = 5, enabled = true)
+    public void languageTests()
+    {
+        test = report.createTest("Test Case 5");
+        MadeInChinaLanguagePage language = new MadeInChinaLanguagePage(test);
+        language.languageTestCases();
+    }
+    @Test(priority = 6, enabled = true)
+    public void lightsTests()
+    {
+        test = report.createTest("Test Case 6");
+        MadeInChinaLedLightPage led = new MadeInChinaLedLightPage(test);
+        led.ledTestCases();
+    }
+    
     @Test (priority = 7, enabled = true)
     public void testCase(){
         test=report.createTest("testCase7");
