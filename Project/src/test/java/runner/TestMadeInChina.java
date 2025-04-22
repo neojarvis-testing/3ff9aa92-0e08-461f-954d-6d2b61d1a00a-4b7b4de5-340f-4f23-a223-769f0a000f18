@@ -27,12 +27,12 @@ public class TestMadeInChina extends Base{
 		openBrowser();
         
 	}
-    // @Test(priority = 9)
-    // public void navigation(){
-    //     test=report.createTest("Navigation Between Categories");
-    //     MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
-    //     madeInChinaNavigationPage.navigation();
-    // }
+    @Test(priority = 9)
+    public void navigation(){
+        test=report.createTest("Navigation Between Categories");
+        MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
+        madeInChinaNavigationPage.navigation();
+    }
 	@Test(priority = 10)
 	public void productCategory(){
 		test=report.createTest("Product Category");

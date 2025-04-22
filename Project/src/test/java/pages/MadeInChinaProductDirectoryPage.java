@@ -10,6 +10,7 @@ import uistore.MadeInChinaProductDirectoryPageLocators;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class MadeInChinaProductDirectoryPage {
@@ -131,10 +132,13 @@ public class MadeInChinaProductDirectoryPage {
     public void clickOnAgriculturalMachinery(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.agriculturalMachinery, 10);
+            Screenshot.captureHighlightedElementScreenshot(MadeInChinaProductDirectoryPageLocators.agriculturalMachinery, "Highlighted_Agricultural_Machinery");
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.agriculturalMachinery);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Agricultural Machinery");
             test.log(Status.PASS, "Successfully clicked on Agricultural Machinery");
+            Screenshot.captureFullScreenshot("agricultural_machinery");
+           
         } catch (Exception e) {
             LoggerHandler.error("Successfully clicked on Agricultural Machinery");
             test.log(Status.FAIL, "Successfully clicked on Agricultural Machinery");
@@ -155,8 +159,6 @@ public class MadeInChinaProductDirectoryPage {
         try {
             String text=helper.getURL();
             Assert.assertTrue(text.contains(url));
-            // System.out.println(text);
-            // System.out.println(url);
             LoggerHandler.info("Successfully  verified the url "+url);
             test.log(Status.PASS,"Successfully verified the url  "+url );
         } catch (Exception e) {

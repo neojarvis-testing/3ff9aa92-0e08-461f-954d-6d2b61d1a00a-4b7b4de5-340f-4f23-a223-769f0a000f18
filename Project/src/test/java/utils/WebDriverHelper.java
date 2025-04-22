@@ -113,7 +113,7 @@ public class WebDriverHelper {
         for (String child : set) {
             if (!child.equals(parent)) {
                 driver.switchTo().window(child);
-                // list.add(child);
+                list.add(child);
             } 
         }
     }
