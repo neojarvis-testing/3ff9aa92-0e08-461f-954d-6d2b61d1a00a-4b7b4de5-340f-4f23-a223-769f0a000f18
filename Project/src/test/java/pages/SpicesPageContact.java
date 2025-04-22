@@ -69,6 +69,19 @@ public class SpicesPageContact {
         }
     }
 
+    public void clickOnContactNow(){
+        try {
+            helper.WaitForElementToBeVisible(SpicesPageContactLocators.contactNow, 10);
+            helper.clickOnElement(SpicesPageContactLocators.contactNow);
+            helper.switchToNewWindow();
+            test.log(Status.PASS, "Clicked on the first contactNow");
+            LoggerHandler.info("Clicked on the first contactNow");
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Not clicked on the first contactNow");
+            LoggerHandler.info("Not clicked on the first contactNow");
+        }
+    }
+
     public void clickOnFirstProduct(){
         try {
             helper.WaitForElementToBeVisible(SpicesPageContactLocators.firstProduct, 10);
@@ -223,8 +236,7 @@ public class SpicesPageContact {
         clickOnSearchBar();
         sendData();
         enterData();
-        clickOnFirstProduct();
-        clickOnContactSupplier();
+        clickOnContactNow();
         clickOnTextArea();
         sendDataToTextArea();
         clickOnEmailInput();

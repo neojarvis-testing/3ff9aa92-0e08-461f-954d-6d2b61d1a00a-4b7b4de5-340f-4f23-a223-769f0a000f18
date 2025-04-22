@@ -21,7 +21,6 @@ import org.openqa.selenium.TakesScreenshot;
 public class Reporter extends Base {
     public static TakesScreenshot ts;
    
-    
     public static ExtentReports generateExtentReport(String reportName) {
         ExtentReports extentReport = new ExtentReports();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");

@@ -1,0 +1,30 @@
+2025.04.22.04.16.17 INFO  utils.LoggerHandler - Clicked on the xmark
+2025.04.22.04.16.17 INFO  utils.LoggerHandler - Clicked on the search bar
+2025.04.22.04.16.17 INFO  utils.LoggerHandler - Data sent to the search bar
+2025.04.22.04.16.19 INFO  utils.LoggerHandler - Enter action performed
+2025.04.22.04.16.20 INFO  utils.LoggerHandler - Clicked on the first product
+2025.04.22.04.16.23 INFO  utils.LoggerHandler - Clicked on the contactSupplier
+2025.04.22.04.16.24 INFO  utils.LoggerHandler - Clicked on the textArea
+2025.04.22.04.16.25 INFO  utils.LoggerHandler - Data sent to the textArea
+2025.04.22.04.16.25 INFO  utils.LoggerHandler - Clicked on the emailInput
+2025.04.22.04.16.25 INFO  utils.LoggerHandler - Data sent to the emailInput
+2025.04.22.04.16.25 INFO  utils.LoggerHandler - Clicked on the sendInquryNow
+2025.04.22.04.16.30 INFO  utils.LoggerHandler - Text Not Verified
+2025.04.22.04.16.46 INFO  utils.LoggerHandler - Clicked on the accountPassword
+2025.04.22.04.17.02 INFO  utils.LoggerHandler - Data sent to the emailInput
+2025.04.22.04.17.17 INFO  utils.LoggerHandler - Clicked on the checkBox
+2025.04.22.04.17.23 INFO  utils.LoggerHandler - Clicked on the verifyEmail
+2025.04.22.04.17.27 INFO  utils.LoggerHandler - Clicked on the xmark
+2025.04.22.04.17.27 INFO  utils.LoggerHandler - Clicked on the search bar
+2025.04.22.04.17.27 INFO  utils.LoggerHandler - Data sent to the search bar
+2025.04.22.04.17.29 INFO  utils.LoggerHandler - Enter action performed
+2025.04.22.04.17.29 INFO  utils.LoggerHandler - Text Verified
+2025.04.22.04.17.31 INFO  utils.LoggerHandler - Clicked on the firstProduct
+2025.04.22.04.17.34 INFO  utils.LoggerHandler - Clicked on the logo
+2025.04.22.04.17.35 INFO  utils.LoggerHandler - Clicked on the search bar
+2025.04.22.04.17.35 INFO  utils.LoggerHandler - Data sent to the search bar
+2025.04.22.04.17.37 INFO  utils.LoggerHandler - Enter action performed
+2025.04.22.04.17.37 INFO  utils.LoggerHandler - Text Verified
+2025.04.22.04.17.40 INFO  utils.LoggerHandler - Clicked on the clickOn2InPagination
+2025.04.22.04.17.42 INFO  utils.LoggerHandler - Clicked on the logo
+2025.04.22.04.17.42 INFO  utils.LoggerHandler - Title Verified

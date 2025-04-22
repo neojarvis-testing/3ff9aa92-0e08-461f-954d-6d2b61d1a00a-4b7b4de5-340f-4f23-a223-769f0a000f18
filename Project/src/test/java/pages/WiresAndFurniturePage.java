@@ -129,9 +129,9 @@ public class WiresAndFurniturePage {
         }   
     }
 
-    public void clikOnPagination2PAge(){
+    public void clikOnPagination2Page(){
         try {
-            helper.javascriptScroll(WiresAndFurnitureLocatores.clickOn2InPagination);
+            helper.JavascriptExecutor(WiresAndFurnitureLocatores.clickOn2InPagination);
             helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.clickOn2InPagination, 10);
             helper.javascriptClick(WiresAndFurnitureLocatores.clickOn2InPagination);
             test.log(Status.PASS, "Clicked on the clickOn2InPagination");
@@ -166,7 +166,7 @@ public class WiresAndFurniturePage {
         sendData("Furniture");
         enterData();
         veirfyTextContainsFurniture();
-        clikOnPagination2PAge();
+        clikOnPagination2Page();
         clickOnLogo();
         verifyHomePage();
 
