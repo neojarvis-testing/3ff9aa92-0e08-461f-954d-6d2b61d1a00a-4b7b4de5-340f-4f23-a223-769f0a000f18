@@ -19,6 +19,7 @@ import pages.MadeInChinaLanguagePage;
 import pages.MadeInChinaLedLightPage;
 import pages.MadeInChinaNavigationPage;
 import pages.MadeInChinaProductDirectoryPage;
+import pages.MadeInChinaSignInPage;
 import pages.MadeInChinaSpicesPageContact;
 import pages.MadeInChinaWiresAndFurniturePage;
 import utils.*;
@@ -34,20 +35,30 @@ public class TestMadeInChina extends Base{
      * e.Paramenter List:none
      */
     @BeforeClass
-    public void initializeReport() {
-        report=Reporter.generateExtentReport("MADE_IN_CHINA_Report");
+    public void initializeReport(){
+        report = Reporter.generateExtentReport("MADE_IN_CHINA_Report");
+
     }
     /*
-     * a. Method Name: open
+     * a. Method Name: openTheBrowser
      * b. Author Name: Team_09
      * c. Description: Opens the browser before each test.
      * d. Return Type: void
      * e. Parameter List: None
      */
     @BeforeMethod
-    public void openTheBrowser() {
+    public void openTheBrowser(){
         openBrowser();
+
     }
+    @Test(priority = 2)
+    public void testcase2(){
+        test = report.createTest("signin");
+        MadeInChinaSignInPage sp = new MadeInChinaSignInPage(test);
+        sp.case1();
+    }
+    
+    
     @Test(priority = 5, enabled = true)
     public void languageTests()
     {
