@@ -13,12 +13,18 @@ import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 public class MadeInChinaBuyerModulePage {
-    public static ExtentTest test;
-    public static WebDriverHelper helper;
+    ExtentTest test;
+    WebDriverHelper helper;
     public MadeInChinaBuyerModulePage(ExtentTest test){
         helper=new WebDriverHelper(Base.driver);
         this.test = test;
     }
+    /*
+     * a.Method Name: close Pop Up
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to close the pop up 
+     * d.Return Type: void
+     */
     public void ClosePopUp(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClosePopUp, 10);
@@ -30,6 +36,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Failed to close the pop up");
         }
     }
+    /*
+     * a.Method Name: Hover Buyer
+     * b.Author Name: Samhitha
+     * c.Description: This method hovers on the buyer 
+     * d.Return Type: void
+     */
     public void HoverBuyer(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.HoverOnBuyer, 10);
@@ -43,6 +55,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Failed to locate the element to be hovered");
         }
     }
+    /*
+     * a.Method Name: Click new user guide
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to close the pop up 
+     * d.Return Type: void
+     */
     public void ClickNewUserGuide(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClickNewUserGuide, 10);
@@ -57,6 +75,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Couldn't click on new user guide");
         }
     }
+    /*
+     * a.Method Name: Verify URL
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to Verify the URL 
+     * d.Return Type: void
+     */
     public void VerifyURL(){
         try {
             String url=Base.driver.getCurrentUrl();
@@ -68,6 +92,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Url didin't match");
         }
     }
+    /*
+     * a.Method Name: Verify Title
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to Verify Title
+     * d.Return Type: void
+     */
     public void VerifyTitle(){
         try{
             String title = Base.driver.getTitle();
@@ -80,6 +110,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Invalid Title");
         }
     }
+    /*
+     * a.Method Name: Click Logo
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to click on logo 
+     * d.Return Type: void
+     */
     public void ClickLogo(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClickLogo, 10);
@@ -93,6 +129,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Couldn't click on logo");
         }
     }
+    /*
+     * a.Method Name: Click Audited Suppliers
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to click on audited suppliers 
+     * d.Return Type: void
+     */
     public void ClickAuditedSuppliers(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClickAuditedSuppliers, 10);
@@ -107,6 +149,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Couldn't click on Audited Suppliers");
         }
     }
+    /*
+     * a.Method Name: Verify Url2
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to verify the url which contains audited supplier
+     * d.Return Type: void
+     */
     public void VerifyURL2(){
         try {
             String url2=Base.driver.getCurrentUrl();
@@ -118,6 +166,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Invalid URL");
         }
     }
+    /*
+     * a.Method Name: Verify Title
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to Verify Title
+     * d.Return Type: void
+     */
     public void VerifyTitle2(){
         try {
             String title2=Base.driver.getTitle();
@@ -129,6 +183,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Couldn't verify the title Audited Suppliers");
         }
     }
+    /*
+     * a.Method Name: Click Audited Suppliers
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to click on audited suppliers 
+     * d.Return Type: void
+     */
     public void ClickMeetSuppliers(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClickMeetSupplier, 10);
@@ -143,6 +203,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Clicked on Meet suppliers link");
         }
     }
+    /*
+     * a.Method Name: Verify Url2
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to verify the url which contains private sourcing meeting
+     * d.Return Type: void
+     */
     public void VerifyURL3(){
         try {
             String url3=Base.driver.getCurrentUrl();
@@ -154,6 +220,12 @@ public class MadeInChinaBuyerModulePage {
             LoggerHandler.error("Invalid URL");
         }
     }
+    /*
+     * a.Method Name: Verify Title
+     * b.Author Name: Samhitha
+     * c.Description: This method is used to Verify Title
+     * d.Return Type: void
+     */
     public void VerifyTitle3(){
         try {
             String title3=Base.driver.getTitle();

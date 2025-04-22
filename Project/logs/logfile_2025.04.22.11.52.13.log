@@ -1,0 +1,16 @@
+2025.04.22.11.52.13 INFO  utils.LoggerHandler - pop up closed
+2025.04.22.11.52.14 INFO  utils.LoggerHandler - Hovered on  Buyer
+2025.04.22.11.52.15 INFO  utils.LoggerHandler - Clicked on new user guide
+2025.04.22.11.52.16 INFO  utils.LoggerHandler - URL Verified
+2025.04.22.11.52.16 INFO  utils.LoggerHandler - Title verified successfully
+2025.04.22.11.52.18 INFO  utils.LoggerHandler - Clicked on logo
+2025.04.22.11.52.18 INFO  utils.LoggerHandler - Hovered on  Buyer
+2025.04.22.11.52.20 INFO  utils.LoggerHandler - Clicked on Audited Suppliers
+2025.04.22.11.52.20 INFO  utils.LoggerHandler - Verified Audited Suppliers
+2025.04.22.11.52.20 INFO  utils.LoggerHandler - Audites Suppliers Verified Successfully
+2025.04.22.11.52.22 INFO  utils.LoggerHandler - Clicked on logo
+2025.04.22.11.52.23 INFO  utils.LoggerHandler - Hovered on  Buyer
+2025.04.22.11.52.24 INFO  utils.LoggerHandler - Clicked on Meet suppliers link
+2025.04.22.11.52.25 INFO  utils.LoggerHandler - Verified Private sourcing meeting url
+2025.04.22.11.52.25 INFO  utils.LoggerHandler - Meet Suppliers Verified Successfully
+2025.04.22.11.52.27 INFO  utils.LoggerHandler - Clicked on logo
