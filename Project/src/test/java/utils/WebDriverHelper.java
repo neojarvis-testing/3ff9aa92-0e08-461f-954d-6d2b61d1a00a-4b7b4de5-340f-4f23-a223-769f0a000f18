@@ -17,24 +17,24 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  
 public class WebDriverHelper {
     WebDriver driver;
-    public WebDriverHelper(WebDriver driver) {
-        this.driver=driver;
-    }
+	public WebDriverHelper(WebDriver driver) {
+		this.driver=driver;
+	}
     List<String> list=new ArrayList<String>();
-    public void clickOnElement(By path) {
-        try {
-            driver.findElement(path).click();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    public void sendKeys(By path, String value) {
-        try {
-            driver.findElement(path).sendKeys(value);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+	public void clickOnElement(By path) {
+		try {
+			driver.findElement(path).click();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void sendKeys(By path, String value) {
+		try {
+			driver.findElement(path).sendKeys(value);
+	    } catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
     public String getText(By path){
         return driver.findElement(path).getText();
     }
@@ -50,9 +50,9 @@ public class WebDriverHelper {
     public String getURL(){
         return driver.getCurrentUrl();
     }
-    public void enterAction(By path){
-        driver.findElement(path).sendKeys(Keys.ENTER);
-    }
+	public void enterAction(By path){
+		driver.findElement(path).sendKeys(Keys.ENTER);
+	}
     public void clearText(By path){
         driver.findElement(path).clear();
     }
@@ -70,41 +70,41 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-    public void hoverOverElement(By path) {
-        try {
-            Actions action= new Actions(driver);
-            WebElement webelement=driver.findElement(path);
-            action.moveToElement(webelement).build().perform();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    public void hoverAndClick(By path) {
-        try {
-            Actions action= new Actions(driver);
-            WebElement webelement=driver.findElement(path);
-            action.click(webelement).build().perform();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    public List<WebElement> getElementsByXPath(String path){
-        return driver.findElements(By.xpath(path));
-    }
-    public List<WebElement> getElementsByPath(By path){
-        return driver.findElements(path);
-    }
-   
-    public void switchToAllTabs() {
-        try {
-            Set<String> set = driver.getWindowHandles(); // Get all open tabs/windows
-            for (String child : set) {
-                driver.switchTo().window(child); // Switch to each tab/window
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+	public void hoverOverElement(By path) {
+		try {
+			Actions action= new Actions(driver);
+			WebElement webelement=driver.findElement(path);
+			action.moveToElement(webelement).build().perform();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void hoverAndClick(By path) {
+		try {
+			Actions action= new Actions(driver);
+			WebElement webelement=driver.findElement(path);
+			action.click(webelement).build().perform();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public List<WebElement> getElementsByXPath(String path){
+		return driver.findElements(By.xpath(path));
+	}
+	public List<WebElement> getElementsByPath(By path){
+		return driver.findElements(path);
+	}
+    
+	public void switchToAllTabs() {
+	    try {
+	        Set<String> set = driver.getWindowHandles(); // Get all open tabs/windows
+	        for (String child : set) {
+	            driver.switchTo().window(child); // Switch to each tab/window
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
     public void clickAndSwitch(By path){
         String parent=driver.getWindowHandle();
         clickOnElement(path);
@@ -113,7 +113,7 @@ public class WebDriverHelper {
             if (!child.equals(parent)) {
                 driver.switchTo().window(child);
                 list.add(child);
-            }
+            } 
         }
     }
     public void switchToNewWindow() {
@@ -131,14 +131,14 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-    public void scrollByPath(int path) {
+	public void scrollByPath(int path) {
         try {
             JavascriptExecutor js=(JavascriptExecutor)driver;
             js.executeScript("window.scrollBy(0,"+ path +");");
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+	}
     public void scrollByPixel(int x ,int y) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(arguments[0],arguments[1]);", x,y);
@@ -164,7 +164,7 @@ public class WebDriverHelper {
     public void switchBackTowindow(int x){
        driver.switchTo().window(list.get(x));
     }
-    public void selectDropDown(By path, String value) {
+	public void selectDropDown(By path, String value) {
         try {
             WebElement element=driver.findElement(path);
             Select select= new Select(element);
@@ -172,7 +172,7 @@ public class WebDriverHelper {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+	}
     public void scrollToFooter(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
