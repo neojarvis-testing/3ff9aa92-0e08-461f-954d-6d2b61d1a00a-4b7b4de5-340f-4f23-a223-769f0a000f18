@@ -131,7 +131,8 @@ public class WiresAndFurniturePage {
 
     public void clikOnPagination2Page(){
         try {
-            helper.JavascriptExecutor(WiresAndFurnitureLocatores.clickOn2InPagination);
+            helper.ScrollByPixel(0, 5000);cd Project 
+            Thread.sleep(3000);
             helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.clickOn2InPagination, 10);
             helper.javascriptClick(WiresAndFurnitureLocatores.clickOn2InPagination);
             test.log(Status.PASS, "Clicked on the clickOn2InPagination");
