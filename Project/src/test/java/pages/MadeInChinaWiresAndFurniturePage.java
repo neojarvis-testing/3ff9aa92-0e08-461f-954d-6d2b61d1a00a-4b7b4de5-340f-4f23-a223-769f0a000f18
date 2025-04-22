@@ -20,6 +20,13 @@ public class MadeInChinaWiresAndFurniturePage {
         this.test = test;
     }
 
+    /*
+     * a.Method Name: clickOnXmark
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the x mark.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnXmark(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.xmark, 10);
@@ -32,6 +39,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }
     }
 
+    /*
+     * a.Method Name: clickOnSearchBar
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOnSearchBar.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnSearchBar(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
@@ -44,6 +58,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }
     }
 
+    /*
+     * a.Method Name: sendData
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to send the data.
+     * d.Return Type: String
+     * e.Paramenter List: String value
+     */
     public void sendData(String value){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
@@ -56,6 +77,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }
     }
 
+    /*
+     * a.Method Name: enterData
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to perform enter action.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void enterData(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
@@ -68,6 +96,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }
     }
 
+    /*
+     * a.Method Name: veirfyTextContainsWire
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to verify the text.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void veirfyTextContainsWire(){
         try {
             String text = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
@@ -80,6 +115,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }   
     }
 
+    /*
+     * a.Method Name: clickOnFirstProductWire
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOnFirstProductWire.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnFirstProductWire(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.firstProduct, 10);
@@ -93,6 +135,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }
     }
 
+    /*
+     * a.Method Name: verifyContactSupplier
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to verify the text.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void verifyContactSupplier(){
         try {
             String contactText = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
@@ -105,6 +154,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }
     }
 
+    /*
+     * a.Method Name: clickOnLogo
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOnLogo.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnLogo(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.logo, 10);
@@ -117,6 +173,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }
     }
 
+    /*
+     * a.Method Name: veirfyTextContainsFurniture
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to Method to verify the text.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void veirfyTextContainsFurniture(){
         try {
             String text = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
@@ -129,6 +192,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }   
     }
 
+    /*
+     * a.Method Name: clikOnPagination2Page
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clikOnPagination2Page.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clikOnPagination2Page(){
         try {
             // helper.ScrollByPixel(0, 5000);
@@ -143,6 +213,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }
     }
 
+    /*
+     * a.Method Name: verifyHomePage
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to verify the Home Page.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void verifyHomePage(){
         try {
             String title = Base.driver.getTitle();
@@ -155,6 +232,13 @@ public class MadeInChinaWiresAndFurniturePage {
         }  
     }
 
+    /*
+     * a.Method Name: WiresAndFurnitureTestCase
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to run all the methods with in the page.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void WiresAndFurnitureTestCase(){
         clickOnXmark();
         clickOnSearchBar();

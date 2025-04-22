@@ -21,6 +21,14 @@ public class MadeInChinaSpicesPageContact {
         this.test = test;
     }
 
+
+    /*
+     * a.Method Name: clickOnXmark
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the x mark.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnXmark(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.xmark, 10);
@@ -33,6 +41,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: clickOnSearchBar
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the search bar.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnSearchBar(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.searchBar, 10);
@@ -44,7 +59,14 @@ public class MadeInChinaSpicesPageContact {
             LoggerHandler.info("Not clicked on the search bar");
         }
     }
-
+    
+    /*
+     * a.Method Name: sendData
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to sent the data to search bar.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void sendData(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.searchBar, 10);
@@ -57,6 +79,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: enterData
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to perform enter action.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void enterData(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.searchBar, 10);
@@ -69,6 +98,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: clickOnContactNow
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the contact now.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnContactNow(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.contactNow, 10);
@@ -82,6 +118,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: clickOnFirstProduct
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOnFirstProduct.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnFirstProduct(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.firstProduct, 10);
@@ -95,6 +138,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: clickOnContactSupplier
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOnContactSupplier.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnContactSupplier(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.contactSeller, 10);
@@ -109,6 +159,13 @@ public class MadeInChinaSpicesPageContact {
     }
 
 
+    /*
+     * a.Method Name: clickOnTextArea
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOnTextArea.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnTextArea(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.textArea, 10);
@@ -121,6 +178,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: sendDataToTextArea
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to send the data to textArea.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void sendDataToTextArea(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.textArea, 10);
@@ -133,6 +197,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: clickOnEmailInput
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on clickOnEmailInput.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnEmailInput(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.emailInput, 10);
@@ -145,6 +216,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: sendDataToEmailInput
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to send the data to emailInput.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void sendDataToEmailInput(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.emailInput, 10);
@@ -157,6 +235,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: clickOnSendInquireNow
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOnSendInquireNow.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnSendInquireNow(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.sendInquryNow, 10);
@@ -169,6 +254,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: verifyTextSuccessfullySended
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to verify the text.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void verifyTextSuccessfullySended(){
         try {
             String text = helper.getText(MadeInChinaSpicesPageContactLocators.sentSuccessfully);
@@ -181,6 +273,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: clickOnAccountPassword
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOnAccountPassword.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnAccountPassword(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.accountPassword, 10);
@@ -193,6 +292,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: sendDataToAccountPassword
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to send the data to account password.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void sendDataToAccountPassword(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.accountPassword, 10);
@@ -205,6 +311,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: clickOncheckBox
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOncheckBox.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOncheckBox(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.checkBox, 10);
@@ -217,6 +330,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    /*
+     * a.Method Name: clickOnVerifyEmail
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to click on the clickOnVerifyEmail.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void clickOnVerifyEmail(){
         try {
             helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.verifyEmail, 10);
@@ -231,6 +351,13 @@ public class MadeInChinaSpicesPageContact {
         }
     }
     
+    /*
+     * a.Method Name: SpicesPageContactTestCase
+     * b.Author Name: Shashank Kondur
+     * c.Description: Method to run all the methods with in the page.
+     * d.Return Type: void
+     * e.Paramenter List: none
+     */
     public void SpicesPageContactTestCase(){
         clickOnXmark();
         clickOnSearchBar();
