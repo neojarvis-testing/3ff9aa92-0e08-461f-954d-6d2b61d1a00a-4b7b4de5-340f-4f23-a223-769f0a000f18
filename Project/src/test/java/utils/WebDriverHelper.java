@@ -178,3 +178,4 @@ public class WebDriverHelper {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }
 }
+ 

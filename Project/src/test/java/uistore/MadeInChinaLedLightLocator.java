@@ -22,5 +22,4 @@ public class MadeInChinaLedLightLocator {
     public static By ledTubeLightFilter = By.xpath("//a[text() = 'Led Light Tube']");
     public static By colorTemp = By.xpath("//span[text()='Color Temperature']");
     public static By warmwhite = By.xpath("//a[contains(text(),'Warm White')]");
-    //public static By verifyWarmwhite = By.xpath("//div[@class = 'filter-list-item']//span[@class = 'filter-list-item-text']");
 }
