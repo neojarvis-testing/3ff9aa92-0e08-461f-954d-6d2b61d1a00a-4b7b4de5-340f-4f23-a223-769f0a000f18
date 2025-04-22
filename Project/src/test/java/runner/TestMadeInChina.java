@@ -5,16 +5,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-
 import pages.DiamondMembershipMadeInChinaPage;
 import pages.MadeInChinaHotItemsPage;
 import pages.MadeInChinaNavigationPage;
 import pages.MadeInChinaProductDirectoryPage;
-import utils.Base;
-import utils.Reporter;
+import utils.*;
 
 public class TestMadeInChina extends Base{
     ExtentReports report;
