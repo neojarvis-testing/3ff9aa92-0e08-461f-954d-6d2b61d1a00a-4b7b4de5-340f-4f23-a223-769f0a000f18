@@ -22,7 +22,7 @@ public class MadeInChinaNavigationPage {
     public void clickOnCategory(By path ,String heading){
         try {
             helper.clickOnElement(MadeInChinaHomePageLocators.popup);
-            helper.WaitForElementToBeVisible(path, 10);
+            helper.waitForElementToBeVisible(path, 10);
             helper.clickOnElement(path);
             LoggerHandler.info("Successfully Clicked on the "+ heading);
             test.log(Status.PASS, "Successfully Clicked on the "+heading);

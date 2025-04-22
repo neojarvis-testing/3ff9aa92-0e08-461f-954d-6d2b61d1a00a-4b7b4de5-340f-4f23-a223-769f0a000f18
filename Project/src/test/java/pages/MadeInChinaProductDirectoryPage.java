@@ -10,6 +10,7 @@ import uistore.MadeInChinaProductDirectoryPageLocators;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
@@ -21,55 +22,77 @@ public class MadeInChinaProductDirectoryPage {
         this.test=test;
     }
     public void clickOnPopUp(){
-        helper.clickOnElement(MadeInChinaHomePageLocators.popup);
+        try {
+            helper.clickOnElement(MadeInChinaHomePageLocators.popup);
+            LoggerHandler.info("Successfully clicked on popup");
+            test.log(Status.PASS, "Successfully clicked on popup");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to click on popup");
+            test.log(Status.FAIL, "Failed to click on popup");
+        }
     }
     public void hoverOverBuyers(){
-        helper.HoverOverElement(MadeInChinaProductDirectoryPageLocators.buyer);
+        try {
+            helper.hoverOverElement(MadeInChinaProductDirectoryPageLocators.buyer);
+            LoggerHandler.info("Successfully  hovered over the Buyer");
+            test.log(Status.PASS, "Successfully  hovered over the Buyer");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to hovered over the Buyer");
+            test.log(Status.FAIL, "Failed to hovered over the Buyer");
+        }
     }
     public void clickOnProductDirectory(){
-        helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.productDirectory);
-        helper.switchToNewWindow();
-        
-    }
-    public void clickOnMachineTools(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.machineTools, 10);
-            helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.machineTools);
+            
+            helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.productDirectory);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Machine Tools");
             test.log(Status.PASS, "Successfully clicked on Machine Tools");
         } catch (Exception e) {
-            LoggerHandler.error("Successfully clicked on Machine Tools");
-            test.log(Status.FAIL, "Successfully clicked on Machine Tools");
+            
+        }
+    }
+    public void clickOnMachineTools(){
+        try {
+            helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.machineTools, 10);
+            helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.machineTools);
+            helper.switchToNewWindow();
+            LoggerHandler.info("Successfully clicked on Machine Tools");
+            test.log(Status.PASS, "Successfully clicked on Machine Tools");
+            Reporter.attachScreenshotToReport("Machine Tools", test, "Machine Tools");
+        } catch (Exception e) {
+            LoggerHandler.error("Failed to click on Machine Tools");
+            test.log(Status.FAIL, "Failed to click on Machine Tools");
         }
     }
     public void clickOnEngineeringConstructionMachinery(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.engineeringConstructionMachinery, 10);
+            helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.engineeringConstructionMachinery, 10);
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.engineeringConstructionMachinery);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Engineering & Construction Machinery");
             test.log(Status.PASS, "Successfully clicked on Engineering & Construction Machinery");
+            Reporter.attachScreenshotToReport("Construction Machinery ", test, "Construction Machinery");
         } catch (Exception e) {
-            LoggerHandler.error("Successfully clicked on Engineering & Construction Machinery");
-            test.log(Status.FAIL, "Successfully clicked on Engineering & Construction Machinery");
+            LoggerHandler.error("Failed to click on Engineering & Construction Machinery");
+            test.log(Status.FAIL, "Failed to click on Engineering & Construction Machinery");
         }
     }
     public void clickOnWoodworkingMachinery(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.woodworkingMachinery, 10);
+            helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.woodworkingMachinery, 10);
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.woodworkingMachinery);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Woodworking Machinery");
             test.log(Status.PASS, "Successfully clicked on Woodworking Machinery");
         } catch (Exception e) {
-            LoggerHandler.error("Successfully clicked on Woodworking Machinery");
-            test.log(Status.FAIL, "Successfully clicked on Woodworking Machinery");
+            LoggerHandler.error("Failed to click on Woodworking Machinery");
+            test.log(Status.FAIL, "Failed to click on Woodworking Machinery");
         }
     }
     public void clickOnPlasticMachinery(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.plasticMachinery, 10);
+            helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.plasticMachinery, 10);
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.plasticMachinery);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Plastic Machinery");
@@ -81,7 +104,7 @@ public class MadeInChinaProductDirectoryPage {
     }
     public void clickOnMetallicProcessingMachinery(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.metallicProcessingMachinery, 10);
+            helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.metallicProcessingMachinery, 10);
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.metallicProcessingMachinery);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Metallic Processing Machinery");
@@ -93,7 +116,7 @@ public class MadeInChinaProductDirectoryPage {
     }
     public void clickOnMould(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.mould, 10);
+            helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.mould, 10);
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.mould);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Mould");
@@ -105,7 +128,7 @@ public class MadeInChinaProductDirectoryPage {
     }
     public void clickOnLaserEquipment(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.laserEquipment, 10);
+            helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.laserEquipment, 10);
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.laserEquipment);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Laser Equipment");
@@ -117,7 +140,7 @@ public class MadeInChinaProductDirectoryPage {
     }
     public void clickOnCastingForging(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.castingForging, 10);
+            helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.castingForging, 10);
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.castingForging);
             helper.switchToNewWindow();
             LoggerHandler.info("click on casting");
@@ -131,7 +154,7 @@ public class MadeInChinaProductDirectoryPage {
     }
     public void clickOnAgriculturalMachinery(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.agriculturalMachinery, 10);
+            helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.agriculturalMachinery, 10);
             Screenshot.captureHighlightedElementScreenshot(MadeInChinaProductDirectoryPageLocators.agriculturalMachinery, "Highlighted_Agricultural_Machinery");
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.agriculturalMachinery);
             helper.switchToNewWindow();
@@ -146,8 +169,9 @@ public class MadeInChinaProductDirectoryPage {
     }
     public void navigateBack(){
         try {
-
             helper.switchBackTowindow(1);
+            LoggerHandler.info("navigate back to product directory");
+            test.log(Status.PASS,"navigate back to product directory");
             LoggerHandler.info("Successfully  navigated Back");
             test.log(Status.PASS,"Successfully navigated Back");
         } catch (Exception e) {

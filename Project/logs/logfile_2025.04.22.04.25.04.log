@@ -1,0 +1,67 @@
+2025.04.22.04.25.04 INFO  utils.LoggerHandler - Successfully Clicked on the Manufacturing & Processing Machinery
+2025.04.22.04.25.05 INFO  utils.LoggerHandler - Successfully  verified the heading Manufacturing & Processing Machinery
+2025.04.22.04.25.05 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.07 INFO  utils.LoggerHandler - Successfully Clicked on the Consumer Electronics
+2025.04.22.04.25.07 INFO  utils.LoggerHandler - Successfully  verified the heading Consumer Electronics
+2025.04.22.04.25.07 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.09 INFO  utils.LoggerHandler - Successfully Clicked on the Industrial Equipment & Components
+2025.04.22.04.25.09 INFO  utils.LoggerHandler - Successfully  verified the heading Industrial Equipment & Components
+2025.04.22.04.25.10 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.12 INFO  utils.LoggerHandler - Successfully Clicked on the Electrical & Electronics
+2025.04.22.04.25.12 INFO  utils.LoggerHandler - Successfully  verified the heading Electrical & Electronics
+2025.04.22.04.25.12 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.14 INFO  utils.LoggerHandler - Successfully Clicked on the Construction & Decoration
+2025.04.22.04.25.14 INFO  utils.LoggerHandler - Successfully  verified the heading Construction & Decoration
+2025.04.22.04.25.15 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.17 INFO  utils.LoggerHandler - Successfully Clicked on the Light Industry & Daily Use
+2025.04.22.04.25.17 INFO  utils.LoggerHandler - Successfully  verified the heading Light Industry & Daily Use
+2025.04.22.04.25.17 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.19 INFO  utils.LoggerHandler - Successfully Clicked on the Auto, Motorcycle Parts & Accessories
+2025.04.22.04.25.19 INFO  utils.LoggerHandler - Successfully  verified the heading Auto, Motorcycle Parts & Accessories
+2025.04.22.04.25.20 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.22 INFO  utils.LoggerHandler - Successfully Clicked on the Apparel & Accessories
+2025.04.22.04.25.22 INFO  utils.LoggerHandler - Successfully  verified the heading Apparel & Accessories
+2025.04.22.04.25.22 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.24 INFO  utils.LoggerHandler - Successfully Clicked on the Lights & Lighting
+2025.04.22.04.25.24 INFO  utils.LoggerHandler - Successfully  verified the heading Lights & Lighting
+2025.04.22.04.25.25 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.27 INFO  utils.LoggerHandler - Successfully Clicked on the Sporting Goods & Recreation
+2025.04.22.04.25.27 INFO  utils.LoggerHandler - Successfully  verified the heading Sporting Goods & Recreation
+2025.04.22.04.25.29 INFO  utils.LoggerHandler - Successfully clicked on popup
+2025.04.22.04.25.30 INFO  utils.LoggerHandler - Successfully  hovered over the Buyer
+2025.04.22.04.25.30 INFO  utils.LoggerHandler - Successfully clicked on Machine Tools
+2025.04.22.04.25.32 INFO  utils.LoggerHandler - Successfully clicked on Machine Tools
+2025.04.22.04.25.35 INFO  utils.LoggerHandler - Successfully  verified the url /Manufacturing-Processing-Machinery-Catalog/Machine-Tools.html
+2025.04.22.04.25.35 INFO  utils.LoggerHandler - navigate back to product directory
+2025.04.22.04.25.35 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.35 INFO  utils.LoggerHandler - Successfully clicked on Engineering & Construction Machinery
+2025.04.22.04.25.37 INFO  utils.LoggerHandler - Successfully  verified the url /Manufacturing-Processing-Machinery-Catalog/Engineering-Construction-Machinery.html
+2025.04.22.04.25.37 INFO  utils.LoggerHandler - navigate back to product directory
+2025.04.22.04.25.37 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.37 INFO  utils.LoggerHandler - Successfully clicked on Woodworking Machinery
+2025.04.22.04.25.39 INFO  utils.LoggerHandler - Successfully  verified the url /Manufacturing-Processing-Machinery-Catalog/Woodworking-Machinery.html
+2025.04.22.04.25.39 INFO  utils.LoggerHandler - navigate back to product directory
+2025.04.22.04.25.39 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.40 INFO  utils.LoggerHandler - Successfully clicked on Plastic Machinery
+2025.04.22.04.25.42 INFO  utils.LoggerHandler - Successfully  verified the url /Manufacturing-Processing-Machinery-Catalog/Plastic-Machinery.html
+2025.04.22.04.25.42 INFO  utils.LoggerHandler - navigate back to product directory
+2025.04.22.04.25.42 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.42 INFO  utils.LoggerHandler - Successfully clicked on Metallic Processing Machinery
+2025.04.22.04.25.44 INFO  utils.LoggerHandler - Successfully  verified the url /Manufacturing-Processing-Machinery-Catalog/Metallic-Processing-Machinery.html
+2025.04.22.04.25.44 INFO  utils.LoggerHandler - navigate back to product directory
+2025.04.22.04.25.44 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.46 INFO  utils.LoggerHandler - Successfully clicked on Mould
+2025.04.22.04.25.46 INFO  utils.LoggerHandler - Successfully  verified the url /Manufacturing-Processing-Machinery-Catalog/Mould.html
+2025.04.22.04.25.47 INFO  utils.LoggerHandler - navigate back to product directory
+2025.04.22.04.25.47 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.48 INFO  utils.LoggerHandler - Successfully clicked on Laser Equipment
+2025.04.22.04.25.49 INFO  utils.LoggerHandler - Successfully  verified the url /Manufacturing-Processing-Machinery-Catalog/Laser-Equipment.html
+2025.04.22.04.25.49 INFO  utils.LoggerHandler - navigate back to product directory
+2025.04.22.04.25.49 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.50 INFO  utils.LoggerHandler - click on casting
+2025.04.22.04.25.50 INFO  utils.LoggerHandler - Successfully clicked on Casting & Forging
+2025.04.22.04.25.53 INFO  utils.LoggerHandler - Successfully  verified the url /Manufacturing-Processing-Machinery-Catalog/Casting-Forging.html
+2025.04.22.04.25.53 INFO  utils.LoggerHandler - navigate back to product directory
+2025.04.22.04.25.53 INFO  utils.LoggerHandler - Successfully  navigated Back
+2025.04.22.04.25.55 INFO  utils.LoggerHandler - Successfully clicked on Agricultural Machinery
+2025.04.22.04.25.57 INFO  utils.LoggerHandler - Successfully  verified the url /Manufacturing-Processing-Machinery-Catalog/Agricultural-Machinery.html

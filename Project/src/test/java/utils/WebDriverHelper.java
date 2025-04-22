@@ -28,8 +28,7 @@ public class WebDriverHelper {
 			e.printStackTrace();
 		}
 	}
-
-	public void SendKeys(By path, String value) {
+	public void sendKeys(By path, String value) {
 		try {
 			driver.findElement(path).sendKeys(value);
 	    } catch (Exception e) {
@@ -45,33 +44,33 @@ public class WebDriverHelper {
     public void navigateBack(){
         driver.navigate().back();
     }
-    public void Refresh(){
+    public void refresh(){
         driver.navigate().refresh();
     }
     public String getURL(){
         return driver.getCurrentUrl();
     }
-	public void EnterAction(By path){
+	public void enterAction(By path){
 		driver.findElement(path).sendKeys(Keys.ENTER);
 	}
-    public void ClearText(By path){
+    public void clearText(By path){
         driver.findElement(path).clear();
     }
-    public void WaitForElementToBeVisible(By path, int seconds) {
+    public void waitForElementToBeVisible(By path, int seconds) {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.visibilityOfElementLocated(path));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public void WaitForElementToBeClickable(By path, int seconds) {
+    public void waitForElementToBeClickable(By path, int seconds) {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.elementToBeClickable(path));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-	public void HoverOverElement(By path) {
+	public void hoverOverElement(By path) {
 		try {
 			Actions action= new Actions(driver);
 			WebElement webelement=driver.findElement(path);
@@ -80,7 +79,7 @@ public class WebDriverHelper {
 			e.printStackTrace();
 		}
 	}
-	public void HoverAndClick(By path) {
+	public void hoverAndClick(By path) {
 		try {
 			Actions action= new Actions(driver);
 			WebElement webelement=driver.findElement(path);
@@ -89,10 +88,10 @@ public class WebDriverHelper {
 			e.printStackTrace();
 		}
 	}
-	public List<WebElement>getElementsByXPath(String path){
+	public List<WebElement> getElementsByXPath(String path){
 		return driver.findElements(By.xpath(path));
 	}
-	public List<WebElement>getElementsByPath(By path){
+	public List<WebElement> getElementsByPath(By path){
 		return driver.findElements(path);
 	}
     
@@ -106,7 +105,7 @@ public class WebDriverHelper {
 	        e.printStackTrace();
 	    }
 	}
-    public void ClickAndSwitch(By path){
+    public void clickAndSwitch(By path){
         String parent=driver.getWindowHandle();
         clickOnElement(path);
         Set<String> set=driver.getWindowHandles();
@@ -132,7 +131,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-	public void ScrollByPath(int path) {
+	public void scrollByPath(int path) {
         try {
             JavascriptExecutor js=(JavascriptExecutor)driver;
             js.executeScript("window.scrollBy(0,"+ path +");");
@@ -140,7 +139,7 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
 	}
-    public void ScrollByPixel(int x ,int y) {
+    public void scrollByPixel(int x ,int y) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(arguments[0],arguments[1]);", x,y);
     }
@@ -174,4 +173,8 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
 	}
+    public void scrollToFooter(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+    }
 }
