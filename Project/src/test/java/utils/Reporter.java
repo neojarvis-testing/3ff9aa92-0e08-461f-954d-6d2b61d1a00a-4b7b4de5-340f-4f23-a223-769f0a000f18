@@ -12,16 +12,12 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
- 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
  
 public class Reporter extends Base {
     public static TakesScreenshot ts;
-   
-    
     public static ExtentReports generateExtentReport(String reportName) {
         ExtentReports extentReport = new ExtentReports();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
@@ -85,6 +81,6 @@ public class Reporter extends Base {
    
     }
     
- 
+
 }
  
