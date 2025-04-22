@@ -1,10 +1,10 @@
 package utils;
-
+ 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
+ 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -14,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+ 
 public class WebDriverHelper {
     WebDriver driver;
 	public WebDriverHelper(WebDriver driver) {
@@ -43,7 +43,7 @@ public class WebDriverHelper {
 	public void sendKeys(By path, String value) {
 		try {
 			driver.findElement(path).sendKeys(value);
-		} catch (Exception e) {
+	    } catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -62,8 +62,8 @@ public class WebDriverHelper {
      * Description: Retrieves the page Title
      * Return type:Void
      */
-    public void getTitle(){
-        driver.getTitle();
+    public String getTitle(){
+       return  driver.getTitle();
     }
     /*
      * Method name: navigateBack
@@ -268,7 +268,7 @@ public class WebDriverHelper {
      * Description: Scrolls directly to a specific element using JavaScript scroll.
      * Return type: void
      */
-    public void javascriptScrollToElement(By path) {
+    public void javaScriptScrollToElement(By path) {
         try {
             WebElement element = driver.findElement(path);
             JavascriptExecutor js = (JavascriptExecutor) driver;
