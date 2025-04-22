@@ -1,0 +1,12 @@
+package uistore;
+
+import org.openqa.selenium.By;
+
+public class MadeInChinaBuyerModulePageLocator {
+    public static By ClosePopUp=By.xpath("//span[@class='campaign-pop-close J-campaign-pop-close']");
+    public static By HoverOnBuyer=By.xpath("//a[text()='Buyer']");
+    public static By ClickNewUserGuide=By.xpath("//a[text()='New User Guide']");
+    public static By ClickLogo=By.className("m-logo");
+    public static By ClickAuditedSuppliers=By.xpath("//a[contains(text(),'Audited')]");
+    public static By ClickMeetSupplier=By.xpath("//a[text()='Meet Suppliers']");
+}
