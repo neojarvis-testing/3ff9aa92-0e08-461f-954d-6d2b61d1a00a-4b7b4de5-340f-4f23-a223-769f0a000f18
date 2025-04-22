@@ -1,12 +1,19 @@
 package runner;
 
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+
+import pages.MadeInChinaBuyerModulePage;
+import utils.Base;
+import utils.Reporter;
+
 import pages.DiamondMembershipMadeInChinaPage;
 import pages.MadeInChinaHotItemsPage;
 import pages.MadeInChinaNavigationPage;
@@ -26,6 +33,10 @@ public class TestMadeInChina extends Base{
      * e.Paramenter List:none
      */
     @BeforeClass
+    public void GenerateReport(){
+        report=Reporter.generateExtentReport("MADE_IN_CHINA_Report");
+    }
+    /* a. Method Name: open
     public void initializeReport() {
         report=Reporter.generateExtentReport("MADE_IN_CHINA_Report");
     }
@@ -41,6 +52,13 @@ public class TestMadeInChina extends Base{
     public void openTheBrowser() {
         openBrowser();
     }
+    @Test (priority = 7, enabled = true)
+    public void testCase(){
+        test=report.createTest("testCase7");
+        MadeInChinaBuyerModulePage buyerModulePage=new MadeInChinaBuyerModulePage(test);
+        buyerModulePage.testCase7();
+    }
+
     /*
     * a. Method Name: diamond
     * b. Author Name: Krishna

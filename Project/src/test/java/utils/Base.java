@@ -50,7 +50,7 @@ public class Base {
     * e. Parameter List: None
     */
     public void openBrowser() {
-
+        
         try {
             loadProperties();
         } catch (IOException e) {
