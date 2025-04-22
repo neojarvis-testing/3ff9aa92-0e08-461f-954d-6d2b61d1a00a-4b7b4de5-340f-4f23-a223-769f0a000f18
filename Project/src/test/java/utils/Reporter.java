@@ -18,8 +18,14 @@ import org.openqa.selenium.TakesScreenshot;
  
 public class Reporter extends Base {
     public static TakesScreenshot ts;
-   
     
+    /*
+     * a.Method Name: generateExtentReport
+     * b.Author Name: Shashank Kondur
+     * c.Description: Generate the ExtentReport with the given name.
+     * d.Return Type: ExtentReports
+     * e.Paramenter List: String reportName
+     */
     public static ExtentReports generateExtentReport(String reportName) {
         ExtentReports extentReport = new ExtentReports();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
@@ -31,6 +37,14 @@ public class Reporter extends Base {
         extentReport.attachReporter(sparkReporter);
         return extentReport;
     }
+
+    /*
+     * a.Method Name: takeScreenshotAsBase64
+     * b.Author Name: Shashank Kondur
+     * c.Description: Takes the Screenshot as Base64 format.
+     * d.Return Type: String
+     * e.Paramenter List: String reportName
+     */
     public static String takeScreenshotAsBase64() {
         String base64String = "";
         try {
@@ -42,6 +56,14 @@ public class Reporter extends Base {
         }
         return base64String;
     }
+
+    /*
+     * a.Method Name: takeScreenshotAsBase64
+     * b.Author Name: Shashank Kondur
+     * c.Description: Attach the Screenshot to report in base64 format.
+     * d.Return Type: void
+     * e.Paramenter List: String reportName, ExtentTest test, String description
+     */
     public static void attachScreenshotToReportBase64(String reportName, ExtentTest test, String description) {
         try {
             String base64Screenshot = takeScreenshotAsBase64();
@@ -54,6 +76,14 @@ public class Reporter extends Base {
             e.printStackTrace();
         }
     }
+
+    /*
+     * a.Method Name: captureScreenShot
+     * b.Author Name: Shashank Kondur
+     * c.Description: Capture the Screenshot and saves it with given report name.
+     * d.Return Type: String
+     * e.Paramenter List: String filename
+     */
     public static String captureScreenShot(String filename) {
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String name = filename + timestamp + ".png";
@@ -73,7 +103,15 @@ public class Reporter extends Base {
         }
         return destPath;
     }
-    
+
+
+    /*
+     * a.Method Name: attachScreenshotToReport
+     * b.Author Name: Shashank Kondur
+     * c.Description: Attach the screenshot with  ExtentReport with the given name.
+     * d.Return Type: void
+     * e.Paramenter List: String filename, ExtentTest test, String description
+     */
     public static void attachScreenshotToReport(String filename, ExtentTest test, String description) {
         try {
             test.log(Status.INFO, description, MediaEntityBuilder.createScreenCaptureFromPath(captureScreenShot(filename)).build());
@@ -83,6 +121,6 @@ public class Reporter extends Base {
    
     }
     
- 
+
 }
  

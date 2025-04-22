@@ -9,12 +9,21 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import pages.MadeInChinaLanguagePage;
-import pages.MadeInChinaLedLightPage;
 import utils.Base;
 import utils.Reporter;
 
-public class TestMadeInChina extends Base {
+import pages.DiamondMembershipMadeInChinaPage;
+import pages.MadeInChinaBuyerModulePage;
+import pages.MadeInChinaHotItemsPage;
+import pages.MadeInChinaLanguagePage;
+import pages.MadeInChinaLedLightPage;
+import pages.MadeInChinaNavigationPage;
+import pages.MadeInChinaProductDirectoryPage;
+import pages.MadeInChinaSpicesPageContact;
+import pages.MadeInChinaWiresAndFurniturePage;
+import utils.*;
+
+public class TestMadeInChina extends Base{
     ExtentReports report;
     ExtentTest test;
     /*
@@ -53,7 +62,96 @@ public class TestMadeInChina extends Base {
         MadeInChinaLedLightPage led = new MadeInChinaLedLightPage(test);
         led.ledTestCases();
     }
+    
+    @Test (priority = 7, enabled = true)
+    public void testCase(){
+        test=report.createTest("testCase7");
+        MadeInChinaBuyerModulePage buyerModulePage=new MadeInChinaBuyerModulePage(test);
+        buyerModulePage.testCase7();
+    }
+
     /*
+    * a. Method Name: diamond
+    * b. Author Name: Krishna
+    * c. Description: Executes the Diamond Membership test case by creating a test instance and invoking the membership method.
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
+    @Test(priority = 1,enabled = true)
+    public void diamond(){
+        test = report.createTest("Diamond Membership");
+        DiamondMembershipMadeInChinaPage diamond = new DiamondMembershipMadeInChinaPage(test);
+        diamond.diamondMember();
+    }
+    /*
+     * a. Method Name: testCaese3
+     * b. Author Name: Shashank Kondur
+     * c. Description: Method to run the testCase3.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
+    @Test(enabled = true,priority = 3)
+    public void testCaese3(){
+        test = report.createTest("testCase3");
+        MadeInChinaSpicesPageContact spc = new MadeInChinaSpicesPageContact(test);
+        spc.SpicesPageContactTestCase();
+    }
+
+    /*
+     * a. Method Name: testCaese4
+     * b. Author Name: Shashank Kondur
+     * c. Description: Method to run the testCase4..
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
+    @Test(enabled = true,priority = 4)
+    public void testCaese4(){
+        test = report.createTest("testCase4");
+        MadeInChinaWiresAndFurniturePage wfp = new MadeInChinaWiresAndFurniturePage(test);
+        wfp.WiresAndFurnitureTestCase();
+    }
+    /*
+    * a. Method Name: hotItems
+    * b. Author Name: Krishna
+    * c. Description: Executes the Hot Items test case by creating a test instance and invoking the corresponding method.
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
+    @Test(priority = 8,enabled = true)
+    public void hotItems(){
+        test = report.createTest("All Hot Items");
+        MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);
+        hotItems.hoteItems();
+    }
+    
+   /*
+    * a.Method Name: navigation
+    * b.Author Name: Pruthviraj Batti
+    * c.Description: Test method to verify navigation between categories.
+    * d.Return Type: void
+    * e.Parameter List: None
+    */
+    @Test(priority = 9)
+    public void navigation(){
+        test=report.createTest("Navigation Between Categories");
+        MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
+        madeInChinaNavigationPage.navigation();
+    }
+    
+   /*
+    * a.Method Name: productCategory
+    * b.Author Name: Pruthviraj Batti
+    * c.Description: Test method to verify product category navigation.
+    * d.Return Type: void
+    * e.Parameter List: None
+    */
+	@Test(priority = 10)
+	public void productCategory(){
+		test=report.createTest("Product Category");
+		MadeInChinaProductDirectoryPage madeInChinaProductDirectoryPage=new MadeInChinaProductDirectoryPage(test);
+		madeInChinaProductDirectoryPage.productDirectory();
+	}
+	/*
      * a. Method Name: closeTheBrowser
      * b. Author Name: Team_09
      * c. Description: Closes the browser after each test.
@@ -71,8 +169,8 @@ public class TestMadeInChina extends Base {
      * d.Return Type: void
      * e.Paramenter List:none
      */
-    @AfterClass
-    public void finalizeReport() {
-        report.flush();
+	@AfterClass
+	public void finalizeReport() {
+		report.flush();
     }
 }
