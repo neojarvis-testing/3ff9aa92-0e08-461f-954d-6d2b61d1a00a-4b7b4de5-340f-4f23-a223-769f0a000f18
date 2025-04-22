@@ -1,11 +1,10 @@
 package pages;
 
+import org.checkerframework.checker.units.qual.s;
 import org.testng.Assert;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
-import uistore.MadeInChinaHomePageLocators;
+import uistore.MadeInChinaCategoriesPageLocators;
 import uistore.MadeInChinaProductDirectoryPageLocators;
 import utils.Base;
 import utils.ExcelReader;
@@ -17,13 +16,28 @@ import utils.WebDriverHelper;
 public class MadeInChinaProductDirectoryPage {
     WebDriverHelper helper;
     ExtentTest test;
+    /*
+     * a. Method Name: MadeInChinaProductDirectoryPage
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: Initializes the MadeInChinaProductDirectoryPage class by setting up the WebDriverHelper 
+     *    instance and associating the test instance for logging.
+     * d. Return Type: Constructor (no return type)
+     * e. Parameter List: ExtentTest test - The test instance used for logging actions.
+     */
     public MadeInChinaProductDirectoryPage(ExtentTest test){
         helper=new WebDriverHelper(Base.driver);
         this.test=test;
-    }
+    }   
+    /*
+     * a. Method Name: clickOnPopUp
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method attempts to click on the popup element and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnPopUp(){
         try {
-            helper.clickOnElement(MadeInChinaHomePageLocators.popup);
+            helper.clickOnElement(MadeInChinaCategoriesPageLocators.popup);
             LoggerHandler.info("Successfully clicked on popup");
             test.log(Status.PASS, "Successfully clicked on popup");
         } catch (Exception e) {
@@ -31,6 +45,13 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Failed to click on popup");
         }
     }
+    /*
+     * a. Method Name: hoverOverBuyers
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method attempts to hover over the Buyer element and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void hoverOverBuyers(){
         try {
             helper.hoverOverElement(MadeInChinaProductDirectoryPageLocators.buyer);
@@ -41,17 +62,33 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Failed to hovered over the Buyer");
         }
     }
+    /*
+     * a. Method Name: clickOnProductDirectory
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method attempts to click on the Product Directory element, switches to a new window, 
+     *    and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnProductDirectory(){
         try {
-            
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.productDirectory);
             helper.switchToNewWindow();
-            LoggerHandler.info("Successfully clicked on Machine Tools");
-            test.log(Status.PASS, "Successfully clicked on Machine Tools");
+            LoggerHandler.info("Successfully clicked on Product Directory");
+            test.log(Status.PASS, "Successfully clicked on Product Directory");
         } catch (Exception e) {
-            
+            LoggerHandler.error("Failed  to click on Product Directory");
+            test.log(Status.FAIL, "Failed  to click on Product Directory");
         }
     }
+    /*
+     * a. Method Name: clickOnMachineTools
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method waits for the Machine Tools element to be visible, clicks on it, switches to a new window,
+     *    captures a screenshot, and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnMachineTools(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.machineTools, 10);
@@ -65,6 +102,14 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Failed to click on Machine Tools");
         }
     }
+    /*
+     * a. Method Name: clickOnEngineeringConstructionMachinery
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method waits for the Engineering & Construction Machinery element to be visible, 
+     *    clicks on it, switches to a new window, captures a screenshot, and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnEngineeringConstructionMachinery(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.engineeringConstructionMachinery, 10);
@@ -78,6 +123,14 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Failed to click on Engineering & Construction Machinery");
         }
     }
+    /*
+     * a. Method Name: clickOnWoodworkingMachinery
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method waits for the Woodworking Machinery element to be visible, clicks on it, 
+     *    switches to a new window, and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnWoodworkingMachinery(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.woodworkingMachinery, 10);
@@ -90,6 +143,14 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Failed to click on Woodworking Machinery");
         }
     }
+    /*
+     * a. Method Name: clickOnPlasticMachinery
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method waits for the Plastic Machinery element to be visible, clicks on it, 
+     *    switches to a new window, and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnPlasticMachinery(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.plasticMachinery, 10);
@@ -102,6 +163,14 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Successfully clicked on Plastic Machinery");
         }
     }
+    /*
+     * a. Method Name: clickOnMetallicProcessingMachinery
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method waits for the Metallic Processing Machinery element to be visible, 
+     *    clicks on it, switches to a new window, and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnMetallicProcessingMachinery(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.metallicProcessingMachinery, 10);
@@ -114,6 +183,14 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Successfully clicked on Metallic Processing Machinery");
         }
     }
+    /*
+     * a. Method Name: clickOnMould
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method waits for the Mould element to be visible, clicks on it, 
+     *    switches to a new window, and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnMould(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.mould, 10);
@@ -126,6 +203,14 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Successfully clicked on Mould");
         }
     }
+    /*
+     * a. Method Name: clickOnLaserEquipment
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method waits for the Laser Equipment element to be visible, clicks on it, 
+     *    switches to a new window, and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnLaserEquipment(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.laserEquipment, 10);
@@ -138,6 +223,14 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Successfully clicked on Laser Equipment");
         }
     }
+    /*
+     * a. Method Name: clickOnCastingForging
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method waits for the Casting & Forging element to be visible, clicks on it, 
+     *    switches to a new window, and logs the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnCastingForging(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.castingForging, 10);
@@ -152,6 +245,15 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Successfully clicked on Casting & Forging");
         }
     }
+    /*
+     * a. Method Name: clickOnAgriculturalMachinery
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method waits for the Agricultural Machinery element to be visible, highlights it for 
+     *    a screenshot, clicks on it, switches to a new window, attaches screenshots to the report, and logs 
+     *    the action's success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void clickOnAgriculturalMachinery(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.agriculturalMachinery, 10);
@@ -160,6 +262,7 @@ public class MadeInChinaProductDirectoryPage {
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Agricultural Machinery");
             test.log(Status.PASS, "Successfully clicked on Agricultural Machinery");
+            Reporter.attachScreenshotToReport("agricultural_machinery", test, "agricultural_machinery");
             Screenshot.captureFullScreenshot("agricultural_machinery");
            
         } catch (Exception e) {
@@ -167,6 +270,14 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.FAIL, "Successfully clicked on Agricultural Machinery");
         }
     }
+    /*
+     * a. Method Name: navigateBack
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method switches back to the specified window index, logs the navigation action, 
+     *    and records its success or failure.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void navigateBack(){
         try {
             helper.switchBackTowindow(1);
@@ -179,6 +290,14 @@ public class MadeInChinaProductDirectoryPage {
             test.log(Status.PASS,"Failed to navigated Back");
         }
     }
+    /*
+     * a. Method Name: verifyurl
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method retrieves the current page URL, verifies if it contains the expected URL substring, 
+     *    and logs the verification status.
+     * d. Return Type: void
+     * e. Parameter List: String url - The expected URL substring to verify.
+     */
     public void verifyurl(String url){
         try {
             String text=helper.getURL();
@@ -188,41 +307,46 @@ public class MadeInChinaProductDirectoryPage {
         } catch (Exception e) {
             LoggerHandler.info("Failed to verified the url  "+url );
             test.log(Status.FAIL,"Failed to verified the url  "+url );
-        }
-       
-        
+        }  
     }
+    /*
+     * a. Method Name: productDirectory
+     * b. Author Name: Pruthviraj Batti
+     * c. Description: This method navigates through various product directories by clicking on elements, 
+     *    verifying URLs against test data, and handling navigation back to the main page.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     public void productDirectory(){
             clickOnPopUp();
             hoverOverBuyers();
             clickOnProductDirectory();
             clickOnMachineTools();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Pruthvi", 0, 1));
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 0, 1));
             navigateBack();
             clickOnEngineeringConstructionMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Pruthvi", 1, 1));
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 1, 1));
             navigateBack();
             clickOnWoodworkingMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "pruthvi", 2, 1));
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 2, 1));
             navigateBack();
             clickOnPlasticMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "pruthvi", 3, 1));
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 3, 1));
             navigateBack();
             clickOnMetallicProcessingMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "pruthvi", 4, 1));
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 4, 1));
             navigateBack();
             clickOnMould();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "pruthvi", 5, 1));
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 5, 1));
             navigateBack();
             clickOnLaserEquipment();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "pruthvi", 6, 1));
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 6, 1));
             navigateBack();
             clickOnCastingForging();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "pruthvi", 7, 1));   
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 7, 1));   
             navigateBack();
             clickOnAgriculturalMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "pruthvi", 8, 1));
-            
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 8, 1));  
     }
     
 }

@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class MadeInChinaHomePageLocators {
+public class MadeInChinaCategoriesPageLocators {
     public static By popup=By.cssSelector("span[class='campaign-pop-close J-campaign-pop-close']");
     public static By Manufacturing=By.cssSelector("a span[data-index='1']");
     public static By consumerElectronics=By.cssSelector("a span[data-index='2']");
