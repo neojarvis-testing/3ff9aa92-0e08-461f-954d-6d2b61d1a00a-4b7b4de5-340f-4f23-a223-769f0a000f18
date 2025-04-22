@@ -29,7 +29,7 @@ public class MadeInChinaWiresAndFurniturePage {
      */
     public void clickOnXmark(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.xmark, 10);
+            helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.xmark, 10);
             helper.clickOnElement(MadeInChinaSpicesPageContactLocators.xmark);
             test.log(Status.PASS, "Clicked on the xmark");
             LoggerHandler.info("Clicked on the xmark");
@@ -48,7 +48,7 @@ public class MadeInChinaWiresAndFurniturePage {
      */
     public void clickOnSearchBar(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
+            helper.waitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
             helper.clickOnElement(MadeInChinaWiresAndFurnitureLocatores.searchBar);
             test.log(Status.PASS, "Clicked on the search bar");
             LoggerHandler.info("Clicked on the search bar");
@@ -67,8 +67,8 @@ public class MadeInChinaWiresAndFurniturePage {
      */
     public void sendData(String value){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
-            helper.SendKeys(MadeInChinaWiresAndFurnitureLocatores.searchBar, value);
+            helper.waitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
+            helper.sendKeys(MadeInChinaWiresAndFurnitureLocatores.searchBar, value);
             test.log(Status.PASS, "Data sent to the search bar");
             LoggerHandler.info("Data sent to the search bar");
         } catch (Exception e) {
@@ -86,8 +86,8 @@ public class MadeInChinaWiresAndFurniturePage {
      */
     public void enterData(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
-            helper.EnterAction(MadeInChinaWiresAndFurnitureLocatores.searchBar);
+            helper.waitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
+            helper.enterAction(MadeInChinaWiresAndFurnitureLocatores.searchBar);
             test.log(Status.PASS, "Enter action performed");
             LoggerHandler.info("Enter action performed");
         } catch (Exception e) {
@@ -124,7 +124,7 @@ public class MadeInChinaWiresAndFurniturePage {
      */
     public void clickOnFirstProductWire(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.firstProduct, 10);
+            helper.waitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.firstProduct, 10);
             helper.clickOnElement(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
             helper.switchToNewWindow();
             test.log(Status.PASS, "Clicked on the firstProduct");
@@ -163,7 +163,7 @@ public class MadeInChinaWiresAndFurniturePage {
      */
     public void clickOnLogo(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.logo, 10);
+            helper.waitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.logo, 10);
             helper.clickOnElement(MadeInChinaWiresAndFurnitureLocatores.logo);
             test.log(Status.PASS, "Clicked on the logo");
             LoggerHandler.info("Clicked on the logo");

@@ -14,7 +14,13 @@ public class LoggerHandler {
     static {
         initializeLogger();
     }
-
+    /*
+     * a.Method Name: initializeLogger
+     * b.Author Name: Pruthviraj Batti
+     * c.Description: To Initialize The Logger.
+     * d.Return Type: void
+     * e.Paramenter List:String message
+     */
     private static void initializeLogger() {
         try {
             String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
@@ -26,27 +32,65 @@ public class LoggerHandler {
         }
     }
 
+    /*
+     * a.Method Name: trace
+     * b.Author Name: Pruthviraj Batti
+     * c.Description: Logs a trace message.
+     * d.Return Type: void
+     * e.Paramenter List:String message
+     */
     public static void trace(String message) {
         logger.trace(message);
     }
-
+    /*
+     * a.Method Name: debug
+     * b.Author Name: Pruthviraj Batti
+     * c.Description: Logs a debug message.
+     * d.Return Type: void
+     * e.Paramenter List:String message
+     */
     public static void debug(String message) {
         logger.debug(message);
     }
-
+    /*
+     * a.Method Name: info
+     * b.Author Name: Pruthviraj Batti
+     * c.Description: Logs a info message.
+     * d.Return Type: void
+     * e.Paramenter List:String message
+     */
     public static void info(String message) {
         logger.info(message);
     }
-
+    /*
+     * a.Method Name: warn
+     * b.Author Name: Pruthviraj Batti
+     * c.Description: Logs a warn message.
+     * d.Return Type: void
+     * e.Paramenter List:String message
+     */
     public static void warn(String message) {
         logger.warn(message);
     }
-
+     /*
+     * a.Method Name: error
+     * b.Author Name: Pruthviraj Batti
+     * c.Description: Logs a error message.
+     * d.Return Type: void
+     * e.Paramenter List:String message
+     */
     public static void error(String message) {
         logger.error(message);
     }
-
+    /*
+     * a.Method Name: fatal
+     * b.Author Name: Pruthviraj Batti
+     * c.Description: Logs a fatal message.
+     * d.Return Type: void
+     * e.Paramenter List:String message
+     */
     public static void fatal(String message) {
         logger.fatal(message);
     }
+ 
 }

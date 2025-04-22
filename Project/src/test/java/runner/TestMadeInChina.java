@@ -11,14 +11,15 @@ import com.aventstack.extentreports.ExtentTest;
 
 import pages.MadeInChinaSpicesPageContact;
 import pages.MadeInChinaWiresAndFurniturePage;
-import utils.Base;
-import utils.Reporter;
+import pages.MadeInChinaNavigationPage;
+import pages.MadeInChinaProductDirectoryPage;
+
+import utils.*;
 
 public class TestMadeInChina extends Base{
-    public static ExtentReports report;
-    public static ExtentTest test;
-    
-    /*
+    ExtentReports report;
+    ExtentTest test;
+	/*
      * a.Method Name: initializeReport
      * b.Author Name: Team_09
      * c.Description: Intializes the ExtentReport before the tests execution.
@@ -29,8 +30,9 @@ public class TestMadeInChina extends Base{
     public void initializeReport() {
         report=Reporter.generateExtentReport("MADE_IN_CHINA_Report");
     }
-    /*
-     * a. Method Name: open
+    
+	/*
+     * a. Method Name: openTheBrowser
      * b. Author Name: Team_09
      * c. Description: Opens the browser before each test.
      * d. Return Type: void
@@ -68,8 +70,34 @@ public class TestMadeInChina extends Base{
         MadeInChinaWiresAndFurniturePage wfp = new MadeInChinaWiresAndFurniturePage(test);
         wfp.WiresAndFurnitureTestCase();
     }
-
-    /*
+   /*
+    * a.Method Name: navigation
+    * b.Author Name: Pruthviraj Batti
+    * c.Description: Test method to verify navigation between categories.
+    * d.Return Type: void
+    * e.Parameter List: None
+    */
+    @Test(priority = 9)
+    public void navigation(){
+        test=report.createTest("Navigation Between Categories");
+        MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
+        madeInChinaNavigationPage.navigation();
+    }
+    
+   /*
+    * a.Method Name: productCategory
+    * b.Author Name: Pruthviraj Batti
+    * c.Description: Test method to verify product category navigation.
+    * d.Return Type: void
+    * e.Parameter List: None
+    */
+	@Test(priority = 10)
+	public void productCategory(){
+		test=report.createTest("Product Category");
+		MadeInChinaProductDirectoryPage madeInChinaProductDirectoryPage=new MadeInChinaProductDirectoryPage(test);
+		madeInChinaProductDirectoryPage.productDirectory();
+	}
+	/*
      * a. Method Name: closeTheBrowser
      * b. Author Name: Team_09
      * c. Description: Closes the browser after each test.
@@ -87,9 +115,8 @@ public class TestMadeInChina extends Base{
      * d.Return Type: void
      * e.Paramenter List:none
      */
-    @AfterClass
-    public void finalizeReport() {
-        report.flush();
+	@AfterClass
+	public void finalizeReport() {
+		report.flush();
     }
 }
-
