@@ -12,7 +12,6 @@ import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-
 public class BuyerModulePage {
     public static ExtentTest test;
     public static WebDriverHelper helper;
@@ -61,7 +60,7 @@ public class BuyerModulePage {
     public void VerifyURL(){
         try {
             String url=Base.driver.getCurrentUrl();
-            Assert.assertTrue(url.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 1, 0)));
+            Assert.assertTrue(url.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 1, 0)));
             test.log(Status.PASS, "URL Verified");
             LoggerHandler.info("URL Verified");
         } catch (AssertionError e) {
@@ -72,7 +71,7 @@ public class BuyerModulePage {
     public void VerifyTitle(){
         try{
             String title = Base.driver.getTitle();
-            Assert.assertTrue(title.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 2, 0)));
+            Assert.assertTrue(title.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 2, 0)));
             test.log(Status.PASS, "Title verified successfully");
             LoggerHandler.info("Title verified successfully");
         }
@@ -111,7 +110,7 @@ public class BuyerModulePage {
     public void VerifyURL2(){
         try {
             String url2=Base.driver.getCurrentUrl();
-            Assert.assertTrue(url2.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 3, 0)));
+            Assert.assertTrue(url2.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 3, 0)));
             test.log(Status.PASS, "Verified Audited Suppliers");
             LoggerHandler.info("Verified Audited Suppliers");
         } catch (AssertionError e) {
@@ -122,7 +121,7 @@ public class BuyerModulePage {
     public void VerifyTitle2(){
         try {
             String title2=Base.driver.getTitle();
-            Assert.assertTrue(title2.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 4, 0)));
+            Assert.assertTrue(title2.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 4, 0)));
             test.log(Status.PASS, "Audited Suppliers Verified Successfully");
             LoggerHandler.info("Audites Suppliers Verified Successfully");
         } catch (AssertionError e) {
@@ -147,7 +146,7 @@ public class BuyerModulePage {
     public void VerifyURL3(){
         try {
             String url3=Base.driver.getCurrentUrl();
-            Assert.assertTrue(url3.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 5, 0)));
+            Assert.assertTrue(url3.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 5, 0)));
             test.log(Status.PASS, "Verified Private sourcing meeting url");
             LoggerHandler.info("Verified Private sourcing meeting url");
         } catch (Exception e) {
@@ -158,7 +157,7 @@ public class BuyerModulePage {
     public void VerifyTitle3(){
         try {
             String title3=Base.driver.getTitle();
-            Assert.assertTrue(title3.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx/", "Samhitha", 6, 0)));
+            Assert.assertTrue(title3.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 6, 0)));
             test.log(Status.PASS, "Meet Suppliers Verified Successfully");
             LoggerHandler.info("Meet Suppliers Verified Successfully");
         } catch (AssertionError e) {
@@ -172,20 +171,17 @@ public class BuyerModulePage {
         ClickNewUserGuide();
         VerifyURL();
         VerifyTitle();
-
         ClickLogo();
         HoverBuyer();
         ClickAuditedSuppliers();
         VerifyURL2();
         VerifyTitle2();
-
         ClickLogo();
         HoverBuyer();
         ClickMeetSuppliers();
         VerifyURL3();
         VerifyTitle3();
         ClickLogo();
-
     }
 }
 
