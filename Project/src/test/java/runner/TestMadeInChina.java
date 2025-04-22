@@ -52,8 +52,15 @@ public class TestMadeInChina extends Base{
     public void openTheBrowser() {
         openBrowser();
     }
+    /*
+     * Method Name: BuyerModule
+     * Author name: Samhitha
+     * Description: this method will run all the testCases
+     * return type: void
+     * parameter: none
+     */
     @Test (priority = 7, enabled = true)
-    public void testCase(){
+    public void BuyerModule(){
         test=report.createTest("testCase7");
         MadeInChinaBuyerModulePage buyerModulePage=new MadeInChinaBuyerModulePage(test);
         buyerModulePage.testCase7();

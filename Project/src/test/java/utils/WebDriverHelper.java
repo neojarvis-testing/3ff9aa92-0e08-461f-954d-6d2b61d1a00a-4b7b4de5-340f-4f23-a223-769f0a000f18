@@ -60,7 +60,7 @@ public class WebDriverHelper {
      * Method name: getTitle
      * Author: Samhitha
      * Description: Retrieves the page Title
-     * Return type:Void
+     * Return type: Str
      */
     public String getTitle(){
        return  driver.getTitle();
