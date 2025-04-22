@@ -27,7 +27,7 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnPopUp(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.popUp, 10);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.popUp, 10);
             helper.clickOnElement(MadeInChinaHotItemsPageLocator.popUp);
             LoggerHandler.info("Clicked On popUp");
             test.log(Status.PASS, "Clicked On popUp");
@@ -45,7 +45,7 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnLogo(){
         try {
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.logo,10);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.logo,10);
             helper.clickOnElement(MadeInChinaHotItemsPageLocator.logo);
             //helper.switchBackToWindow(0);
             LoggerHandler.info("Clicked On logo");
@@ -64,9 +64,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnFurniture(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.furniture);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.furniture,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.furniture);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.furniture);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.furniture,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.furniture);
             Screenshot.captureFullScreenshot("Furniture");
             LoggerHandler.info("Clicked On Furniture");
             test.log(Status.PASS, "Clicked On Furniture");
@@ -120,9 +120,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnApparelClothing(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.apparelAndClothing);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.apparelAndClothing,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.apparelAndClothing);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.apparelAndClothing);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.apparelAndClothing,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.apparelAndClothing);
             Screenshot.captureFullScreenshot("Apparel Clothing");
             LoggerHandler.info("Clicked On Apparel Clothing");
             test.log(Status.PASS, "Clicked On Apparel Clothing");
@@ -176,9 +176,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnAutoParts(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.autoParts);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.autoParts,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.autoParts);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.autoParts);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.autoParts,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.autoParts);
             Screenshot.captureFullScreenshot("Auto Parts");
             LoggerHandler.info("Clicked On Auto Parts");
             test.log(Status.PASS, "Clicked On Auto Parts");
@@ -232,9 +232,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnBagsCases(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.bagsCasesAndLuggages);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.bagsCasesAndLuggages,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.bagsCasesAndLuggages);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.bagsCasesAndLuggages);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.bagsCasesAndLuggages,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.bagsCasesAndLuggages);
             Screenshot.captureFullScreenshot("Bags Cases");
             LoggerHandler.info("Clicked On Bags Cases");
             test.log(Status.PASS, "Clicked On Bags Cases");
@@ -288,9 +288,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnComputerProducts(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.computerProducts);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.computerProducts,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.computerProducts);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.computerProducts);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.computerProducts,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.computerProducts);
             Screenshot.captureFullScreenshot("Computer Products");
             LoggerHandler.info("Clicked On Computer Products");
             test.log(Status.PASS, "Clicked On Computer Products");
@@ -344,9 +344,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnConsumerElectronics(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.consumerElectronics);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.consumerElectronics,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.consumerElectronics);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.consumerElectronics);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.consumerElectronics,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.consumerElectronics);
             Screenshot.captureFullScreenshot("Consumer Electronics");
             LoggerHandler.info("Clicked On Consumer Electronic");
             test.log(Status.PASS, "Clicked On Consumer Electronic");
@@ -400,9 +400,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnElectricalEquipment(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.electricalEquipment);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.electricalEquipment,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.electricalEquipment);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.electricalEquipment);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.electricalEquipment,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.electricalEquipment);
             Screenshot.captureFullScreenshot("Electrical Equipment");
             LoggerHandler.info("Clicked On Electrical Equipment");
             test.log(Status.PASS, "Clicked On Electrical Equipment");
@@ -456,9 +456,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnElectronicComponents(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.electricalCompents);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.electricalCompents,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.electricalCompents);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.electricalCompents);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.electricalCompents,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.electricalCompents);
             Screenshot.captureFullScreenshot("Electronic Compents");
             LoggerHandler.info("Clicked On Electronic Components");
             test.log(Status.PASS, "Clicked On Electronic Components");
@@ -512,9 +512,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnGiftsCrafts(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.giftsCrafts);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.giftsCrafts,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.giftsCrafts);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.giftsCrafts);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.giftsCrafts,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.giftsCrafts);
             Screenshot.captureFullScreenshot("Gifts Crafts");
             LoggerHandler.info("Clicked On Gift Crafts");
             test.log(Status.PASS, "Clicked On Gift Crafts");
@@ -568,9 +568,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnMotorCycles(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.motorCycles);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.motorCycles,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.motorCycles);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.motorCycles);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.motorCycles,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.motorCycles);
             Screenshot.captureFullScreenshot("Motor Cycles");
             LoggerHandler.info("Clicked On MotorCycles");
             test.log(Status.PASS, "Clicked On MotorCycles");
@@ -624,9 +624,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnSealingPackage(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.sealingPackaging);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.sealingPackaging,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.sealingPackaging);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.sealingPackaging);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.sealingPackaging,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.sealingPackaging);
             LoggerHandler.info("Clicked On Sealing Package");
             Screenshot.captureFullScreenshot("Sealing Package");
             test.log(Status.PASS, "Clicked On Sealing Package");
@@ -680,9 +680,9 @@ public class MadeInChinaHotItemsPage {
     */
     public void clickOnBuildingMaterials(){
         try {
-            helper.javascriptScroll(MadeInChinaHotItemsPageLocator.buildingMaterials);
-            helper.WaitForElementToBeVisible(MadeInChinaHotItemsPageLocator.buildingMaterials,10);
-            helper.ClickAndSwitch(MadeInChinaHotItemsPageLocator.buildingMaterials);
+            helper.javaScriptScrollToElement(MadeInChinaHotItemsPageLocator.buildingMaterials);
+            helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.buildingMaterials,10);
+            helper.clickAndSwitch(MadeInChinaHotItemsPageLocator.buildingMaterials);
             Screenshot.captureFullScreenshot("Building Materials");
             LoggerHandler.info("Clicked On Building Materials");
             test.log(Status.PASS, "Clicked On Building Materials");

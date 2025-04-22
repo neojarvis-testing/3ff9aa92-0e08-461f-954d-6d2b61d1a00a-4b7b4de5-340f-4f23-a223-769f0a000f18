@@ -29,7 +29,7 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickPopUp(){
-        helper.WaitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.popUp, 10);
+        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.popUp, 10);
         helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.popUp);
     }
     /*
@@ -40,7 +40,7 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickOnSearchBar(){
-        helper.WaitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.searchBar, 10);
+        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.searchBar, 10);
         helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.searchBar);
     }
     /*
@@ -51,7 +51,7 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void enterDataToSearchBar(){
-        helper.SendKeys(MadeInChinaDiamondMembershipPageLocator.searchBar, ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 0, 1));
+        helper.sendKeys(MadeInChinaDiamondMembershipPageLocator.searchBar, ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 0, 1));
         helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.searchIcon);
     }
     /*
@@ -73,7 +73,7 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickOnSupplierLIst(){
-        helper.WaitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.supplierList,10);
+        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.supplierList,10);
         helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.supplierList);
     }
     /*
@@ -84,7 +84,7 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickOnConsumer(){
-        helper.WaitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.consumerElectronics,10);
+        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.consumerElectronics,10);
         helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.consumerElectronics);
     }
     /*
@@ -106,7 +106,7 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickOnIs9000(){
-        helper.WaitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.Is9000,10);
+        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.Is9000,10);
         helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.Is9000);
     }
     /*
