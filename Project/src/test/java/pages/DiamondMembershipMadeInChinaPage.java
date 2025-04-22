@@ -1,17 +1,15 @@
 package pages;
 
 import org.testng.Assert;
-
 import com.aventstack.extentreports.ExtentTest;
-
 import uistore.MadeInChinaDiamondMembershipPageLocator;
 import utils.Base;
 import utils.ExcelReader;
 import utils.WebDriverHelper;
 
 public class DiamondMembershipMadeInChinaPage {
-    public static WebDriverHelper helper;
-    public static ExtentTest test;
+    WebDriverHelper helper;
+    ExtentTest test;
     /*
     * a. Method Name: DiamondMembershipMadeInChinaPage (Constructor)
     * b. Author Name: Krishna

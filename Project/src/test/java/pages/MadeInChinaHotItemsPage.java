@@ -1,6 +1,5 @@
 package pages;
 
-import org.bouncycastle.x509.util.LDAPStoreHelper;
 import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -12,8 +11,8 @@ import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class MadeInChinaHotItemsPage {
-    public static WebDriverHelper helper;
-    public static ExtentTest test;
+    WebDriverHelper helper;
+    ExtentTest test;
     public MadeInChinaHotItemsPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver);
         this.test = test;
