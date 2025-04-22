@@ -15,36 +15,77 @@ import utils.Base;
 import utils.Reporter;
 
 public class TestMadeInChina extends Base{
-    public static ExtentReports reports;
-    public static ExtentTest test;
-
+    ExtentReports report;
+    ExtentTest test;
+    /*
+     * a.Method Name: initializeReport
+     * b.Author Name: Team_09
+     * c.Description: Intializes the ExtentReport before the tests execution.
+     * d.Return Type: void
+     * e.Paramenter List:none
+     */
     @BeforeClass
-    public void report(){
-        reports = Reporter.generateExtentReport("MADE_IN_CHINA_Report");
+    public void initializeReport() {
+        report=Reporter.generateExtentReport("MADE_IN_CHINA_Report");
     }
+    /*
+     * a. Method Name: open
+     * b. Author Name: Team_09
+     * c. Description: Opens the browser before each test.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     @BeforeMethod
-    public void open(){
+    public void openTheBrowser() {
         openBrowser();
     }
-    @Test(priority = 8,enabled = true)
-    public void hotItems(){
-        test = reports.createTest("All Hot Items");
-        MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);
-        hotItems.hoteItems();
-    }
+    /*
+    * a. Method Name: diamond
+    * b. Author Name: Krishna
+    * c. Description: Executes the Diamond Membership test case by creating a test instance and invoking the membership method.
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
     @Test(priority = 1,enabled = true)
     public void diamond(){
-        test = reports.createTest("Diamond Membership");
+        test = report.createTest("Diamond Membership");
         DiamondMembershipMadeInChinaPage diamond = new DiamondMembershipMadeInChinaPage(test);
         diamond.diamondMember();
     }
+    /*
+    * a. Method Name: hotItems
+    * b. Author Name: Krishna
+    * c. Description: Executes the Hot Items test case by creating a test instance and invoking the corresponding method.
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
+    @Test(priority = 8,enabled = true)
+    public void hotItems(){
+        test = report.createTest("All Hot Items");
+        MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);
+        hotItems.hoteItems();
+    }
+    /*
+     * a. Method Name: closeTheBrowser
+     * b. Author Name: Team_09
+     * c. Description: Closes the browser after each test.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     @AfterMethod
-    public void close(){
+    public void closeTheBrowser() {
         driver.quit();
     }
+    /*
+     * a.Method Name: finalizeReport
+     * b.Author Name: Team_09
+     * c.Description: Flushes the ExtentReport after the tests execution.
+     * d.Return Type: void
+     * e.Paramenter List:none
+     */
     @AfterClass
-    public void generate(){
-        reports.flush();
+    public void finalizeReport() {
+        report.flush();
     }
     
 }

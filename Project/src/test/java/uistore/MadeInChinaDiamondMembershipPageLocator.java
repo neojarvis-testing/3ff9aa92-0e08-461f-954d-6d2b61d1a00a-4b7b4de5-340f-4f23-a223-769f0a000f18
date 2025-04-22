@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class DiamondMembershipMadeInChinaPageLocator {
+public class MadeInChinaDiamondMembershipPageLocator {
     public static By logo = By.cssSelector("a[class = 'logo-link']");
     public static By searchBar = By.cssSelector("input[class = 'nail-search-input']");
     public static By searchIcon = By.cssSelector("button[class = 'nail-search-btn']");
