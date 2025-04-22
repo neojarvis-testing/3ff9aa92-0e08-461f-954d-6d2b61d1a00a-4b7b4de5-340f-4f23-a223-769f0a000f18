@@ -12,8 +12,8 @@ import utils.WebDriverHelper;
 import utils.Base;
 import utils.LoggerHandler;
 public class MadeInChinaSignInPage {
-    public static ExtentTest test;
-    public static WebDriverHelper helper;
+    ExtentTest test;
+    WebDriverHelper helper;
     public MadeInChinaSignInPage(ExtentTest test){
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
