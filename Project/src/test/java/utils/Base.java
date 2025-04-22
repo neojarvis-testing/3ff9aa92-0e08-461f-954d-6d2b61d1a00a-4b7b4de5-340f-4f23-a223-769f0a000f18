@@ -50,7 +50,10 @@ public class Base {
             URL gridUrl;
             try {
                 gridUrl = new URL(prop.getProperty("gridurl"));
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless");
                 driver = new RemoteWebDriver(gridUrl, new ChromeOptions());
+                
             } catch (MalformedURLException e) {
 
                 e.printStackTrace();

@@ -141,7 +141,7 @@ public class WebDriverHelper {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(arguments[0],arguments[1]);", x,y);
     }
-    public void javascriptScroll(By path) {
+    public void javaScriptScrollToElement(By path) {
         try {
             WebElement element = driver.findElement(path);
             JavascriptExecutor js = (JavascriptExecutor) driver;

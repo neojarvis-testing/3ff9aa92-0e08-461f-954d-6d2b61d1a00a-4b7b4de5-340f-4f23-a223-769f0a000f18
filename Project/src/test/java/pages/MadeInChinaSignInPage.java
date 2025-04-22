@@ -7,23 +7,30 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import uistore.SignInPageLocator;
+import uistore.MadeInChinaSignInPageLocator;
 import utils.WebDriverHelper;
 import utils.Base;
 import utils.LoggerHandler;
-public class SignInPage {
+public class MadeInChinaSignInPage {
     public static ExtentTest test;
     public static WebDriverHelper helper;
-    public SignInPage(ExtentTest test){
+    public MadeInChinaSignInPage(ExtentTest test){
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
     }
+    /*
+   * MethodName: verifySignIn
+   * AuthorName: SaiRohith
+   * Description: This method is used to verify the text of signin logo
+   * Parameters: None
+   * ReturnType: void
+   */
     public void verifySignIn(){
         try {
-            helper.WaitForElementToBeVisible(SignInPageLocator.popup,6);
-            helper.clickOnElement(SignInPageLocator.popup);
+            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.popup,6);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.popup);
 
-            String text = helper.getText(SignInPageLocator.signintext);
+            String text = helper.getText(MadeInChinaSignInPageLocator.signintext);
             Assert.assertTrue(text.contains("Sign in "));
             test.log(Status.PASS,"scuuessfully verified Sign text");
             LoggerHandler.info("scuuessfully verified Sign text");
@@ -33,10 +40,17 @@ public class SignInPage {
             LoggerHandler.error("SignIn verification failed");
         }
     }
+   /*
+   * MethodName: hoverSignIn
+   * AuthorName: SaiRohith
+   * Description: This method is used to hover the sign in option
+   * Parameters: None
+   * ReturnType: void
+   */
     public void hoverSignIn(){
         try {
-            helper.WaitForElementToBeVisible(SignInPageLocator.signinicon,6);
-            helper.HoverOverElement(SignInPageLocator.signinicon);
+            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.signintext,6);
+            helper.HoverOverElement(MadeInChinaSignInPageLocator.signintext);
 
             test.log(Status.PASS,"Hovering SignIn success");
             LoggerHandler.info("Hovering SignIn success");
@@ -46,10 +60,17 @@ public class SignInPage {
             LoggerHandler.error("Hovering SignIn failed");
         }
     }
+   /*
+   * MethodName: hoverSignIn
+   * AuthorName: SaiRohith
+   * Description: This method is used to click on joinfree option
+   * Parameters: None
+   * ReturnType: void
+   */
     public void clickSignIn(){
         try {
-            helper.WaitForElementToBeVisible(SignInPageLocator.joinfree, 10);
-            helper.clickOnElement(SignInPageLocator.joinfree);
+            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.joinfree, 10);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.joinfree);
             helper.switchToNewWindow();
             test.log(Status.PASS,"Clicking SignIn success");
             LoggerHandler.info("Clicking SignIn success");
@@ -60,21 +81,17 @@ public class SignInPage {
             LoggerHandler.error("Clicking SignIn failed");
         }
     }
-    // public void switchnewtab(){
-    //     try {
-    //         helper.switchToNewWindow();
-    //         test.log(Status.PASS,"Switching new tab success");
-    //         LoggerHandler.info("Switching new tab succes");
-            
-    //     } catch (Exception e) {
-    //         test.log(Status.FAIL,"Switching new tab failed");
-    //         LoggerHandler.error("Switching new tab failed");
-    //     }
-    // }
+    /*
+   * MethodName: clickemailbar
+   * AuthorName: SaiRohith
+   * Description: This method is used to click on email bar
+   * Parameters: None
+   * ReturnType: void
+   */
     public void clickemailbar(){
         try {
-            helper.WaitForElementToBeClickable(SignInPageLocator.email,6);
-            helper.clickOnElement(SignInPageLocator.email);
+            helper.WaitForElementToBeClickable(MadeInChinaSignInPageLocator.email,6);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.email);
             test.log(Status.PASS,"Clicking email success");
             LoggerHandler.info("Clicking email success");
 
@@ -84,9 +101,16 @@ public class SignInPage {
             LoggerHandler.error("Clicking email failed");
         }
     }
+    /*
+   * MethodName: enterdatatoemail
+   * AuthorName: SaiRohith
+   * Description: This method is used to enter data to email bar
+   * Parameters: None
+   * ReturnType: void
+   */
     public void enterdatatoemail(){
         try {
-            helper.SendKeys(SignInPageLocator.email,"sair27774@gmail.com");
+            helper.SendKeys(MadeInChinaSignInPageLocator.email,"sair27774@gmail.com");
             test.log(Status.PASS,"entering data to email success");
             LoggerHandler.info("entering data to email success");
 
@@ -97,23 +121,36 @@ public class SignInPage {
             LoggerHandler.error("entering data to email failed");
         }
     }
+     /*
+   * MethodName: clickIagree
+   * AuthorName: SaiRohith
+   * Description: This method is used to click on I agree button
+   * Parameters: None
+   * ReturnType: void
+   */
     public void clickIagree(){
         try {
-            helper.clickOnElement(SignInPageLocator.checkbox);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.checkbox);
             test.log(Status.PASS,"Clicking I agree to checkbox success");
             LoggerHandler.info("Clicking I agree to checkbox success");
-            
-
-            
+            Thread.sleep(1000);            
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking I agree to checkbox failed");
             LoggerHandler.error("Clicking I agree to checkbox failed");
         }
     }
+     /*
+   * MethodName: clickverify
+   * AuthorName: SaiRohith
+   * Description: This method is used to click on verify button
+   * Parameters: None
+   * ReturnType: void
+   */
     public void clickverify(){
         try {
-            helper.WaitForElementToBeVisible(SignInPageLocator.verify,6);
-            helper.clickOnElement(SignInPageLocator.verify);
+            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.verify,6);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.verify);
+            helper.switchToNewWindow();
             test.log(Status.PASS,"Clicking verify box success");
             LoggerHandler.info("Clicking verify box success");
 
@@ -123,9 +160,16 @@ public class SignInPage {
             LoggerHandler.error("Clicking verify box  failed");
         }
     }
+    /*
+   * MethodName: clicknext
+   * AuthorName: SaiRohith
+   * Description: This method is used to click on next button
+   * Parameters: None
+   * ReturnType: void
+   */
     public void clicknext(){
         try {
-            helper.clickOnElement(SignInPageLocator.next);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.next);
             test.log(Status.PASS,"Clicking next box success");
             LoggerHandler.info("Clicking next box success");
             
@@ -137,9 +181,16 @@ public class SignInPage {
 
 
     }
+    /*
+   * MethodName: verifyverification
+   * AuthorName: SaiRohith
+   * Description: This method is used to click on next button
+   * Parameters: None
+   * ReturnType: void
+   */
     public void verifyverification(){
         try {
-            String text = helper.getText(SignInPageLocator.verificationerror);
+            String text = helper.getText(MadeInChinaSignInPageLocator.verificationerror);
             Assert.assertTrue(text.contains("Please enter the verification code."));
             test.log(Status.PASS,"scuuessfully verified text");
             LoggerHandler.info("scuuessfully verified  text");
@@ -150,11 +201,18 @@ public class SignInPage {
         }
 
     }
+    /*
+   * MethodName: clicksignInNOw
+   * AuthorName: SaiRohith
+   * Description: This method is used to click on signinnow
+   * Parameters: None
+   * ReturnType: void
+   */
     public void clicksignInNOw(){
         try {
             Base.driver.navigate().refresh();
-            helper.WaitForElementToBeVisible(SignInPageLocator.signnow,6);
-            helper.clickOnElement(SignInPageLocator.signnow);
+            helper.WaitForElementToBeVisible(MadeInChinaSignInPageLocator.signnow,6);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.signnow);
             test.log(Status.PASS,"Clicking sign in success");
             LoggerHandler.info("Clicking sign in success");
 
@@ -163,10 +221,17 @@ public class SignInPage {
             LoggerHandler.error("Clicking sign in failed");
         }
     }
+     /*
+   * MethodName: enteremailtologin
+   * AuthorName: SaiRohith
+   * Description: This method is used to enter an email in email bar
+   * Parameters: None
+   * ReturnType: void
+   */
     public void enteremailtologin(){
         try {
-            helper.clickOnElement(SignInPageLocator.inputemail);
-            helper.SendKeys(SignInPageLocator.inputemail,"rdfghjkjhg@gmail.com");
+            helper.clickOnElement(MadeInChinaSignInPageLocator.inputemail);
+            helper.SendKeys(MadeInChinaSignInPageLocator.inputemail,"rdfghjkjhg@gmail.com");
             test.log(Status.PASS,"entering data in email success");
             LoggerHandler.info("entering data in email success");
             
@@ -176,10 +241,17 @@ public class SignInPage {
             LoggerHandler.error("entering data in email  failed");
         }
     }
+     /*
+   * MethodName: enterpasswordtologin
+   * AuthorName: SaiRohith
+   * Description: This method is used to enter an password in email bar
+   * Parameters: None
+   * ReturnType: void
+   */
     public void enterpasswordtologin(){
         try {
-            helper.clickOnElement(SignInPageLocator.password);
-            helper.SendKeys(SignInPageLocator.password,"rdfghjk");
+            helper.clickOnElement(MadeInChinaSignInPageLocator.password);
+            helper.SendKeys(MadeInChinaSignInPageLocator.password,"rdfghjk");
             test.log(Status.PASS,"entering data in password success");
             LoggerHandler.info("entering data in password success");
                 
@@ -189,9 +261,16 @@ public class SignInPage {
             LoggerHandler.error("entering data in password fail");
         }
     }
+    /*
+   * MethodName: clicklogin
+   * AuthorName: SaiRohith
+   * Description: This method is used to click on login button
+   * Parameters: None
+   * ReturnType: void
+   */
     public void clicklogin(){
         try {
-            helper.clickOnElement(SignInPageLocator.signin);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.signin);
             test.log(Status.PASS,"Clicking sign in success");
             LoggerHandler.info("Clicking sign in success");
 
@@ -201,9 +280,16 @@ public class SignInPage {
             LoggerHandler.error("Clicking sign in failed");
         }
     }
+    /*
+   * MethodName: verifyaddress
+   * AuthorName: SaiRohith
+   * Description: This method is used to  verify the address
+   * Parameters: None
+   * ReturnType: void
+   */
     public void verifyaddress(){
         try {
-            String text = helper.getText(SignInPageLocator.logionerror);
+            String text = helper.getText(MadeInChinaSignInPageLocator.logionerror);
             Assert.assertTrue(text.contains("This Email Address is not yet registered"));
             test.log(Status.PASS,"scuuessfully verified text");
             LoggerHandler.info("scuuessfully verified  text");
@@ -215,9 +301,16 @@ public class SignInPage {
 
 
     }
+        /*
+   * MethodName: clickonforgetpassword
+   * AuthorName: SaiRohith
+   * Description: This method is used to  click on forget password
+   * Parameters: None
+   * ReturnType: void
+   */
     public void clickonforgetpassword(){
         try {
-            helper.clickOnElement(SignInPageLocator.forgetpassword);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.forgetpassword);
             test.log(Status.PASS,"Clicking forget password in success");
             LoggerHandler.info("Clicking forget password success");
 
@@ -228,6 +321,13 @@ public class SignInPage {
         }
 
     }
+    /*
+   * MethodName: switchnewwindow1
+   * AuthorName: SaiRohith
+   * Description: This method is used switch new window
+   * Parameters: None
+   * ReturnType: void
+   */
     public void switchnewwindow1(){
         try {
             helper.switchToNewWindow();
@@ -241,9 +341,16 @@ public class SignInPage {
         }
 
     }
+    /*
+   * MethodName: clickcontinue
+   * AuthorName: SaiRohith
+   * Description: This method is used click on continue
+   * Parameters: None
+   * ReturnType: void
+   */
     public void clickcontinue(){
         try {
-            helper.clickOnElement(SignInPageLocator.continued);
+            helper.clickOnElement(MadeInChinaSignInPageLocator.continued);
             test.log(Status.PASS,"Clicking continu in success");
             LoggerHandler.info("Clicking continue success");
 
@@ -254,9 +361,16 @@ public class SignInPage {
         }
 
     }
+  /*
+   * MethodName: verifyimage
+   * AuthorName: SaiRohith
+   * Description: This method is used to verify the error text after clicking continue button
+   * Parameters: None
+   * ReturnType: void
+   */
     public void verifyimage(){
         try {
-            String text = helper.getText(SignInPageLocator.lasterror);
+            String text = helper.getText(MadeInChinaSignInPageLocator.lasterror);
             Assert.assertTrue(text.contains("Please enter the text in the image"));
             test.log(Status.PASS,"scuuessfully verified text");
             LoggerHandler.info("scuuessfully verified  text");
@@ -271,29 +385,31 @@ public class SignInPage {
         verifySignIn();
         hoverSignIn();
         clickSignIn();
-        // switchnewtab();
-        // clickemailbar();
+        clickemailbar();
         enterdatatoemail();
         clickIagree();
         
         clickverify();
+
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             
             e.printStackTrace();
         }
-        clicknext();
-        verifyverification();
-        clicksignInNOw();
-        enteremailtologin();
-        enterpasswordtologin();
-        clicklogin();
-        verifyaddress();
-        clickonforgetpassword();
-        switchnewwindow1();
-        clickcontinue();
-        verifyimage();
+        // switchnewwindow1();
+        // clicknext();
+        // verifyverification();
+        // // Base.driver.navigate().refresh();
+        // clicksignInNOw();
+        // enteremailtologin();
+        // enterpasswordtologin();
+        // clicklogin();
+        // verifyaddress();
+        // clickonforgetpassword();
+        // switchnewwindow1();
+        // clickcontinue();
+        // verifyimage();
 
     }
     

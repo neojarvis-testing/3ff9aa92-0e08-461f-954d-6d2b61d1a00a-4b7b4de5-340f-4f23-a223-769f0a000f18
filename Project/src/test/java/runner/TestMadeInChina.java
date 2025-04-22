@@ -10,35 +10,63 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import pages.SignInPage;
+import pages.MadeInChinaSignInPage;
 import utils.Base;
 import utils.Reporter;
 
 public class TestMadeInChina extends Base{
     public static ExtentTest test;
     public static ExtentReports report;
+    /*
+     * a.Method Name: initializeReport
+     * b.Author Name: Team_09
+     * c.Description: Intializes the ExtentReport before the tests execution.
+     * d.Return Type: void
+     * e.Paramenter List:none
+     */
     @BeforeClass
-    public void generatemethod(){
+    public void initializeReport(){
         report = Reporter.generateExtentReport("signin");
 
     }
+    /*
+     * a. Method Name: openTheBrowse
+     * b. Author Name: Team_09
+     * c. Description: Opens the browser before each test.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     @BeforeMethod
-    public void startmethod(){
+    public void openTheBrowser(){
         openBrowser();
 
     }
     @Test
     public void case1(){
         test = report.createTest("signin");
-        SignInPage sp = new SignInPage(test);
+        MadeInChinaSignInPage sp = new MadeInChinaSignInPage(test);
         sp.testcase1();
     }
+    /*
+     * a. Method Name: closeTheBrowser
+     * b. Author Name: Team_09
+     * c. Description: Closes the browser after each test.
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
     @AfterMethod
-    public void stopmethod(){
+    public void closeTheBrowser(){
         driver.quit();
     }
+     /*
+     * a.Method Name: finalizeReport
+     * b.Author Name: Team_09
+     * c.Description: Flushes the ExtentReport after the tests execution.
+     * d.Return Type: void
+     * e.Paramenter List:none
+     */
     @AfterClass
-    public void flushmethod(){
+    public void finalizeReport(){
         report.flush();
     }
     
