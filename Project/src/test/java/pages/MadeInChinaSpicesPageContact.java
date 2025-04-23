@@ -371,7 +371,7 @@ public class MadeInChinaSpicesPageContact {
      * d.Return Type: void
      * e.Paramenter List: none
      */
-    public void SpicesPageContactTestCase(){
+    public void spicesPageContactTestCase(){
         clickOnXmark();
         clickOnSearchBar();
         sendDataToSearchBar();
