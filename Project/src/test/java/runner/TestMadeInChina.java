@@ -1,6 +1,5 @@
 package runner;
 
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -10,14 +9,17 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import pages.MadeInChinaBuyerModulePage;
 import utils.Base;
 import utils.Reporter;
 
 import pages.DiamondMembershipMadeInChinaPage;
+import pages.MadeInChinaBuyerModulePage;
 import pages.MadeInChinaHotItemsPage;
+import pages.MadeInChinaLanguagePage;
+import pages.MadeInChinaLedLightPage;
 import pages.MadeInChinaNavigationPage;
 import pages.MadeInChinaProductDirectoryPage;
+import pages.MadeInChinaSignInPage;
 import pages.MadeInChinaSpicesPageContact;
 import pages.MadeInChinaWiresAndFurniturePage;
 import utils.*;
@@ -33,15 +35,11 @@ public class TestMadeInChina extends Base{
      * e.Paramenter List:none
      */
     @BeforeClass
-    public void GenerateReport(){
-        report=Reporter.generateExtentReport("MADE_IN_CHINA_Report");
+    public void initializeReport(){
+        report = Reporter.generateExtentReport("MADE_IN_CHINA_Report");
+
     }
-    /* a. Method Name: open
-    public void initializeReport() {
-        report=Reporter.generateExtentReport("MADE_IN_CHINA_Report");
-    }
-    
-	/*
+    /*
      * a. Method Name: openTheBrowser
      * b. Author Name: Team_09
      * c. Description: Opens the browser before each test.
@@ -49,23 +47,43 @@ public class TestMadeInChina extends Base{
      * e. Parameter List: None
      */
     @BeforeMethod
-    public void openTheBrowser() {
+    public void openTheBrowser(){
         openBrowser();
+
+    }
+    @Test(priority = 2)
+    public void testcase2(){
+        test = report.createTest("signin");
+        MadeInChinaSignInPage sp = new MadeInChinaSignInPage(test);
+        sp.case1();
+    }    
+    @Test(priority = 5, enabled = true)
+    public void languageTests()
+    {
+        test = report.createTest("Test Case 5");
+        MadeInChinaLanguagePage language = new MadeInChinaLanguagePage(test);
+        language.languageTestCases();
+    }
+    @Test(priority = 6, enabled = true)
+    public void lightsTests()
+    {
+        test = report.createTest("Test Case 6");
+        MadeInChinaLedLightPage led = new MadeInChinaLedLightPage(test);
+        led.ledTestCases();
     }
     /*
-     * Method Name: BuyerModule
-     * Author name: Samhitha
-     * Description: this method will run all the testCases
-     * return type: void
-     * parameter: none
-     */
+    * a. Method Name: Buyer Module
+    * b. Author Name: Samhitha 
+    * c. Description: Executes the Buyer Module  test case by creating a test instance
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
     @Test (priority = 7, enabled = true)
     public void BuyerModule(){
         test=report.createTest("testCase7");
         MadeInChinaBuyerModulePage buyerModulePage=new MadeInChinaBuyerModulePage(test);
         buyerModulePage.testCase7();
     }
-
     /*
     * a. Method Name: diamond
     * b. Author Name: Krishna
@@ -92,7 +110,6 @@ public class TestMadeInChina extends Base{
         MadeInChinaSpicesPageContact spc = new MadeInChinaSpicesPageContact(test);
         spc.SpicesPageContactTestCase();
     }
-
     /*
      * a. Method Name: testCaese4
      * b. Author Name: Shashank Kondur
@@ -119,7 +136,6 @@ public class TestMadeInChina extends Base{
         MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);
         hotItems.hoteItems();
     }
-    
    /*
     * a.Method Name: navigation
     * b.Author Name: Pruthviraj Batti
@@ -133,7 +149,6 @@ public class TestMadeInChina extends Base{
         MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
         madeInChinaNavigationPage.navigation();
     }
-    
    /*
     * a.Method Name: productCategory
     * b.Author Name: Pruthviraj Batti

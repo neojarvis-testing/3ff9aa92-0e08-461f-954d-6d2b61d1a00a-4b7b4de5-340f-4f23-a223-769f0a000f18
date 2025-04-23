@@ -63,7 +63,7 @@ public class WebDriverHelper {
      * Return type: Str
      */
     public String getTitle(){
-       return  driver.getTitle();
+       return driver.getTitle();
     }
     /*
      * Method name: navigateBack
@@ -327,3 +327,4 @@ public class WebDriverHelper {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }
 }
+ 
