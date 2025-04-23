@@ -2,9 +2,11 @@ package pages;
 
 import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import uistore.MadeInChinaDiamondMembershipPageLocator;
 import utils.Base;
 import utils.ExcelReader;
+import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
 public class DiamondMembershipMadeInChinaPage {
