@@ -7,6 +7,7 @@ import com.aventstack.extentreports.Status;
 
 import uistore.MadeInChinaSpicesPageContactLocators;
 import utils.Base;
+import utils.ExcelReader;
 import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
@@ -256,7 +257,7 @@ public class MadeInChinaSpicesPageContact {
 
     public void clikOnPopupXMark(){
         try {
-            helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.removePopup, 10);
+            helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.removePopup, 5);
             helper.clickOnElement(MadeInChinaSpicesPageContactLocators.removePopup);
             test.log(Status.PASS, "Clicked on the removePopup");
             LoggerHandler.info("Clicked on the removePopup");
@@ -276,7 +277,7 @@ public class MadeInChinaSpicesPageContact {
     public void verifyTextSuccessfullySended(){
         try {
             String text = helper.getText(MadeInChinaSpicesPageContactLocators.sentSuccessfully);
-            Assert.assertEquals("text, Sent Successfully!", text);
+            Assert.assertEquals(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", text, 4, 0), text);
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
         } catch (Exception e) {
@@ -382,7 +383,6 @@ public class MadeInChinaSpicesPageContact {
         sendDataToEmailInput();
         clickOnSendInquireNow();
         clikOnPopupXMark();
-        
     }
 
 
