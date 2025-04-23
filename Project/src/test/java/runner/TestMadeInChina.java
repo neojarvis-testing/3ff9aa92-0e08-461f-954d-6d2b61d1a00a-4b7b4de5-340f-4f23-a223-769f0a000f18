@@ -93,14 +93,19 @@ public class TestMadeInChina extends Base{
         MadeInChinaLedLightPage led = new MadeInChinaLedLightPage(test);
         led.ledTestCases();
     }
-    
+    /*
+    * a. Method Name: Buyer Module
+    * b. Author Name: Samhitha 
+    * c. Description: Executes the Buyer Module  test case by creating a test instance
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
     @Test (priority = 7, enabled = true)
-    public void testCase(){
+    public void BuyerModule(){
         test=report.createTest("testCase7");
         MadeInChinaBuyerModulePage buyerModulePage=new MadeInChinaBuyerModulePage(test);
         buyerModulePage.testCase7();
     }
-
     /*
     * a. Method Name: diamond
     * b. Author Name: Krishna
@@ -127,7 +132,6 @@ public class TestMadeInChina extends Base{
         MadeInChinaSpicesPageContact spc = new MadeInChinaSpicesPageContact(test);
         spc.SpicesPageContactTestCase();
     }
-
     /*
      * a. Method Name: WiresAndFurniture
      * b. Author Name: Shashank Kondur
@@ -154,7 +158,6 @@ public class TestMadeInChina extends Base{
         MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);
         hotItems.hoteItems();
     }
-    
    /*
     * a.Method Name: navigation
     * b.Author Name: Pruthviraj Batti
