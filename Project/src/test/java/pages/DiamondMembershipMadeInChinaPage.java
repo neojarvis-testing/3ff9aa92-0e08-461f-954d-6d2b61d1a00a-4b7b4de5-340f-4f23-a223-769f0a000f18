@@ -29,8 +29,15 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickPopUp(){
-        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.popUp, 10);
-        helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.popUp);
+        try {
+            helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.popUp, 10);
+            helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.popUp);
+            LoggerHandler.info("Clicked On pop Up");
+            test.log(Status.PASS, "Clicked On pop Up");
+        } catch (Exception e) {
+            LoggerHandler.error("Not Clicked On pop Up");
+            test.log(Status.FAIL, "Not Clicked On pop Up");
+        }
     }
     /*
     * a. Method Name: clickOnSearchBar
@@ -40,8 +47,15 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickOnSearchBar(){
-        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.searchBar, 10);
-        helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.searchBar);
+        try {
+            helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.searchBar, 10);
+            helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.searchBar);
+            LoggerHandler.info("Clicked On Search Bar");
+            test.log(Status.PASS, "Clicked On Search Bar");
+        } catch (Exception e) {
+            LoggerHandler.error("Not Clicked On Search Bar");
+            test.log(Status.FAIL, "Not Clicked On Search Bar");
+        }
     }
     /*
     * a. Method Name: enterDataToSearchBar
@@ -51,8 +65,15 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void enterDataToSearchBar(){
-        helper.sendKeys(MadeInChinaDiamondMembershipPageLocator.searchBar, ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 0, 1));
-        helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.searchIcon);
+        try {
+            helper.sendKeys(MadeInChinaDiamondMembershipPageLocator.searchBar, ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 0, 1));
+            helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.searchIcon);
+            LoggerHandler.info("Clicked on Search icon");
+            test.log(Status.PASS, "Clicked on Search icon");
+        } catch (Exception e) {
+            LoggerHandler.error("Not Clicked on Search icon");
+            test.log(Status.FAIL, "Not Clicked on Search icon");
+        }
     }
     /*
     * a. Method Name: verifyElectronics
@@ -62,8 +83,15 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void verifyElectronics(){
-        String electronics = helper.getText(MadeInChinaDiamondMembershipPageLocator.verifyWord);
-        Assert.assertTrue(electronics.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 1)));
+        try {
+            String electronics = helper.getText(MadeInChinaDiamondMembershipPageLocator.verifyWord);
+            Assert.assertTrue(electronics.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 1)));
+            LoggerHandler.info("Verified Electronics");
+            test.log(Status.PASS, "Verified Electronics");
+        } catch (Exception e) {
+            LoggerHandler.error("Not Verified Electronics");
+            test.log(Status.FAIL, "Not Verified Electronics");
+        }
     }
     /*
     * a. Method Name: clickOnSupplierList
@@ -73,8 +101,15 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickOnSupplierLIst(){
-        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.supplierList,10);
-        helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.supplierList);
+        try {
+            helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.supplierList,10);
+            helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.supplierList);
+            LoggerHandler.info("Clicked ON Supplier List");
+            test.log(Status.PASS, "Clicked ON Supplier List");
+        } catch (Exception e) {
+            LoggerHandler.error("Not Clicked ON Supplier List");
+            test.log(Status.FAIL, "Not Clicked ON Supplier List");
+        }
     }
     /*
     * a. Method Name: clickOnConsumer
@@ -84,8 +119,15 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickOnConsumer(){
-        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.consumerElectronics,10);
-        helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.consumerElectronics);
+        try {
+            helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.consumerElectronics,10);
+            helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.consumerElectronics);
+            LoggerHandler.info("Clicked on consumer");
+            test.log(Status.PASS, "Clicked on consumer");
+        } catch (Exception e) {
+            LoggerHandler.error("Not Clicked on consumer");
+            test.log(Status.FAIL, "Not Clicked on consumer");
+        }
     }
     /*
     * a. Method Name: verifyConsumer
@@ -95,8 +137,15 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void verifyConsumer(){
-        String consumer = helper.getText(MadeInChinaDiamondMembershipPageLocator.filterconsumerElectronics);
-        Assert.assertTrue(consumer.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 2)));
+        try {
+            String consumer = helper.getText(MadeInChinaDiamondMembershipPageLocator.filterconsumerElectronics);
+            Assert.assertTrue(consumer.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 2)));
+            LoggerHandler.info("Verified Consumer");
+            test.log(Status.PASS, "Verified Consumer");
+        } catch (Exception e) {
+            LoggerHandler.error("Not Verified Consumer");
+            test.log(Status.FAIL, "Not Verified Consumer");
+        }
     }
     /*
     * a. Method Name: clickOnIs9000
@@ -106,8 +155,15 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void clickOnIs9000(){
-        helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.Is9000,10);
-        helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.Is9000);
+        try {
+            helper.waitForElementToBeVisible(MadeInChinaDiamondMembershipPageLocator.Is9000,10);
+            helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.Is9000);
+            LoggerHandler.info("Clicked On Is9000");
+            test.log(Status.PASS, "Clicked On Is9000");
+        } catch (Exception e) {
+            LoggerHandler.error("Not Clicked On Is9000");
+            test.log(Status.FAIL, "Not Clicked On Is9000");
+        }
     }
     /*
     * a. Method Name: verifyIs9000
@@ -117,8 +173,15 @@ public class DiamondMembershipMadeInChinaPage {
     * e. Parameter List: None
     */
     public void verifyIs9000(){
-        String isfilter = helper.getText(MadeInChinaDiamondMembershipPageLocator.filterIs9000);
-        Assert.assertTrue(isfilter.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 3)));
+        try {
+            String isfilter = helper.getText(MadeInChinaDiamondMembershipPageLocator.filterIs9000);
+            Assert.assertTrue(isfilter.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 3)));
+            LoggerHandler.info("Verified Is9000");
+            test.log(Status.PASS, "Verified Is9000");
+        } catch (Exception e) {
+            LoggerHandler.error("Not Verified Is9000");
+            test.log(Status.FAIL, "Not Verified Is9000");
+        }
     }
 
     /*
