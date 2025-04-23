@@ -51,7 +51,7 @@ public class TestMadeInChina extends Base{
         openBrowser();
 
     }
-    @Test(priority = 2, enabled = true)
+    @Test(priority = 2)
     public void testcase2(){
         test = report.createTest("signin");
         MadeInChinaSignInPage sp = new MadeInChinaSignInPage(test);
@@ -142,7 +142,7 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-    @Test(priority = 9, enabled=true)
+    @Test(priority = 9)
     public void navigation(){
         test=report.createTest("Navigation Between Categories");
         MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
@@ -156,7 +156,7 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-	@Test(priority = 10, enabled=true)
+	@Test(priority = 10)
 	public void productCategory(){
 		test=report.createTest("Product Category");
 		MadeInChinaProductDirectoryPage madeInChinaProductDirectoryPage=new MadeInChinaProductDirectoryPage(test);
