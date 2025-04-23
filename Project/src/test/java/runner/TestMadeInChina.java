@@ -102,29 +102,29 @@ public class TestMadeInChina extends Base{
         diamond.diamondMember();
     }
     /*
-     * a. Method Name: testCaese3
+     * a. Method Name: SpicesContact
      * b. Author Name: Shashank Kondur
-     * c. Description: Method to run the testCase3.
+     * c. Description: Method to run the SpicesContact.
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(enabled = true,priority = 3)
-    public void testCaese3(){
-        test = report.createTest("testCase3");
+    @Test(priority = 3, enabled = true)
+    public void SpicesContact(){
+        test = report.createTest("SpicesContact");
         MadeInChinaSpicesPageContact spc = new MadeInChinaSpicesPageContact(test);
         spc.SpicesPageContactTestCase();
     }
 
     /*
-     * a. Method Name: testCaese4
+     * a. Method Name: WiresAndFurniture
      * b. Author Name: Shashank Kondur
-     * c. Description: Method to run the testCase4..
+     * c. Description: Method to run the WiresAndFurniture.
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(enabled = true,priority = 4)
-    public void testCaese4(){
-        test = report.createTest("testCase4");
+    @Test(priority = 4, enabled = true)
+    public void WiresAndFurniture(){
+        test = report.createTest("WiresAndFurniture");
         MadeInChinaWiresAndFurniturePage wfp = new MadeInChinaWiresAndFurniturePage(test);
         wfp.WiresAndFurnitureTestCase();
     }

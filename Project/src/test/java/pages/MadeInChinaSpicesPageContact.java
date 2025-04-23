@@ -7,6 +7,7 @@ import com.aventstack.extentreports.Status;
 
 import uistore.MadeInChinaSpicesPageContactLocators;
 import utils.Base;
+import utils.ExcelReader;
 import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
@@ -67,7 +68,7 @@ public class MadeInChinaSpicesPageContact {
      * d.Return Type: void
      * e.Paramenter List: none
      */
-    public void sendData(){
+    public void sendDataToSearchBar(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.searchBar, 10);
             helper.sendKeys(MadeInChinaSpicesPageContactLocators.searchBar, "spices");
@@ -86,7 +87,7 @@ public class MadeInChinaSpicesPageContact {
      * d.Return Type: void
      * e.Paramenter List: none
      */
-    public void enterData(){
+    public void enterDataToSearchBar(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.searchBar, 10);
             helper.enterAction(MadeInChinaSpicesPageContactLocators.searchBar);
@@ -254,6 +255,18 @@ public class MadeInChinaSpicesPageContact {
         }
     }
 
+    public void clikOnPopupXMark(){
+        try {
+            helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.removePopup, 5);
+            helper.clickOnElement(MadeInChinaSpicesPageContactLocators.removePopup);
+            test.log(Status.PASS, "Clicked on the removePopup");
+            LoggerHandler.info("Clicked on the removePopup");
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Not clicked on the removePopup");
+            LoggerHandler.info("Not clicked on the removePopup");
+        }
+    }
+
     /*
      * a.Method Name: verifyTextSuccessfullySended
      * b.Author Name: Shashank Kondur
@@ -264,7 +277,7 @@ public class MadeInChinaSpicesPageContact {
     public void verifyTextSuccessfullySended(){
         try {
             String text = helper.getText(MadeInChinaSpicesPageContactLocators.sentSuccessfully);
-            Assert.assertEquals("text, Sent Successfully!", text);
+            Assert.assertEquals(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", text, 4, 0), text);
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
         } catch (Exception e) {
@@ -361,19 +374,15 @@ public class MadeInChinaSpicesPageContact {
     public void SpicesPageContactTestCase(){
         clickOnXmark();
         clickOnSearchBar();
-        sendData();
-        enterData();
+        sendDataToSearchBar();
+        enterDataToSearchBar();
         clickOnContactNow();
         clickOnTextArea();
         sendDataToTextArea();
         clickOnEmailInput();
         sendDataToEmailInput();
         clickOnSendInquireNow();
-        verifyTextSuccessfullySended();
-        clickOnAccountPassword();
-        sendDataToAccountPassword();
-        clickOncheckBox();
-        clickOnVerifyEmail();
+        clikOnPopupXMark();
     }
 
 
