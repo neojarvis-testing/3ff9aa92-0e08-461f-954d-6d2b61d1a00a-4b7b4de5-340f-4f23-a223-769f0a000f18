@@ -63,7 +63,7 @@ public class DiamondMembershipMadeInChinaPage {
     */
     public void verifyElectronics(){
         String electronics = helper.getText(MadeInChinaDiamondMembershipPageLocator.verifyWord);
-        Assert.assertTrue(electronics.contains("Electronics"));
+        Assert.assertTrue(electronics.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 1)));
     }
     /*
     * a. Method Name: clickOnSupplierList
@@ -96,7 +96,7 @@ public class DiamondMembershipMadeInChinaPage {
     */
     public void verifyConsumer(){
         String consumer = helper.getText(MadeInChinaDiamondMembershipPageLocator.filterconsumerElectronics);
-        Assert.assertTrue(consumer.contains("Consumer"));
+        Assert.assertTrue(consumer.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 2)));
     }
     /*
     * a. Method Name: clickOnIs9000
@@ -118,7 +118,7 @@ public class DiamondMembershipMadeInChinaPage {
     */
     public void verifyIs9000(){
         String isfilter = helper.getText(MadeInChinaDiamondMembershipPageLocator.filterIs9000);
-        Assert.assertTrue(isfilter.contains("9000"));
+        Assert.assertTrue(isfilter.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 3)));
     }
 
     /*
