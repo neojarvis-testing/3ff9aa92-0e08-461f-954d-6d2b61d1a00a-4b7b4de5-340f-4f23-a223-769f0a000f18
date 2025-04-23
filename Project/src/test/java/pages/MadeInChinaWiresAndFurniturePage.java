@@ -65,7 +65,7 @@ public class MadeInChinaWiresAndFurniturePage {
      * d.Return Type: String
      * e.Paramenter List: String value
      */
-    public void sendData(String value){
+    public void sendDataToSearchBar(String value){
         try {
             helper.waitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
             helper.sendKeys(MadeInChinaWiresAndFurnitureLocatores.searchBar, value);
@@ -84,7 +84,7 @@ public class MadeInChinaWiresAndFurniturePage {
      * d.Return Type: void
      * e.Paramenter List: none
      */
-    public void enterData(){
+    public void enterDataToSearchBar(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
             helper.enterAction(MadeInChinaWiresAndFurnitureLocatores.searchBar);
@@ -242,14 +242,14 @@ public class MadeInChinaWiresAndFurniturePage {
     public void WiresAndFurnitureTestCase(){
         clickOnXmark();
         clickOnSearchBar();
-        sendData("Wires");
-        enterData();
+        sendDataToSearchBar("Wires");
+        enterDataToSearchBar();
         veirfyTextContainsWire();
         clickOnFirstProductWire();
         clickOnLogo();
         clickOnSearchBar();
         sendData("Furniture");
-        enterData();
+        enterDataToSearchBar();
         veirfyTextContainsFurniture();
         clikOnPagination2Page();
         clickOnLogo();
