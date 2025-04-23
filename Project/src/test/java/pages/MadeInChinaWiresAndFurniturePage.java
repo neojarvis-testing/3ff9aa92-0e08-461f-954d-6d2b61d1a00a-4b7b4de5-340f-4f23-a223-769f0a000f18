@@ -240,7 +240,7 @@ public class MadeInChinaWiresAndFurniturePage {
      * d.Return Type: void
      * e.Paramenter List: none
      */
-    public void WiresAndFurnitureTestCase(){
+    public void wiresAndFurnitureTestCase(){
         clickOnXmark();
         clickOnSearchBar();
         sendDataToSearchBar("Wires");
