@@ -149,13 +149,12 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-    @Test(priority = 9)
+    @Test(priority = 9,enabled = true)
     public void navigation(){
         test=report.createTest("Navigation Between Categories");
         MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
         madeInChinaNavigationPage.navigation();
     }
-    
    /*
     * a.Method Name: productCategory
     * b.Author Name: Pruthviraj Batti
@@ -163,7 +162,7 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-	@Test(priority = 10)
+    @Test(priority = 10,enabled = true)
 	public void productCategory(){
 		test=report.createTest("Product Category");
 		MadeInChinaProductDirectoryPage madeInChinaProductDirectoryPage=new MadeInChinaProductDirectoryPage(test);
