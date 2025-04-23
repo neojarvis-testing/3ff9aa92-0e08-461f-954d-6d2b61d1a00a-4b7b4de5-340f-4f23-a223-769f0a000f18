@@ -121,7 +121,8 @@ public class MadeInChinaLedLightPage {
     public void verifyFilter(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyFilter);
-            Assert.assertEquals(text,"Led Strip Light");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 11, 0);
+            Assert.assertEquals(text,value);
             test.log(Status.PASS, "Filter result verified");
             LoggerHandler.info("Filter result verified");
         } catch (Exception e) {
@@ -157,7 +158,8 @@ public class MadeInChinaLedLightPage {
     public void verifyInquiry(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyInquiry);
-            Assert.assertTrue(text.contains("Send Inquiry"));
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 12, 0);
+            Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "Inquiry page is verified");
             LoggerHandler.info("Inquiry page is verified");
         } catch (Exception e) {
@@ -269,7 +271,8 @@ public class MadeInChinaLedLightPage {
     public void verifyHomePage(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyHomePage);
-            Assert.assertTrue(text.contains("Post My RFQ"));
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 13, 0);
+            Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "Home page is verified");
             LoggerHandler.info("Home page is verified");
         } catch (Exception e) {
@@ -323,7 +326,8 @@ public class MadeInChinaLedLightPage {
     public void verifyLedTube(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyLedTube);
-            Assert.assertTrue(text.contains("LED Tube"));
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1",14 , 0);
+            Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "LED Tube page is verified");
             LoggerHandler.info("LED Tube page is verified");
         } catch (Exception e) {
