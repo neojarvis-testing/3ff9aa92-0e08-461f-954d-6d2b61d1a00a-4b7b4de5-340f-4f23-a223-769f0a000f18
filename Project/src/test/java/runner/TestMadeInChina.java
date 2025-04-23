@@ -65,7 +65,13 @@ public class TestMadeInChina extends Base{
         signin.case1();
     }
     
-    
+    /*
+    * a. Method Name: languageTests
+    * b. Author Name: Rishi Prashar
+    * c. Description: Executes the language page test cases.
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
     @Test(priority = 5, enabled = true)
     public void languageTests()
     {
@@ -73,6 +79,13 @@ public class TestMadeInChina extends Base{
         MadeInChinaLanguagePage language = new MadeInChinaLanguagePage(test);
         language.languageTestCases();
     }
+    /*
+    * a. Method Name: lightsTests
+    * b. Author Name: Rishi Prashar
+    * c. Description: Executes the led light page test cases.
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
     @Test(priority = 6, enabled = true)
     public void lightsTests()
     {
