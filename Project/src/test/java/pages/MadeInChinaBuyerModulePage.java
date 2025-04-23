@@ -192,9 +192,9 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Click Audited Suppliers
+     * a.Method Name: Click Meet Suppliers
      * b.Author Name: Samhitha
-     * c.Description: This method is used to click on audited suppliers 
+     * c.Description: This method is used to click on Meet suppliers
      * d.Return Type: void
      */
     public void clickMeetSuppliers(){
