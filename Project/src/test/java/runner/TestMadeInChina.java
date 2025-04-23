@@ -51,11 +51,18 @@ public class TestMadeInChina extends Base{
         openBrowser();
 
     }
-    @Test(priority = 2)
-    public void testcase2(){
+     /*
+     * a. Method Name: SigninTest
+     * b. Author Name: SaiRohith
+     * c. Description: Executes the SignIn test case by registering and undergoing regestration and signin process
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
+    @Test(priority = 2,enabled = true)
+    public void SigninTest(){
         test = report.createTest("signin");
-        MadeInChinaSignInPage sp = new MadeInChinaSignInPage(test);
-        sp.case1();
+        MadeInChinaSignInPage signin = new MadeInChinaSignInPage(test);
+        signin.case1();
     }
     
     
