@@ -8,6 +8,7 @@ import com.aventstack.extentreports.Status;
 import uistore.MadeInChinaSpicesPageContactLocators;
 import uistore.MadeInChinaWiresAndFurnitureLocatores;
 import utils.Base;
+import utils.ExcelReader;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
@@ -65,7 +66,7 @@ public class MadeInChinaWiresAndFurniturePage {
      * d.Return Type: String
      * e.Paramenter List: String value
      */
-    public void sendData(String value){
+    public void sendDataToSearchBar(String value){
         try {
             helper.waitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
             helper.sendKeys(MadeInChinaWiresAndFurnitureLocatores.searchBar, value);
@@ -84,7 +85,7 @@ public class MadeInChinaWiresAndFurniturePage {
      * d.Return Type: void
      * e.Paramenter List: none
      */
-    public void enterData(){
+    public void enterDataToSearchBar(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaWiresAndFurnitureLocatores.searchBar, 10);
             helper.enterAction(MadeInChinaWiresAndFurnitureLocatores.searchBar);
@@ -106,7 +107,7 @@ public class MadeInChinaWiresAndFurniturePage {
     public void veirfyTextContainsWire(){
         try {
             String text = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
-            Assert.assertTrue(text.contains("Wire"));
+            Assert.assertTrue(text.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", "Sheet1", 0, 0)));
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
         } catch (Exception e) {
@@ -145,7 +146,7 @@ public class MadeInChinaWiresAndFurniturePage {
     public void verifyContactSupplier(){
         try {
             String contactText = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
-            Assert.assertTrue(contactText.contains("Contact Supplier"));
+            Assert.assertTrue(contactText.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", "Sheet1", 1, 0)));
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
         } catch (Exception e) {
@@ -183,7 +184,7 @@ public class MadeInChinaWiresAndFurniturePage {
     public void veirfyTextContainsFurniture(){
         try {
             String text = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
-            Assert.assertTrue(text.contains("Furniture"));
+            Assert.assertTrue(text.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", "Sheet1", 2, 0)));
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
         } catch (Exception e) {
@@ -223,7 +224,7 @@ public class MadeInChinaWiresAndFurniturePage {
     public void verifyHomePage(){
         try {
             String title = Base.driver.getTitle();
-            Assert.assertTrue(title.contains("Made-in-China"));
+            Assert.assertTrue(title.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", "Sheet1", 3, 0)));
             test.log(Status.PASS, "Title Verified");
             LoggerHandler.info("Title Verified");
         } catch (Exception e) {
@@ -242,14 +243,14 @@ public class MadeInChinaWiresAndFurniturePage {
     public void WiresAndFurnitureTestCase(){
         clickOnXmark();
         clickOnSearchBar();
-        sendData("Wires");
-        enterData();
+        sendDataToSearchBar("Wires");
+        enterDataToSearchBar();
         veirfyTextContainsWire();
         clickOnFirstProductWire();
         clickOnLogo();
         clickOnSearchBar();
-        sendData("Furniture");
-        enterData();
+        sendDataToSearchBar("Furniture");
+        enterDataToSearchBar();
         veirfyTextContainsFurniture();
         clikOnPagination2Page();
         clickOnLogo();

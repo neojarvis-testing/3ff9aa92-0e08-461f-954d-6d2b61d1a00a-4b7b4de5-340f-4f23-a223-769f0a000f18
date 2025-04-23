@@ -19,6 +19,13 @@ public class MadeInChinaLedLightPage {
         this.test = test;
         helper = new WebDriverHelper(Base.driver);
     }
+    /*
+     * Method name: closePopUp.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will help us to close the pop up.
+     * Parameters: None.
+     * return type: void.
+     */
     public void closePopUp(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLanguagePageLocator.joinFree,3);
@@ -30,6 +37,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not close pop up");
         }
     }
+    /*
+     * Method name: clickAndSendData.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click and send data to search bar.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickAndSendData(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.searchbar,3);
@@ -44,6 +58,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click and sent data to search bar");
         }
     }
+    /*
+     * Method name: verifySearchResult.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify the heading.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifySearchResult(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyLed);
@@ -54,7 +75,13 @@ public class MadeInChinaLedLightPage {
             test.log(Status.FAIL, "search result not verified");
             LoggerHandler.error("search result not verified");
         }
-    }
+    }/*
+     * Method name: clickOnMore.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on more button.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnMore(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.more,3);
@@ -66,6 +93,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on more");
         }
     }
+    /*
+     * Method name: clickOnLedStripLight.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on Led Strip Light.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnLedStripLight(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.ledStripFilter,3);
@@ -77,10 +111,18 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on ledStripFilter");
         }
     }
+    /*
+     * Method name: verifyFilter.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify if the filter is applied.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyFilter(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyFilter);
-            Assert.assertEquals(text,"Led Strip Light");
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 11, 0);
+            Assert.assertEquals(text,value);
             test.log(Status.PASS, "Filter result verified");
             LoggerHandler.info("Filter result verified");
         } catch (Exception e) {
@@ -88,6 +130,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Filter result not verified");
         }
     }
+    /*
+     * Method name: clickOnContactNow.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on contact now button.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnContactNow(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.contactNow,3);
@@ -99,10 +148,18 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on contact Now");
         }
     }
+    /*
+     * Method name: verifyInquiry.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify if the inquiry page.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyInquiry(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyInquiry);
-            Assert.assertTrue(text.contains("Send Inquiry"));
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 12, 0);
+            Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "Inquiry page is verified");
             LoggerHandler.info("Inquiry page is verified");
         } catch (Exception e) {
@@ -110,6 +167,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Inquiry page is not verified");
         }
     }
+    /*
+     * Method name: clickAndSendInquiry.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click and send the enquiry.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickAndSendInquiry(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.content,3);
@@ -123,6 +187,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click and sent data to content field");
         }
     }
+     /*
+     * Method name: clickAndSendInquiry.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click and send the email.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickAndSendEmail(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.email,3);
@@ -136,6 +207,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click and sent data to email field");
         }
     }
+     /*
+     * Method name: clickAndSendInquiry.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on send inquiry button.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnSendInquiryNow(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.sendEnquiry,3);
@@ -147,6 +225,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on sendEnquiry");
         }
     }
+     /*
+     * Method name: clickOnCrossMark.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on the cross mark.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnCrossMark(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.crossMark,3);
@@ -158,6 +243,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on crossMark");
         }
     }
+    /*
+     * Method name: clickOnCrossMark.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on the made in china logo.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnLogo(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.logo,3);
@@ -169,10 +261,18 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on logo");
         }
     }
+    /*
+     * Method name: verifyHomePage.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify if we are in home page or not.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyHomePage(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyHomePage);
-            Assert.assertTrue(text.contains("Post My RFQ"));
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 13, 0);
+            Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "Home page is verified");
             LoggerHandler.info("Home page is verified");
         } catch (Exception e) {
@@ -180,6 +280,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Home page is not verified");
         }
     }
+    /*
+     * Method name: hoverOnLigtsAndLightning.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will hover on lights.
+     * Parameters: None.
+     * return type: void.
+     */
     public void hoverOnLigtsAndLightning(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.lightsAndLighting,3);
@@ -191,6 +298,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not hover over lights And Lighting");
         }
     }
+    /*
+     * Method name: clickOnLedTube.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on led tube.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnLedTube(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.ledTube,3);
@@ -202,10 +316,18 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on ledTube");
         }
     }
+    /*
+     * Method name: verifyLedTube.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will verify the led tube page.
+     * Parameters: None.
+     * return type: void.
+     */
     public void verifyLedTube(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyLedTube);
-            Assert.assertTrue(text.contains("LED Tube"));
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1",14 , 0);
+            Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "LED Tube page is verified");
             LoggerHandler.info("LED Tube page is verified");
         } catch (Exception e) {
@@ -213,6 +335,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("LED Tube page is not verified");
         }
     }
+    /*
+     * Method name: clickOnLedTubeFilter.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on led tube filter.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnLedTubeFilter(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.ledTubeLightFilter,3);
@@ -224,6 +353,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on ledTubeLightFilter");
         }
     }
+    /*
+     * Method name: clickOnColorTemprature.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on color temprature in led page.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnColorTemprature(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.colorTemp,3);
@@ -235,6 +371,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on color Temprature");
         }
     }
+    /*
+     * Method name: clickOnWarmWhite.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will click on Warm white filter.
+     * Parameters: None.
+     * return type: void.
+     */
     public void clickOnWarmWhite(){
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.warmwhite,3);
@@ -246,6 +389,13 @@ public class MadeInChinaLedLightPage {
             LoggerHandler.error("Did not click on color warm white");
         }
     }
+    /*
+     * Method name: ledTestCases.
+     * AuthorName: Rishi Prashar.
+     * Description: This method will call all the methods.
+     * Parameters: None.
+     * return type: void.
+     */ 
     public void ledTestCases(){
         closePopUp();
         clickAndSendData();

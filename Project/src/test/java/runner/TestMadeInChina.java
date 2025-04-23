@@ -51,12 +51,27 @@ public class TestMadeInChina extends Base{
         openBrowser();
 
     }
-    @Test(priority = 2)
-    public void testcase2(){
+     /*
+     * a. Method Name: SigninTest
+     * b. Author Name: SaiRohith
+     * c. Description: Executes the SignIn test case by registering and undergoing regestration and signin process
+     * d. Return Type: void
+     * e. Parameter List: None
+     */
+    @Test(priority = 2,enabled = true)
+    public void SigninTest(){
         test = report.createTest("signin");
-        MadeInChinaSignInPage sp = new MadeInChinaSignInPage(test);
-        sp.case1();
-    }    
+        MadeInChinaSignInPage signin = new MadeInChinaSignInPage(test);
+        signin.case1();
+    }
+    
+    /*
+    * a. Method Name: languageTests
+    * b. Author Name: Rishi Prashar
+    * c. Description: Executes the language page test cases.
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
     @Test(priority = 5, enabled = true)
     public void languageTests()
     {
@@ -64,6 +79,13 @@ public class TestMadeInChina extends Base{
         MadeInChinaLanguagePage language = new MadeInChinaLanguagePage(test);
         language.languageTestCases();
     }
+    /*
+    * a. Method Name: lightsTests
+    * b. Author Name: Rishi Prashar
+    * c. Description: Executes the led light page test cases.
+    * d. Return Type: Void
+    * e. Parameter List: None
+    */
     @Test(priority = 6, enabled = true)
     public void lightsTests()
     {
@@ -98,28 +120,28 @@ public class TestMadeInChina extends Base{
         diamond.diamondMember();
     }
     /*
-     * a. Method Name: testCaese3
+     * a. Method Name: SpicesContact
      * b. Author Name: Shashank Kondur
-     * c. Description: Method to run the testCase3.
+     * c. Description: Method to run the SpicesContact.
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(enabled = true,priority = 3)
-    public void testCaese3(){
-        test = report.createTest("testCase3");
+    @Test(priority = 3, enabled = true)
+    public void SpicesContact(){
+        test = report.createTest("SpicesContact");
         MadeInChinaSpicesPageContact spc = new MadeInChinaSpicesPageContact(test);
         spc.SpicesPageContactTestCase();
     }
     /*
-     * a. Method Name: testCaese4
+     * a. Method Name: WiresAndFurniture
      * b. Author Name: Shashank Kondur
-     * c. Description: Method to run the testCase4..
+     * c. Description: Method to run the WiresAndFurniture.
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(enabled = true,priority = 4)
-    public void testCaese4(){
-        test = report.createTest("testCase4");
+    @Test(priority = 4, enabled = true)
+    public void WiresAndFurniture(){
+        test = report.createTest("WiresAndFurniture");
         MadeInChinaWiresAndFurniturePage wfp = new MadeInChinaWiresAndFurniturePage(test);
         wfp.WiresAndFurnitureTestCase();
     }
@@ -143,7 +165,7 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-    @Test(priority = 9)
+    @Test(priority = 9,enabled = true)
     public void navigation(){
         test=report.createTest("Navigation Between Categories");
         MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
@@ -156,7 +178,7 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-	@Test(priority = 10)
+    @Test(priority = 10,enabled = true)
 	public void productCategory(){
 		test=report.createTest("Product Category");
 		MadeInChinaProductDirectoryPage madeInChinaProductDirectoryPage=new MadeInChinaProductDirectoryPage(test);

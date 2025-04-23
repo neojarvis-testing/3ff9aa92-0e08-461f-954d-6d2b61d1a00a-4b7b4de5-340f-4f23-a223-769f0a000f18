@@ -12,6 +12,7 @@ public class MadeInChinaSpicesPageContactLocators {
     public static By textArea = By.cssSelector("textarea[class='input-textarea span-18']");
     public static By emailInput = By.id("senderMail");
     public static By sendInquryNow = By.cssSelector("input[type='button']");
+    public static By removePopup = By.cssSelector("span[class='dlg-close']");
     public static By sendInputSubmit = By.cssSelector("input[type='submit']");
     public static By sentSuccessfully = By.cssSelector("div[class='ft-result__title J-msg-h1']");
     public static By accountPassword = By.cssSelector("input[class='ft-input is-error']");
