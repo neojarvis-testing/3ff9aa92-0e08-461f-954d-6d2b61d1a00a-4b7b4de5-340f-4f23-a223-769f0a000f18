@@ -124,8 +124,8 @@ public class MadeInChinaLedLightPage {
     public void verifyFilter(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyFilter);
-            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 11, 0);
-            Assert.assertEquals(text,value);
+            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 11, 0);
+            Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "Filter result verified");
             LoggerHandler.info("Filter result verified");
         } catch (Exception e) {

@@ -149,7 +149,8 @@ public class MadeInChinaWiresAndFurniturePage {
     public void verifyContactSupplier(){
         try {
             String contactText = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
-            Assert.assertTrue(contactText.contains(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 0)));
+            System.out.println(contactText);
+            Assert.assertTrue(contactText.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", "Sheet1", 1, 0)));
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text is Verified");
         } catch (Exception e) {
