@@ -3,20 +3,20 @@ package uistore;
 import org.openqa.selenium.By;
 
 public class MadeInChinaHotItemsPageLocator {
-    public static By furniture = By.cssSelector("a[href='/quick-products/Furniture.html']");
-    //public static By furniture = By.cssSelector("a[href='https://www.made-in-china.com/quick-products/Furniture.html?pv_id=1ipc75nvgaa4&faw_id=1ipch4f9f3a6&bv_id=1ipch4f9pc83&pbv_id=1ipc75kvj1c8']");
-    public static By apparelAndClothing = By.cssSelector("a[href = '/quick-products/Apparel-Clothing.html']");
-    public static By autoParts = By.cssSelector("a[href='/quick-products/Auto-Parts-Accessories.html']");
-    public static By bagsCasesAndLuggages = By.cssSelector("a[href = '/quick-products/Bags-Cases-Luggages.html']");
-    public static By computerProducts = By.cssSelector("a[href = '/quick-products/Computer-Products.html']");
-    public static By consumerElectronics = By.cssSelector("a[href = '/quick-products/Consumer-Electronics.html']");
-    public static By electricalEquipment = By.cssSelector("a[href = '/quick-products/Electrical-Equipments.html']");
-    public static By electricalCompents = By.cssSelector("a[href = '/quick-products/Electronic-Components.html']");
-    public static By giftsCrafts = By.cssSelector("a[href = '/quick-products/Gifts-Crafts-Collectibles.html']");
-    public static By motorCycles = By.cssSelector("a[href = '/quick-products/Motorcycles-Scooters.html']");
-    public static By sealingPackaging = By.cssSelector("a[href = '/quick-products/Sealing-Packaging-Storage-Shelving.html']");
-    public static By buildingMaterials = By.cssSelector("a[href = '/quick-products/Building-Materials-Supplies.html']");
-    public static By logo = By.cssSelector("a[class = 'm-logo']");
-    public static By popUp = By.cssSelector("span[class = 'campaign-pop-close J-campaign-pop-close']");
+    private MadeInChinaHotItemsPageLocator(){}
+    public static final By furniture = By.cssSelector("a[href='/quick-products/Furniture.html']");
+    public static final By apparelAndClothing = By.cssSelector("a[href = '/quick-products/Apparel-Clothing.html']");
+    public static final By autoParts = By.cssSelector("a[href='/quick-products/Auto-Parts-Accessories.html']");
+    public static final By bagsCasesAndLuggages = By.cssSelector("a[href = '/quick-products/Bags-Cases-Luggages.html']");
+    public static final By computerProducts = By.cssSelector("a[href = '/quick-products/Computer-Products.html']");
+    public static final By consumerElectronics = By.cssSelector("a[href = '/quick-products/Consumer-Electronics.html']");
+    public static final By electricalEquipment = By.cssSelector("a[href = '/quick-products/Electrical-Equipments.html']");
+    public static final By electricalCompents = By.cssSelector("a[href = '/quick-products/Electronic-Components.html']");
+    public static final By giftsCrafts = By.cssSelector("a[href = '/quick-products/Gifts-Crafts-Collectibles.html']");
+    public static final By motorCycles = By.cssSelector("a[href = '/quick-products/Motorcycles-Scooters.html']");
+    public static final By sealingPackaging = By.cssSelector("a[href = '/quick-products/Sealing-Packaging-Storage-Shelving.html']");
+    public static final By buildingMaterials = By.cssSelector("a[href = '/quick-products/Building-Materials-Supplies.html']");
+    public static final By logo = By.cssSelector("a[class = 'm-logo']");
+    public static final By popUp = By.cssSelector("span[class = 'campaign-pop-close J-campaign-pop-close']");
 }
 
