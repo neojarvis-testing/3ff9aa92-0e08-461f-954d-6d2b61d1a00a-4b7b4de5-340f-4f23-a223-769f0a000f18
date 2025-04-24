@@ -13,6 +13,9 @@ import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
 public class MadeInChinaWiresAndFurniturePage {
+    private static final String directory = "user.dir";
+    private static final String excelPath = "/testdata/Shashank.xlsx";
+    private static final String sheetName = "Sheet1";
     WebDriverHelper helper;
     ExtentTest test;
 
@@ -74,7 +77,7 @@ public class MadeInChinaWiresAndFurniturePage {
             LoggerHandler.info("Data sent to the search bar");
         } catch (Exception e) {
             test.log(Status.FAIL, "Data not sent to the search bar");
-            LoggerHandler.info("Data not sent to the search bar");
+            LoggerHandler.info("Data did not sent to the search bar");
         }
     }
 
@@ -107,12 +110,12 @@ public class MadeInChinaWiresAndFurniturePage {
     public void veirfyTextContainsWire(){
         try {
             String text = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
-            Assert.assertTrue(text.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", "Sheet1", 0, 0)));
+            Assert.assertTrue(text.contains(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 0, 0)));
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
         } catch (Exception e) {
             test.log(Status.FAIL, "Text Not Verified");
-            LoggerHandler.info("Text Not Verified");
+            LoggerHandler.info("Text did not Verified");
         }   
     }
 
@@ -146,12 +149,12 @@ public class MadeInChinaWiresAndFurniturePage {
     public void verifyContactSupplier(){
         try {
             String contactText = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
-            Assert.assertTrue(contactText.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", "Sheet1", 1, 0)));
+            Assert.assertTrue(contactText.contains(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 0)));
             test.log(Status.PASS, "Text Verified");
-            LoggerHandler.info("Text Verified");
+            LoggerHandler.info("Text is Verified");
         } catch (Exception e) {
             test.log(Status.FAIL, "Text Not Verified");
-            LoggerHandler.info("Text Not Verified");
+            LoggerHandler.info("Text did not Verified");
         }
     }
 
@@ -184,12 +187,12 @@ public class MadeInChinaWiresAndFurniturePage {
     public void veirfyTextContainsFurniture(){
         try {
             String text = helper.getText(MadeInChinaWiresAndFurnitureLocatores.firstProduct);
-            Assert.assertTrue(text.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", "Sheet1", 2, 0)));
+            Assert.assertTrue(text.contains(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 2, 0)));
             test.log(Status.PASS, "Text Verified");
             LoggerHandler.info("Text Verified");
         } catch (Exception e) {
             test.log(Status.FAIL, "Text Not Verified");
-            LoggerHandler.info("Text Not Verified");
+            LoggerHandler.info("Text is Not Verified");
         }   
     }
 
@@ -202,9 +205,6 @@ public class MadeInChinaWiresAndFurniturePage {
      */
     public void clikOnPagination2Page(){
         try {
-            // helper.ScrollByPixel(0, 5000);
-            // Thread.sleep(3000);
-            // helper.WaitForElementToBeVisible(WiresAndFurnitureLocatores.clickOn2InPagination, 10);
             helper.clickOnElement(MadeInChinaWiresAndFurnitureLocatores.clickOn2InPagination);
             test.log(Status.PASS, "Clicked on the clickOn2InPagination");
             LoggerHandler.info("Clicked on the clickOn2InPagination");
@@ -224,12 +224,12 @@ public class MadeInChinaWiresAndFurniturePage {
     public void verifyHomePage(){
         try {
             String title = Base.driver.getTitle();
-            Assert.assertTrue(title.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Shashank.xlsx", "Sheet1", 3, 0)));
+            Assert.assertTrue(title.contains(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 3, 0)));
             test.log(Status.PASS, "Title Verified");
             LoggerHandler.info("Title Verified");
         } catch (Exception e) {
             test.log(Status.FAIL, "Title Not Verified");
-            LoggerHandler.info("Title Not Verified");
+            LoggerHandler.info("Title is Not Verified");
         }  
     }
 

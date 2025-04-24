@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
- 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -102,7 +101,7 @@ public class WebDriverHelper {
         try {
             url = driver.getCurrentUrl();
 	    } catch (Exception e) {
-			LoggerHandler.error("navigateBack not working");
+			LoggerHandler.error("getURL not working");
 		}
         return url;
     }
@@ -145,7 +144,19 @@ public class WebDriverHelper {
             LoggerHandler.error("waitForElementToBeVisible not working");
         }
     }
-
+    /*
+     * Method name: wait For Element to be clickble
+     * Author: Samhitha
+     * Description: waits for an element to be clickable
+     * Return type: void
+     */
+    public void waitForElementToBeClickable(By path, int seconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.elementToBeClickable(path));
+        } catch (Exception e) {
+            LoggerHandler.error("waitForElementToBeClickable not working");
+        }
+    }
     /*
      * Method name: hover on element
      * Author: Samhitha
@@ -199,7 +210,7 @@ public class WebDriverHelper {
 	            driver.switchTo().window(child); // Switch to each tab/window
 	        }
 	    } catch (Exception e) {
-	        LoggerHandler.error("captureFullScreenshot not working");
+	        LoggerHandler.error("switchToAllTabs not working");
 	    }
 	}
     /*
@@ -209,14 +220,18 @@ public class WebDriverHelper {
      * Return type: void
      */
     public void clickAndSwitch(By path){
-        String parent=driver.getWindowHandle();
-        clickOnElement(path);
-        Set<String> set=driver.getWindowHandles();
-        for (String child : set) {
-            if (!child.equals(parent)) {
-                driver.switchTo().window(child);
-                list.add(child);
-            } 
+        try {
+            String parent=driver.getWindowHandle();
+            clickOnElement(path);
+            Set<String> set=driver.getWindowHandles();
+            for (String child : set) {
+                if (!child.equals(parent)) {
+                    driver.switchTo().window(child);
+                    list.add(child);
+                } 
+            }
+        } catch (Exception e) {
+            LoggerHandler.error("clickAndSwitch is not working");
         }
     }
     /*
@@ -237,7 +252,7 @@ public class WebDriverHelper {
                 }
             }
         } catch (Exception e) {
-            LoggerHandler.error("captureFullScreenshot not working");
+            LoggerHandler.error("switchToNewWindow not working");
         }
     }
 
@@ -253,7 +268,7 @@ public class WebDriverHelper {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].scrollIntoView()", element);
         } catch (Exception e) {
-            LoggerHandler.error("captureFullScreenshot not working");
+            LoggerHandler.error("javascriptScrollToElement not working");
         }
     }
     /*
@@ -268,7 +283,7 @@ public class WebDriverHelper {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].click();", element);
         } catch (Exception e) {
-            LoggerHandler.error("captureFullScreenshot not working");
+            LoggerHandler.error("javascriptClick not working");
         }
     }
     /*
@@ -278,7 +293,11 @@ public class WebDriverHelper {
      * Return type: void
      */
     public void switchBackTowindow(int x){
-        driver.switchTo().window(list.get(x));
+        try {
+            driver.switchTo().window(list.get(x));
+        } catch (Exception e) {
+            LoggerHandler.error("switchBackTowindow is not working");
+        }
     }
 }
  

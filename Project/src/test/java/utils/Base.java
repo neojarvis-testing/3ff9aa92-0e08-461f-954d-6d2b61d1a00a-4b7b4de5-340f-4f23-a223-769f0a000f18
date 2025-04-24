@@ -17,7 +17,6 @@ import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
 
 public class Base {
-
     public static WebDriver driver;
     public static FileInputStream file;
     public static Properties prop;
@@ -35,10 +34,8 @@ public class Base {
             file = new FileInputStream(propertiesPath);
             prop = new Properties();
             prop.load(file);
-
         } catch (FileNotFoundException e) {
-            LoggerHandler.error("File Not Found");
-
+            LoggerHandler.error("File Not Found fot loadProperties in base");
         }
     }
 
@@ -50,43 +47,35 @@ public class Base {
     * e. Parameter List: None
     */
     public void openBrowser() {
-        
         try {
             loadProperties();
         } catch (IOException e) {
             // TODO Auto-generated catch block
-            LoggerHandler.error("IoException");
+            LoggerHandler.error("IoException in openBrowser method");
         }
         String executionType = prop.getProperty("executiontype");
         String browserName = prop.getProperty("browser");
-
         if ("remote".equalsIgnoreCase(executionType)) {
             URL gridUrl;
             try {
                 gridUrl = new URL(prop.getProperty("gridurl"));
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--headless");
-                driver = new RemoteWebDriver(gridUrl, new ChromeOptions());
-                
+                driver = new RemoteWebDriver(gridUrl, new ChromeOptions());    
             } catch (MalformedURLException e) {
-
-                LoggerHandler.error("MalformedURLException");
+                LoggerHandler.error("MalformedURLException for chromeOptions");
             }
-
         } else if ("local".equalsIgnoreCase(executionType)) {
             switch (browserName.toLowerCase()) {
                 case "chrome":
                     driver = new ChromeDriver();
                     break;
-
                 case "edge":
                     driver = new EdgeDriver();
                     break;
-
                 case "firefox":
                     driver = new FirefoxDriver();
                     break;
-
                 default:
                     System.err.println("Unsupported browser: " + browserName);
                     break;
@@ -94,21 +83,15 @@ public class Base {
         } else {
             System.err.println("Invalid execution type: " + executionType);
         }
-
         if (driver != null)
-
         {
             driver.manage().window().maximize();
             driver.get(prop.getProperty("url"));
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
         }
         // Dont remove the listener Object
-
         WebDriverListener listener = new EventHandler();
         driver = new EventFiringDecorator<>(listener).decorate(driver);
-
     }
-
 }

@@ -116,8 +116,7 @@ public class MadeInChinaSignInPage {
         try {
             helper.clickOnElement(MadeInChinaSignInPageLocator.checkbox);
             test.log(Status.PASS,"Clicking I agree to checkbox success");
-            LoggerHandler.info("Clicking I agree to checkbox success");
-            Thread.sleep(1000);            
+            LoggerHandler.info("Clicking I agree to checkbox success");           
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking I agree to checkbox failed");
             LoggerHandler.error("Clicking I agree to checkbox failed");
@@ -327,11 +326,6 @@ public class MadeInChinaSignInPage {
         enterDataToEmail();
         clickOnIagree();
         clickOnVerify();
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {            
-            e.printStackTrace();
-        }
         // switchnewwindow1();
         // clicknext();
         // verifyverification();

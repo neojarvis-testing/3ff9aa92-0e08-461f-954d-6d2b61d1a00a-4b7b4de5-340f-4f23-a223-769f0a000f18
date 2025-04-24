@@ -2,13 +2,11 @@ package utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 
 public class LoggerHandler {
-
     public static Logger logger = Logger.getLogger(LoggerHandler.class);
 
     static {
@@ -92,5 +90,4 @@ public class LoggerHandler {
     public static void fatal(String message) {
         logger.fatal(message);
     }
- 
 }

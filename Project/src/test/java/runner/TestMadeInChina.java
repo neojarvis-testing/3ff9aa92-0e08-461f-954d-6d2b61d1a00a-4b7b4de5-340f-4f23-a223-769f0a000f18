@@ -100,7 +100,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test (priority = 7, enabled = true)
+    @Test (priority = 7, enabled = false)
     public void buyerModule(){
         test=report.createTest("testCase7");
         MadeInChinaBuyerModulePage buyerModulePage=new MadeInChinaBuyerModulePage(test);
@@ -152,7 +152,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test(priority = 8,enabled = false)
+    @Test(priority = 8,enabled = true)
     public void hotItems(){
         test = report.createTest("All Hot Items");
         MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);

@@ -30,10 +30,10 @@ public class MadeInChinaBuyerModulePage {
             helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClosePopUp, 10);
             helper.clickOnElement(MadeInChinaBuyerModulePageLocator.ClosePopUp);
             test.log(Status.PASS, "pop up closed");
-            LoggerHandler.info("pop up closed");
+            LoggerHandler.info("popup closed");
         } catch (Exception e) {
             test.log(Status.FAIL, "Failed to close the pop up");
-            LoggerHandler.error("Failed to close the pop up");
+            LoggerHandler.error("Failed to close the popup");
         }
     }
     /*
@@ -51,7 +51,7 @@ public class MadeInChinaBuyerModulePage {
             test.log(Status.PASS, "Hovered on Buyer");
             LoggerHandler.info("Hovered on  Buyer");
         } catch (Exception e) {
-            test.log(Status.FAIL, "Failed to locate the element to be hovered");
+            test.log(Status.FAIL, "Failed to locate the element to hover");
             LoggerHandler.error("Failed to locate the element to be hovered");
         }
     }
@@ -68,10 +68,10 @@ public class MadeInChinaBuyerModulePage {
             helper.switchToAllTabs();
             Screenshot.captureFullScreenshot("New User Guide");
             Reporter.attachScreenshotToReport("New User guide", test, "Screenshot attached to the NewUserGuide Report");
-            test.log(Status.PASS, "Clicked on new user guide");
+            test.log(Status.PASS, "Clicked on the new user guide");
             LoggerHandler.info("Clicked on new user guide");
         } catch (Exception e) {
-            test.log(Status.FAIL, "Couldn't click on New User Guide");
+            test.log(Status.FAIL, "Couldn't click on the New User Guide");
             LoggerHandler.error("Couldn't click on new user guide");
         }
     }
@@ -87,11 +87,11 @@ public class MadeInChinaBuyerModulePage {
             System.out.println(url);
             String NewUser=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 0, 0);
             Assert.assertTrue(url.contains(NewUser));
-            test.log(Status.PASS, "URL Verified");
+            test.log(Status.PASS, "URL was Verified");
             LoggerHandler.info("URL Verified");
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Url didn't match");
-            LoggerHandler.error("Url didin't match");
+            LoggerHandler.error("Url didi not match");
         }
     }
     /*
@@ -105,12 +105,12 @@ public class MadeInChinaBuyerModulePage {
             String title = Base.driver.getTitle();
             String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 1, 0);
             Assert.assertTrue(title.contains(value));
-            test.log(Status.PASS, "Title verified successfully");
+            test.log(Status.PASS, "Title verification successfully");
             LoggerHandler.info("Title verified successfully");
         }
         catch(AssertionError e){
             test.log(Status.FAIL, "Invalid Title");
-            LoggerHandler.error("Invalid Title");
+            LoggerHandler.error("Not a valid Title");
         }
     }
     /*
