@@ -13,6 +13,9 @@ import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
 public class MadeInChinaNavigationPage {
+    private static final String directory = "user.dir";
+    private static final String excelPath = "/testdata/pruthvi.xlsx";
+    private static final String sheetName = "pruthvi";
     WebDriverHelper helper;
     ExtentTest test;
     public MadeInChinaNavigationPage(ExtentTest test){
@@ -87,35 +90,35 @@ public class MadeInChinaNavigationPage {
      */
 
     public void navigation(){
-        clickOnCategory(MadeInChinaCategoriesPageLocators.Manufacturing,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 0, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 0, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.Manufacturing,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 0, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 0, 0));
         navigateBack();
-        clickOnCategory(MadeInChinaCategoriesPageLocators.consumerElectronics,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 1, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 1, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.consumerElectronics,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 0));
         navigateBack();
-        clickOnCategory(MadeInChinaCategoriesPageLocators.industrialEquipmentComponents,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 2, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 2, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.industrialEquipmentComponents,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 2, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 2, 0));
         navigateBack();
-        clickOnCategory(MadeInChinaCategoriesPageLocators.electricalElectronics,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 3, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 3, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.electricalElectronics,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 3, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 3, 0));
         navigateBack();
-        clickOnCategory(MadeInChinaCategoriesPageLocators.constructionDecoration,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 4, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 4, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.constructionDecoration,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 4, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 4, 0));
         navigateBack();
-        clickOnCategory(MadeInChinaCategoriesPageLocators.lightIndustryDailyUse,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 5, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 5, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.lightIndustryDailyUse,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 5, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 5, 0));
         navigateBack();
-        clickOnCategory(MadeInChinaCategoriesPageLocators.autoMotorcyclePartsAccessories,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 6, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 6, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.autoMotorcyclePartsAccessories,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 6, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 6, 0));
         navigateBack();
-        clickOnCategory(MadeInChinaCategoriesPageLocators.apparelAccessories,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 7, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 7, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.apparelAccessories,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 7, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 7, 0));
         navigateBack();
-        clickOnCategory(MadeInChinaCategoriesPageLocators.lightsLighting,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 8, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 8, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.lightsLighting,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 8, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 8, 0));
         navigateBack();
-        clickOnCategory(MadeInChinaCategoriesPageLocators.sportingGoodsRecreation,ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 9, 0));
-        verifyheading(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 9, 0));
+        clickOnCategory(MadeInChinaCategoriesPageLocators.sportingGoodsRecreation,ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 9, 0));
+        verifyheading(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 9, 0));
         
     }
 }
