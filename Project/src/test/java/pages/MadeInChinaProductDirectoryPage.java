@@ -13,6 +13,9 @@ import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class MadeInChinaProductDirectoryPage {
+    private static final String directory = "user.dir";
+    private static final String excelPath = "/testdata/pruthvi.xlsx";
+    private static final String sheetName = "pruthvi";
     WebDriverHelper helper;
     ExtentTest test;
     /*
@@ -156,10 +159,10 @@ public class MadeInChinaProductDirectoryPage {
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.plasticMachinery);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Plastic Machinery");
-            test.log(Status.PASS, "Successfully clicked on Plastic Machinery");
+            test.log(Status.PASS, "Successfully clicked on the Plastic Machinery");
         } catch (Exception e) {
-            LoggerHandler.error("Successfully clicked on Plastic Machinery");
-            test.log(Status.FAIL, "Successfully clicked on Plastic Machinery");
+            LoggerHandler.error("Didn't Successfully clicked on Plastic Machinery");
+            test.log(Status.FAIL, "Not Successfully clicked on Plastic Machinery");
         }
     }
     /*
@@ -176,10 +179,10 @@ public class MadeInChinaProductDirectoryPage {
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.metallicProcessingMachinery);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Metallic Processing Machinery");
-            test.log(Status.PASS, "Successfully clicked on Metallic Processing Machinery");
+            test.log(Status.PASS, "Successfully clicked on the Metallic Processing Machinery");
         } catch (Exception e) {
-            LoggerHandler.error("Successfully clicked on Metallic Processing Machinery");
-            test.log(Status.FAIL, "Successfully clicked on Metallic Processing Machinery");
+            LoggerHandler.error("Not Successfully clicked on Metallic Processing Machinery");
+            test.log(Status.FAIL, "Didn't Successfully clicked on Metallic Processing Machinery");
         }
     }
     /*
@@ -196,10 +199,10 @@ public class MadeInChinaProductDirectoryPage {
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.mould);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Mould");
-            test.log(Status.PASS, "Successfully clicked on Mould");
+            test.log(Status.PASS, "Successfully clicked the on Mould");
         } catch (Exception e) {
-            LoggerHandler.error("Successfully clicked on Mould");
-            test.log(Status.FAIL, "Successfully clicked on Mould");
+            LoggerHandler.error("Didn't Successfully clicked on Mould");
+            test.log(Status.FAIL, "Not Successfully clicked on Mould");
         }
     }
     /*
@@ -215,11 +218,11 @@ public class MadeInChinaProductDirectoryPage {
             helper.waitForElementToBeVisible(MadeInChinaProductDirectoryPageLocators.laserEquipment, 10);
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.laserEquipment);
             helper.switchToNewWindow();
-            LoggerHandler.info("Successfully clicked on Laser Equipment");
+            LoggerHandler.info("Successfully clicked on the Laser Equipment");
             test.log(Status.PASS, "Successfully clicked on Laser Equipment");
         } catch (Exception e) {
-            LoggerHandler.error("Successfully clicked on Laser Equipment");
-            test.log(Status.FAIL, "Successfully clicked on Laser Equipment");
+            LoggerHandler.error("Didn't Successfully clicked on Laser Equipment");
+            test.log(Status.FAIL, "Not Successfully clicked on Laser Equipment");
         }
     }
     /*
@@ -238,10 +241,10 @@ public class MadeInChinaProductDirectoryPage {
             LoggerHandler.info("click on casting");
             test.log(Status.PASS, "click on casting");
             LoggerHandler.info("Successfully clicked on Casting & Forging");
-            test.log(Status.PASS, "Successfully clicked on Casting & Forging");
+            test.log(Status.PASS, "Successfully clicked on the Casting & Forging");
         } catch (Exception e) {
-            LoggerHandler.error("Successfully clicked on Casting & Forging");
-            test.log(Status.FAIL, "Successfully clicked on Casting & Forging");
+            LoggerHandler.error("Did not Successfully clicked on Casting & Forging");
+            test.log(Status.FAIL, "Not Successfully clicked on Casting & Forging");
         }
     }
     /*
@@ -260,13 +263,13 @@ public class MadeInChinaProductDirectoryPage {
             helper.clickOnElement(MadeInChinaProductDirectoryPageLocators.agriculturalMachinery);
             helper.switchToNewWindow();
             LoggerHandler.info("Successfully clicked on Agricultural Machinery");
-            test.log(Status.PASS, "Successfully clicked on Agricultural Machinery");
-            Reporter.attachScreenshotToReport("agricultural_machinery", test, "agricultural_machinery");
+            test.log(Status.PASS, "Successfully clicked on the Agricultural Machinery");
+            Reporter.attachScreenshotToReport("agricultural_machinery", test, "agricultural_machinerys");
             Screenshot.captureFullScreenshot("agricultural_machinery");
            
         } catch (Exception e) {
-            LoggerHandler.error("Successfully clicked on Agricultural Machinery");
-            test.log(Status.FAIL, "Successfully clicked on Agricultural Machinery");
+            LoggerHandler.error("Not Successfully clicked on Agricultural Machinery");
+            test.log(Status.FAIL, "Didn't Successfully clicked on Agricultural Machinery");
         }
     }
     /*
@@ -281,12 +284,12 @@ public class MadeInChinaProductDirectoryPage {
         try {
             helper.switchBackTowindow(1);
             LoggerHandler.info("navigate back to product directory");
-            test.log(Status.PASS,"navigate back to product directory");
-            LoggerHandler.info("Successfully  navigated Back");
-            test.log(Status.PASS,"Successfully navigated Back");
+            test.log(Status.PASS,"navigated back to product directory");
+            LoggerHandler.info("Successfully navigated Back");
+            test.log(Status.PASS,"Successfully navigate back");
         } catch (Exception e) {
-            LoggerHandler.info("Failed to navigated Back");
-            test.log(Status.PASS,"Failed to navigated Back");
+            LoggerHandler.info("Failed to navigate Back");
+            test.log(Status.PASS,"Not navigated back");
         }
     }
     /*
@@ -301,11 +304,11 @@ public class MadeInChinaProductDirectoryPage {
         try {
             String text=helper.getURL();
             Assert.assertTrue(text.contains(url));
-            LoggerHandler.info("Successfully  verified the url "+url);
+            LoggerHandler.info("Successfully verified url "+url);
             test.log(Status.PASS,"Successfully verified the url  "+url );
         } catch (Exception e) {
             LoggerHandler.info("Failed to verified the url  "+url );
-            test.log(Status.FAIL,"Failed to verified the url  "+url );
+            test.log(Status.FAIL,"Didn't verified the url  "+url );
         }  
     }
     /*
@@ -321,31 +324,31 @@ public class MadeInChinaProductDirectoryPage {
             hoverOverBuyers();
             clickOnProductDirectory();
             clickOnMachineTools();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 0, 1));
+            verifyurl(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 0, 1));
             navigateBack();
             clickOnEngineeringConstructionMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 1, 1));
+            verifyurl(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 1));
             navigateBack();
             clickOnWoodworkingMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 2, 1));
+            verifyurl(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 2, 1));
             navigateBack();
             clickOnPlasticMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 3, 1));
+            verifyurl(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 3, 1));
             navigateBack();
             clickOnMetallicProcessingMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 4, 1));
+            verifyurl(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 4, 1));
             navigateBack();
             clickOnMould();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 5, 1));
+            verifyurl(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 5, 1));
             navigateBack();
             clickOnLaserEquipment();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 6, 1));
+            verifyurl(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 6, 1));
             navigateBack();
             clickOnCastingForging();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 7, 1));   
+            verifyurl(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 7, 1));   
             navigateBack();
             clickOnAgriculturalMachinery();
-            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/pruthvi.xlsx", "pruthvi", 8, 1));  
+            verifyurl(ExcelReader.readData(System.getProperty("user.dir")+excelPath, sheetName, 8, 1));  
     }
     
 }

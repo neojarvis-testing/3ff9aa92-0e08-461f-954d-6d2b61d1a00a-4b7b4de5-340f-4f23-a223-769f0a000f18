@@ -13,6 +13,9 @@ import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 public class MadeInChinaBuyerModulePage {
+    private static final String directory = "user.dir";
+    private static final String excelPath = "/testdata/BuyerExcel.xlsx/";
+    private static final String sheetName = "Samhitha";
     ExtentTest test;
     WebDriverHelper helper;
     public MadeInChinaBuyerModulePage(ExtentTest test){
@@ -30,10 +33,10 @@ public class MadeInChinaBuyerModulePage {
             helper.waitForElementToBeVisible(MadeInChinaBuyerModulePageLocator.ClosePopUp, 10);
             helper.clickOnElement(MadeInChinaBuyerModulePageLocator.ClosePopUp);
             test.log(Status.PASS, "pop up closed");
-            LoggerHandler.info("pop up closed");
+            LoggerHandler.info("popup closed");
         } catch (Exception e) {
             test.log(Status.FAIL, "Failed to close the pop up");
-            LoggerHandler.error("Failed to close the pop up");
+            LoggerHandler.error("Failed to close the popup");
         }
     }
     /*
@@ -51,7 +54,7 @@ public class MadeInChinaBuyerModulePage {
             test.log(Status.PASS, "Hovered on Buyer");
             LoggerHandler.info("Hovered on  Buyer");
         } catch (Exception e) {
-            test.log(Status.FAIL, "Failed to locate the element to be hovered");
+            test.log(Status.FAIL, "Failed to locate the element to hover");
             LoggerHandler.error("Failed to locate the element to be hovered");
         }
     }
@@ -68,10 +71,10 @@ public class MadeInChinaBuyerModulePage {
             helper.switchToAllTabs();
             Screenshot.captureFullScreenshot("New User Guide");
             Reporter.attachScreenshotToReport("New User guide", test, "Screenshot attached to the NewUserGuide Report");
-            test.log(Status.PASS, "Clicked on new user guide");
+            test.log(Status.PASS, "Clicked on the new user guide");
             LoggerHandler.info("Clicked on new user guide");
         } catch (Exception e) {
-            test.log(Status.FAIL, "Couldn't click on New User Guide");
+            test.log(Status.FAIL, "Couldn't click on the New User Guide");
             LoggerHandler.error("Couldn't click on new user guide");
         }
     }
@@ -85,13 +88,13 @@ public class MadeInChinaBuyerModulePage {
         try {
             String url=Base.driver.getCurrentUrl();
             System.out.println(url);
-            String NewUser=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 0, 0);
+            String NewUser=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 0, 0);
             Assert.assertTrue(url.contains(NewUser));
-            test.log(Status.PASS, "URL Verified");
+            test.log(Status.PASS, "URL was Verified");
             LoggerHandler.info("URL Verified");
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Url didn't match");
-            LoggerHandler.error("Url didin't match");
+            LoggerHandler.error("Url didi not match");
         }
     }
     /*
@@ -103,14 +106,14 @@ public class MadeInChinaBuyerModulePage {
     public void verifyTitleSourceProducts(){
         try{
             String title = Base.driver.getTitle();
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 1, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 0);
             Assert.assertTrue(title.contains(value));
-            test.log(Status.PASS, "Title verified successfully");
+            test.log(Status.PASS, "Title verification successfully");
             LoggerHandler.info("Title verified successfully");
         }
         catch(AssertionError e){
             test.log(Status.FAIL, "Invalid Title");
-            LoggerHandler.error("Invalid Title");
+            LoggerHandler.error("Not a valid Title");
         }
     }
     /*
@@ -161,13 +164,13 @@ public class MadeInChinaBuyerModulePage {
     public void verifyURLSourceProducts(){
         try {
             String url2=Base.driver.getCurrentUrl();
-            String url=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 2, 0);
+            String url=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 2, 0);
             Assert.assertTrue(url2.contains(url));
             test.log(Status.PASS, "Verified url contains Audited Suppliers");
             LoggerHandler.info("Verified url contains Audited Suppliers");
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Invalid URL");
-            LoggerHandler.error("Invalid URL");
+            LoggerHandler.error("Not valid URL");
         }
     }
     /*
@@ -179,7 +182,7 @@ public class MadeInChinaBuyerModulePage {
     public void verifyTitleAuditedSupplier(){
         try {
             String title2=Base.driver.getTitle();
-            String text=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 3, 0);
+            String text=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 3, 0);
             Assert.assertTrue(title2.contains(text));
             test.log(Status.PASS, "Audited Suppliers Title Verified Successfully");
             LoggerHandler.info("Audites Suppliers Title Verified Successfully");
@@ -202,10 +205,10 @@ public class MadeInChinaBuyerModulePage {
             Screenshot.captureFullScreenshot("Meet Suppliers");
             Reporter.attachScreenshotToReport("Meet suppliers", test, "Meet suppliers ScreenShot Attached to report");
             test.log(Status.PASS, "Clicked on Meet suppliers link");
-            LoggerHandler.info("Clicked on Meet suppliers link");
+            LoggerHandler.info("Clicked on the Meet suppliers link");
         } catch (Exception e) {
             test.log(Status.FAIL, "Couldn't find meet suppliers link");
-            LoggerHandler.error("Clicked on Meet suppliers link");
+            LoggerHandler.error("Didn't Clicked on Meet suppliers link");
         }
     }
     /*
@@ -217,13 +220,13 @@ public class MadeInChinaBuyerModulePage {
     public void verifyURLPrivateSourcing(){
         try {
             String url3=Base.driver.getCurrentUrl();
-            String url=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 4, 0);
+            String url=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 4, 0);
             Assert.assertTrue(url3.contains(url));
             test.log(Status.PASS, "Verified Private sourcing meeting url");
             LoggerHandler.info("Verified Private sourcing meeting url");
         } catch (Exception e) {
             test.log(Status.FAIL, "Invalid URL");
-            LoggerHandler.error("Invalid URL");
+            LoggerHandler.error(" It is an invalid URL");
         }
     }
     /*
@@ -235,7 +238,7 @@ public class MadeInChinaBuyerModulePage {
     public void verifyTitleMeetSuppliers(){
         try {
             String title3=Base.driver.getTitle();
-            String title=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 5, 0);
+            String title=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 5, 0);
             Assert.assertTrue(title3.contains(title));
             test.log(Status.PASS, "Meet Suppliers Verified Successfully");
             LoggerHandler.info("Meet Suppliers Verified Successfully");

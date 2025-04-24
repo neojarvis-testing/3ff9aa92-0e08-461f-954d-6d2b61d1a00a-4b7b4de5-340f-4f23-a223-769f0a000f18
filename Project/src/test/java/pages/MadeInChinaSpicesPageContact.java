@@ -72,10 +72,10 @@ public class MadeInChinaSpicesPageContact {
         try {
             helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.searchBar, 10);
             helper.sendKeys(MadeInChinaSpicesPageContactLocators.searchBar, "spices");
-            test.log(Status.PASS, "Data sent to the search bar");
+            test.log(Status.PASS, "Sent data to the search bar");
             LoggerHandler.info("Data sent to the search bar");
         } catch (Exception e) {
-            test.log(Status.FAIL, "Data not sent to the search bar");
+            test.log(Status.FAIL, "Did not sent data to the search bar");
             LoggerHandler.info("Data not sent to the search bar");
         }
     }
@@ -190,10 +190,10 @@ public class MadeInChinaSpicesPageContact {
         try {
             helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.textArea, 10);
             helper.sendKeys(MadeInChinaSpicesPageContactLocators.textArea, "I want to know more details about the item. ");
-            test.log(Status.PASS, "Data sent to the textArea");
+            test.log(Status.PASS, "Data has sent to the textArea");
             LoggerHandler.info("Data sent to the textArea");
         } catch (Exception e) {
-            test.log(Status.FAIL, "Data not sent to the textArea");
+            test.log(Status.FAIL, "Data did not sent to the textArea");
             LoggerHandler.info("Data not sent to the textArea");
         }
     }
@@ -229,10 +229,10 @@ public class MadeInChinaSpicesPageContact {
             helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.emailInput, 10);
             helper.sendKeys(MadeInChinaSpicesPageContactLocators.emailInput, "testmic@gmail.com");
             test.log(Status.PASS, "Data sent to the emailInput");
-            LoggerHandler.info("Data sent to the emailInput");
+            LoggerHandler.info("Data has sent to the emailInput");
         } catch (Exception e) {
             test.log(Status.FAIL, "Data not sent to the emailInput");
-            LoggerHandler.info("Data not sent to the emailInput");
+            LoggerHandler.info("Data did not sent to the emailInput");
         }
     }
 

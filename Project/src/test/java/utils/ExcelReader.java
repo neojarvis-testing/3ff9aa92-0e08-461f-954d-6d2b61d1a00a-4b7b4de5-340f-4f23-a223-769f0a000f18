@@ -2,7 +2,6 @@ package utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -40,7 +39,7 @@ public class ExcelReader {
                 cellData=col.toString();
             }
         } catch (IOException e) {
-           e.printStackTrace();
+           LoggerHandler.error("IoException");
         } finally{
             try {
                 if (fis!=null) {
@@ -50,7 +49,7 @@ public class ExcelReader {
                     workbook.close();
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                LoggerHandler.error("IOException");
             }
         }
         return cellData;

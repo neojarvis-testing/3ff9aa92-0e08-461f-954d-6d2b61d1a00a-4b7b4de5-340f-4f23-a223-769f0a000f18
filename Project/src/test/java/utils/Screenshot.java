@@ -10,6 +10,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import com.google.common.io.Files;
 public class Screenshot extends Base {
+    private static final String time = "yyyy.MM.dd.HH.mm.ss";
+    private static final String directory = "user.dir";
+    private static final String screenshotDirectory = "/screenshots";
     /*
    * MethodName: captureFullScreenshot
    * AuthorName: SaiRohith
@@ -18,11 +21,11 @@ public class Screenshot extends Base {
    * ReturnType: void
    */
     public static void captureFullScreenshot(String filename) {
-        String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        String timestamp = new SimpleDateFormat(time).format(new Date());
         String name = filename + timestamp + ".png";
         TakesScreenshot ts = (TakesScreenshot) driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
-        File screenshotsDir = new File(System.getProperty("user.dir") + "/screenshots");
+        File screenshotsDir = new File(System.getProperty(directory) + screenshotDirectory);
         if (!screenshotsDir.exists()) {
             screenshotsDir.mkdirs();
         }
@@ -30,7 +33,7 @@ public class Screenshot extends Base {
         try {
             Files.copy(file, target);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerHandler.error("captureFullScreenshot not working");
         }
     }
      /*
@@ -42,13 +45,13 @@ public class Screenshot extends Base {
    */
     public static void captureHighlightedElementScreenshot(By xpath, String filename) {
     	WebElement element = driver.findElement(xpath);
-        String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        String timestamp = new SimpleDateFormat(time).format(new Date());
         String name = filename + timestamp + ".png";
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].style.border='3px solid red'", element);
         TakesScreenshot ts = (TakesScreenshot) driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
-        File screenshotsDir = new File(System.getProperty("user.dir") + "/screenshots");
+        File screenshotsDir = new File(System.getProperty(directory) + screenshotDirectory);
         if (!screenshotsDir.exists()) {
             screenshotsDir.mkdirs();
         }
@@ -56,7 +59,7 @@ public class Screenshot extends Base {
         try {
             Files.copy(file, target);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerHandler.error("captureHighlightedElementScreenshot not working");
         } finally {
             js.executeScript("arguments[0].style.border=''", element);
         }
@@ -70,10 +73,10 @@ public class Screenshot extends Base {
    */
     public static void captureElementOnlyScreenshot(By xpath, String filename) {
     	WebElement element = driver.findElement(xpath);
-        String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        String timestamp = new SimpleDateFormat(time).format(new Date());
         String name = filename + timestamp + ".png";
         File file = element.getScreenshotAs(OutputType.FILE);
-        File screenshotsDir = new File(System.getProperty("user.dir") + "/screenshots");
+        File screenshotsDir = new File(System.getProperty(directory) + screenshotDirectory);
         if (!screenshotsDir.exists()) {
             screenshotsDir.mkdirs();
         }
@@ -81,7 +84,7 @@ public class Screenshot extends Base {
         try {
             Files.copy(file, target);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerHandler.error("captureElementOnlyScreenshot not working");
         }
     }
 }

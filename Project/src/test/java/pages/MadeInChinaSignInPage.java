@@ -63,11 +63,11 @@ public class MadeInChinaSignInPage {
             helper.waitForElementToBeVisible(MadeInChinaSignInPageLocator.joinfree, 10);
             helper.clickOnElement(MadeInChinaSignInPageLocator.joinfree);
             helper.switchToNewWindow();
-            test.log(Status.PASS,"Clicking SignIn success");
-            LoggerHandler.info("Clicking SignIn success");            
+            test.log(Status.PASS,"Clicking on SignIn success");
+            LoggerHandler.info("Clicking SignIn is success");            
         } catch (Exception e) {
-            test.log(Status.FAIL,"Clicking SignIn failed");
-            LoggerHandler.error("Clicking SignIn failed");
+            test.log(Status.FAIL,"Clicking Signin failed");
+            LoggerHandler.error("Clicking Sign In failed");
          }
     }
     /*
@@ -81,11 +81,11 @@ public class MadeInChinaSignInPage {
         try {
             helper.waitForElementToBeClickable(MadeInChinaSignInPageLocator.email,6);
             helper.clickOnElement(MadeInChinaSignInPageLocator.email);
-            test.log(Status.PASS,"Clicking email success");
-            LoggerHandler.info("Clicking email success");            
+            test.log(Status.PASS,"Clicking on email success");
+            LoggerHandler.info("Clicking email is success");            
         } catch (Exception e) {
-            test.log(Status.FAIL,"Clicking email failed");
-            LoggerHandler.error("Clicking email failed");
+            test.log(Status.FAIL,"Clicking email has failed");
+            LoggerHandler.error("Clicking on email failed");
         }
     }
     /*
@@ -116,8 +116,7 @@ public class MadeInChinaSignInPage {
         try {
             helper.clickOnElement(MadeInChinaSignInPageLocator.checkbox);
             test.log(Status.PASS,"Clicking I agree to checkbox success");
-            LoggerHandler.info("Clicking I agree to checkbox success");
-            Thread.sleep(1000);            
+            LoggerHandler.info("Clicking I agree to checkbox success");           
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking I agree to checkbox failed");
             LoggerHandler.error("Clicking I agree to checkbox failed");
@@ -171,10 +170,10 @@ public class MadeInChinaSignInPage {
             String text = helper.getText(MadeInChinaSignInPageLocator.verificationerror);
             Assert.assertTrue(text.contains("Please enter the verification code."));
             test.log(Status.PASS,"scuuessfully verified text");
-            LoggerHandler.info("scuuessfully verified  text");            
+            LoggerHandler.info("successfully verified text");            
         } catch (AssertionError e) {
-            test.log(Status.FAIL,"text verification failed");
-            LoggerHandler.error("text verification failed");
+            test.log(Status.FAIL,"failed to verify text");
+            LoggerHandler.error("text verification is failed");
         }
     }
     /*
@@ -190,10 +189,10 @@ public class MadeInChinaSignInPage {
             helper.waitForElementToBeVisible(MadeInChinaSignInPageLocator.signnow,6);
             helper.clickOnElement(MadeInChinaSignInPageLocator.signnow);
             test.log(Status.PASS,"Clicking sign in success");
-            LoggerHandler.info("Clicking sign in success");
+            LoggerHandler.info("Clicking sign in is success");
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking sign in  failed");
-            LoggerHandler.error("Clicking sign in failed");
+            LoggerHandler.error("Clicking sign in has failed");
         }
     }
      /*
@@ -242,8 +241,8 @@ public class MadeInChinaSignInPage {
     public void clickOnLogin(){
         try {
             helper.clickOnElement(MadeInChinaSignInPageLocator.signin);
-            test.log(Status.PASS,"Clicking sign in success");
-            LoggerHandler.info("Clicking sign in success");
+            test.log(Status.PASS,"Clicked on sign in success");
+            LoggerHandler.info("Clicked sign in success");
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking sign in  failed");
             LoggerHandler.error("Clicking sign in failed");
@@ -260,11 +259,11 @@ public class MadeInChinaSignInPage {
         try {
             String text = helper.getText(MadeInChinaSignInPageLocator.logionerror);
             Assert.assertTrue(text.contains("This Email Address is not yet registered"));
-            test.log(Status.PASS,"scuuessfully verified text");
-            LoggerHandler.info("scuuessfully verified  text");           
+            test.log(Status.PASS,"sucuessfully verified text");
+            LoggerHandler.info("sucessfully verified  text");           
         } catch (AssertionError e) {
-            test.log(Status.FAIL,"text verification failed");
-            LoggerHandler.error("text verification failed");
+            test.log(Status.FAIL,"text is not verified");
+            LoggerHandler.error("text did not verified");
         }
     }
         /*
@@ -312,11 +311,11 @@ public class MadeInChinaSignInPage {
         try {
             String text = helper.getText(MadeInChinaSignInPageLocator.lasterror);
             Assert.assertTrue(text.contains("Please enter the text in the image"));
-            test.log(Status.PASS,"scuuessfully verified text");
+            test.log(Status.PASS,"scuessfully verified text");
             LoggerHandler.info("scuuessfully verified  text");           
         } catch (AssertionError e) {
             test.log(Status.FAIL,"text verification failed");
-            LoggerHandler.error("text verification failed");
+            LoggerHandler.error("text verification has failed");
         }
     }
     public void case1(){
@@ -327,11 +326,6 @@ public class MadeInChinaSignInPage {
         enterDataToEmail();
         clickOnIagree();
         clickOnVerify();
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {            
-            e.printStackTrace();
-        }
         // switchnewwindow1();
         // clicknext();
         // verifyverification();

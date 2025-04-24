@@ -58,7 +58,7 @@ public class TestMadeInChina extends Base{
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(priority = 2,enabled = false)
+    @Test(priority = 2,enabled = true)
     public void signInTest(){
         test = report.createTest("signin");
         MadeInChinaSignInPage signin = new MadeInChinaSignInPage(test);
@@ -72,7 +72,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test(priority = 5, enabled = false)
+    @Test(priority = 5, enabled = true)
     public void languageTests()
     {
         test = report.createTest("Test Case 5");
@@ -86,7 +86,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test(priority = 6, enabled = false)
+    @Test(priority = 6, enabled = true)
     public void lightsTests()
     {
         test = report.createTest("Test Case 6");
@@ -113,7 +113,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test(priority = 1,enabled = false)
+    @Test(priority = 1,enabled = true)
     public void diamond(){
         test = report.createTest("Diamond Membership");
         DiamondMembershipMadeInChinaPage diamond = new DiamondMembershipMadeInChinaPage(test);
@@ -126,7 +126,7 @@ public class TestMadeInChina extends Base{
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(priority = 3, enabled = false)
+    @Test(priority = 3, enabled = true)
     public void spicesContact(){
         test = report.createTest("SpicesContact");
         MadeInChinaSpicesPageContact spc = new MadeInChinaSpicesPageContact(test);
@@ -139,7 +139,7 @@ public class TestMadeInChina extends Base{
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(priority = 4, enabled = false)
+    @Test(priority = 4, enabled = true)
     public void wiresAndFurniture(){
         test = report.createTest("WiresAndFurniture");
         MadeInChinaWiresAndFurniturePage wfp = new MadeInChinaWiresAndFurniturePage(test);
@@ -152,7 +152,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test(priority = 8,enabled = false)
+    @Test(priority = 8,enabled = true)
     public void hotItems(){
         test = report.createTest("All Hot Items");
         MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);
@@ -165,7 +165,7 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-    @Test(priority = 9,enabled = false)
+    @Test(priority = 9,enabled = true)
     public void navigation(){
         test=report.createTest("Navigation Between Categories");
         MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
@@ -178,7 +178,7 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-    @Test(priority = 10,enabled = false)
+    @Test(priority = 10,enabled = true)
 	public void productCategory(){
 		test=report.createTest("Product Category");
 		MadeInChinaProductDirectoryPage madeInChinaProductDirectoryPage=new MadeInChinaProductDirectoryPage(test);

@@ -10,6 +10,9 @@ import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
 public class DiamondMembershipMadeInChinaPage {
+    private static final String directory = "user.dir";
+    private static final String excelPath = "/testdata/krishna.xlsx/";
+    private static final String sheetName = "Krishna";
     WebDriverHelper helper;
     ExtentTest test;
     /*
@@ -68,7 +71,7 @@ public class DiamondMembershipMadeInChinaPage {
     */
     public void enterDataToSearchBar(){
         try {
-            helper.sendKeys(MadeInChinaDiamondMembershipPageLocator.searchBar, ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 0, 1));
+            helper.sendKeys(MadeInChinaDiamondMembershipPageLocator.searchBar, ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 0, 1));
             helper.clickOnElement(MadeInChinaDiamondMembershipPageLocator.searchIcon);
             LoggerHandler.info("Clicked on Search icon");
             test.log(Status.PASS, "Clicked on Search icon");
@@ -87,7 +90,7 @@ public class DiamondMembershipMadeInChinaPage {
     public void verifyElectronics(){
         try {
             String electronics = helper.getText(MadeInChinaDiamondMembershipPageLocator.verifyWord);
-            Assert.assertTrue(electronics.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 1)));
+            Assert.assertTrue(electronics.contains(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 1)));
             LoggerHandler.info("Verified Electronics");
             test.log(Status.PASS, "Verified Electronics");
         } catch (Exception e) {
@@ -141,7 +144,7 @@ public class DiamondMembershipMadeInChinaPage {
     public void verifyConsumer(){
         try {
             String consumer = helper.getText(MadeInChinaDiamondMembershipPageLocator.filterconsumerElectronics);
-            Assert.assertTrue(consumer.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 2)));
+            Assert.assertTrue(consumer.contains(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 2)));
             LoggerHandler.info("Verified Consumer");
             test.log(Status.PASS, "Verified Consumer");
         } catch (Exception e) {
@@ -177,7 +180,7 @@ public class DiamondMembershipMadeInChinaPage {
     public void verifyIs9000(){
         try {
             String isfilter = helper.getText(MadeInChinaDiamondMembershipPageLocator.filterIs9000);
-            Assert.assertTrue(isfilter.contains(ExcelReader.readData(System.getProperty("user.dir")+"/testdata/krishna.xlsx/", "Krishna", 1, 3)));
+            Assert.assertTrue(isfilter.contains(ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 3)));
             LoggerHandler.info("Verified Is9000");
             test.log(Status.PASS, "Verified Is9000");
         } catch (Exception e) {

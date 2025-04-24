@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
- 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -31,7 +30,7 @@ public class WebDriverHelper {
 		try {
 			driver.findElement(path).click();
 		} catch (Exception e) {
-			e.printStackTrace();
+			LoggerHandler.error("clickOnElement not working");
 		}
 	}
     /*
@@ -44,7 +43,7 @@ public class WebDriverHelper {
 		try {
 			driver.findElement(path).sendKeys(value);
 	    } catch (Exception e) {
-			e.printStackTrace();
+			LoggerHandler.error("sendKeys not working");
 		}
 	}
     /*
@@ -54,7 +53,13 @@ public class WebDriverHelper {
      * Return type:String
      */
     public String getText(By path){
-        return driver.findElement(path).getText();
+        String text="";
+        try {
+            text= driver.findElement(path).getText();
+	    } catch (Exception e) {
+			LoggerHandler.error("getText not working");
+		}
+        return text;
     }
     /*
      * Method name: getTitle
@@ -63,7 +68,13 @@ public class WebDriverHelper {
      * Return type: String
      */
     public String getTitle(){
-       return driver.getTitle();
+        String title="";
+        try {
+            title = driver.getTitle();
+	    } catch (Exception e) {
+			LoggerHandler.error("getTitle not working");
+		}
+        return title;
     }
     /*
      * Method name: navigateBack
@@ -72,17 +83,13 @@ public class WebDriverHelper {
      * Return type:Void
      */
     public void navigateBack(){
-        driver.navigate().back();
+        try {
+            driver.navigate().back();
+	    } catch (Exception e) {
+			LoggerHandler.error("navigateBack not working");
+		}
     }
-    /*
-     * Method name: Refresh
-     * Author: Samhitha
-     * Description: Refreshes the page
-     * Return type:Void
-     */
-    public void refresh(){
-        driver.navigate().refresh();
-    }
+
     /*
      * Method name: getURL
      * Author: Samhitha
@@ -90,7 +97,13 @@ public class WebDriverHelper {
      * Return type: String
      */
     public String getURL(){
-        return driver.getCurrentUrl();
+        String url = "";
+        try {
+            url = driver.getCurrentUrl();
+	    } catch (Exception e) {
+			LoggerHandler.error("getURL not working");
+		}
+        return url;
     }
     /*
      * Method name: enterAction
@@ -99,7 +112,11 @@ public class WebDriverHelper {
      * Return type: void
      */
 	public void enterAction(By path){
-		driver.findElement(path).sendKeys(Keys.ENTER);
+        try {
+            driver.findElement(path).sendKeys(Keys.ENTER);
+	    } catch (Exception e) {
+			LoggerHandler.error("enterAction not working");
+		}
 	}
     /*
      * Method name: clearText
@@ -108,7 +125,11 @@ public class WebDriverHelper {
      * Return type: void
      */
     public void clearText(By path){
-        driver.findElement(path).clear();
+        try {
+            driver.findElement(path).clear();
+	    } catch (Exception e) {
+			LoggerHandler.error("clearText not working");
+		}
     }
     /*
      * Method name: waitForElementToBeVisible
@@ -120,7 +141,7 @@ public class WebDriverHelper {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.visibilityOfElementLocated(path));
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("waitForElementToBeVisible not working");
         }
     }
     /*
@@ -133,7 +154,7 @@ public class WebDriverHelper {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.elementToBeClickable(path));
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("waitForElementToBeClickable not working");
         }
     }
     /*
@@ -148,7 +169,7 @@ public class WebDriverHelper {
 			WebElement webelement=driver.findElement(path);
 			action.moveToElement(webelement).build().perform();
 		} catch (Exception e) {
-			e.printStackTrace();
+			LoggerHandler.error("hoverOverElement not working");
 		}
 	}
     /*
@@ -163,18 +184,10 @@ public class WebDriverHelper {
 			WebElement webelement=driver.findElement(path);
 			action.click(webelement).build().perform();
 		} catch (Exception e) {
-			e.printStackTrace();
+			LoggerHandler.error("hoverAndClick not working");
 		}
 	}
-    /*
-     * Method name: getElementsByPath(String Path)
-     * Author: Samhitha
-     * Description: Returns the list of elements found using XPath
-     * Return type: WebElement
-     */
-	public List<WebElement>getElementsByXPath(String path){
-		return driver.findElements(By.xpath(path));
-	}
+
     /*
      * Method name: getElementsByPath(By Path)
      * Author: Samhitha
@@ -197,7 +210,7 @@ public class WebDriverHelper {
 	            driver.switchTo().window(child); // Switch to each tab/window
 	        }
 	    } catch (Exception e) {
-	        e.printStackTrace();
+	        LoggerHandler.error("switchToAllTabs not working");
 	    }
 	}
     /*
@@ -207,14 +220,18 @@ public class WebDriverHelper {
      * Return type: void
      */
     public void clickAndSwitch(By path){
-        String parent=driver.getWindowHandle();
-        clickOnElement(path);
-        Set<String> set=driver.getWindowHandles();
-        for (String child : set) {
-            if (!child.equals(parent)) {
-                driver.switchTo().window(child);
-                list.add(child);
-            } 
+        try {
+            String parent=driver.getWindowHandle();
+            clickOnElement(path);
+            Set<String> set=driver.getWindowHandles();
+            for (String child : set) {
+                if (!child.equals(parent)) {
+                    driver.switchTo().window(child);
+                    list.add(child);
+                } 
+            }
+        } catch (Exception e) {
+            LoggerHandler.error("clickAndSwitch is not working");
         }
     }
     /*
@@ -235,33 +252,10 @@ public class WebDriverHelper {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("switchToNewWindow not working");
         }
     }
-    /*
-     * Method name: scrollByPath
-     * Author: Samhitha
-     * Description: Scrolls down the page by the specified pixel value.
-     * Return type: void
-     */
-	public void scrollByPath(int path) {
-        try {
-            JavascriptExecutor js=(JavascriptExecutor)driver;
-            js.executeScript("window.scrollBy(0,"+ path +");");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-	}
-    /*
-     * Method name: scrollByPixel
-     * Author: Samhitha
-     * Description: Scrolls the page by the given x and y pixel values.
-     * Return type: void
-     */
-    public void scrollByPixel(int x ,int y) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(arguments[0],arguments[1]);", x,y);
-    }
+
     /*
      * Method name: javascriptScrollToElement
      * Author: Samhitha
@@ -274,7 +268,7 @@ public class WebDriverHelper {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].scrollIntoView()", element);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("javascriptScrollToElement not working");
         }
     }
     /*
@@ -289,7 +283,7 @@ public class WebDriverHelper {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].click();", element);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("javascriptClick not working");
         }
     }
     /*
@@ -299,32 +293,11 @@ public class WebDriverHelper {
      * Return type: void
      */
     public void switchBackTowindow(int x){
-        driver.switchTo().window(list.get(x));
-    }
-    /*
-     * Method name: selectDropDown
-     * Author: Samhitha
-     * Description: Selects an option from a dropdown by visible text.
-     * Return type: void
-     */
-	public void selectDropDown(By path, String value) {
         try {
-            WebElement element=driver.findElement(path);
-            Select select= new Select(element);
-            select.selectByVisibleText(value);
+            driver.switchTo().window(list.get(x));
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("switchBackTowindow is not working");
         }
-	}
-    /*
-     * Method name: scrollToFooter
-     * Author: Samhitha
-     * Description: Scrolls to the bottom of the page.
-     * Return type: void
-     */
-    public void scrollToFooter(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }
 }
  

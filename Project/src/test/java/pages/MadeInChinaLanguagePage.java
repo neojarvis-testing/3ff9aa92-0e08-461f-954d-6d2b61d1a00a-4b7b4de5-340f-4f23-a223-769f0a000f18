@@ -13,6 +13,9 @@ import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class MadeInChinaLanguagePage {
+    private static final String directory = "user.dir";
+    private static final String excelPath = "/testdata/Excel.xlsx";
+    private static final String sheetName = "sheet1";
     WebDriverHelper helper;
     ExtentTest test;
     public MadeInChinaLanguagePage(ExtentTest test){
@@ -119,7 +122,7 @@ public class MadeInChinaLanguagePage {
     public void verifySignInNow(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.verifySignIn);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 3, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 3, 0);
             Assert.assertEquals(text,value);
             test.log(Status.PASS, "Verified that we are on sign in page");
             LoggerHandler.info("Verified that we are on sign in page");
@@ -157,7 +160,7 @@ public class MadeInChinaLanguagePage {
     public void verifySpanish(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 4, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 4, 0);
             Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("Spanish");
             test.log(Status.PASS, "changed to spanish");
@@ -196,7 +199,7 @@ public class MadeInChinaLanguagePage {
     public void verifyGerman(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 5, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 5, 0);
             Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("German");
             test.log(Status.PASS, "changed to German");
@@ -235,7 +238,7 @@ public class MadeInChinaLanguagePage {
     public void verifyFrench(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 6, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 6, 0);
             Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("French");
             test.log(Status.PASS, "changed to French");
@@ -274,7 +277,7 @@ public class MadeInChinaLanguagePage {
     public void verifyRussian(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 7, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 7, 0);
             Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("Russian");
             test.log(Status.PASS, "changed to Russian");
@@ -313,7 +316,7 @@ public class MadeInChinaLanguagePage {
     public void verifyJapanese(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 8, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 8, 0);
             Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("Japanese");
             test.log(Status.PASS, "changed to Japanese");
@@ -352,7 +355,7 @@ public class MadeInChinaLanguagePage {
     public void verifyEnglish(){
         try {
             String text = helper.getText(MadeInChinaLanguagePageLocator.languageVerify);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 9, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 9, 0);
             Assert.assertEquals(text,value);
             Screenshot.captureFullScreenshot("English");
             test.log(Status.PASS, "changed to English");

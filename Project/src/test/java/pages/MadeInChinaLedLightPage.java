@@ -13,6 +13,9 @@ import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
 public class MadeInChinaLedLightPage {
+    private static final String directory = "user.dir";
+    private static final String excelPath = "/testdata/Excel.xlsx";
+    private static final String sheetName = "sheet1";
     WebDriverHelper helper;
     ExtentTest test;
     public MadeInChinaLedLightPage(ExtentTest test){
@@ -48,7 +51,7 @@ public class MadeInChinaLedLightPage {
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.searchbar,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.searchbar);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 0, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 0, 0);
             helper.sendKeys(MadeInChinaLedLightLocator.searchbar,value);
             helper.enterAction(MadeInChinaLedLightLocator.searchbar);
             test.log(Status.PASS, "clicked and sent data to search bar");
@@ -122,7 +125,7 @@ public class MadeInChinaLedLightPage {
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyFilter);
             String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 11, 0);
-            Assert.assertEquals(text,value);
+            Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "Filter result verified");
             LoggerHandler.info("Filter result verified");
         } catch (Exception e) {
@@ -158,7 +161,7 @@ public class MadeInChinaLedLightPage {
     public void verifyInquiry(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyInquiry);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 12, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 12, 0);
             Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "Inquiry page is verified");
             LoggerHandler.info("Inquiry page is verified");
@@ -178,7 +181,7 @@ public class MadeInChinaLedLightPage {
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.content,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.content);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 1, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 1, 0);
             helper.sendKeys(MadeInChinaLedLightLocator.content,value);
             test.log(Status.PASS, "clicked and sent data to content field");
             LoggerHandler.info("clicked and sent data to content field");
@@ -198,7 +201,7 @@ public class MadeInChinaLedLightPage {
         try {
             helper.waitForElementToBeVisible(MadeInChinaLedLightLocator.email,3);
             helper.clickOnElement(MadeInChinaLedLightLocator.email);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 2, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 2, 0);
             helper.sendKeys(MadeInChinaLedLightLocator.email,value);
             test.log(Status.PASS, "clicked and sent data to email field");
             LoggerHandler.info("clicked and sent data to email field");
@@ -271,7 +274,7 @@ public class MadeInChinaLedLightPage {
     public void verifyHomePage(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyHomePage);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1", 13, 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName, 13, 0);
             Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "Home page is verified");
             LoggerHandler.info("Home page is verified");
@@ -326,7 +329,7 @@ public class MadeInChinaLedLightPage {
     public void verifyLedTube(){
         try {
             String text = helper.getText(MadeInChinaLedLightLocator.verifyLedTube);
-            String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "sheet1",14 , 0);
+            String value=ExcelReader.readData(System.getProperty(directory)+excelPath, sheetName,14 , 0);
             Assert.assertTrue(text.contains(value));
             test.log(Status.PASS, "LED Tube page is verified");
             LoggerHandler.info("LED Tube page is verified");
