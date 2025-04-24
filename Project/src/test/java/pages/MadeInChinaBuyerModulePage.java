@@ -37,7 +37,7 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Hover Buyer
+     * a.Method Name: hoverOnBuyer
      * b.Author Name: Samhitha
      * c.Description: This method hovers on the buyer 
      * d.Return Type: void
@@ -56,7 +56,7 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Click new user guide
+     * a.Method Name: clickNewUserGuide
      * b.Author Name: Samhitha
      * c.Description: This method is used to close the pop up 
      * d.Return Type: void
@@ -76,7 +76,7 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Verify URL
+     * a.Method Name: verifyURLNewUser
      * b.Author Name: Samhitha
      * c.Description: This method is used to Verify the URL 
      * d.Return Type: void
@@ -95,7 +95,7 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Verify Title
+     * a.Method Name: verifyTitleSourceProducts
      * b.Author Name: Samhitha
      * c.Description: This method is used to Verify Title
      * d.Return Type: void
@@ -103,7 +103,6 @@ public class MadeInChinaBuyerModulePage {
     public void verifyTitleSourceProducts(){
         try{
             String title = Base.driver.getTitle();
-            System.out.println(title);
             String value=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 1, 0);
             Assert.assertTrue(title.contains(value));
             test.log(Status.PASS, "Title verified successfully");
@@ -115,7 +114,7 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Click Logo
+     * a.Method Name: clickLogo
      * b.Author Name: Samhitha
      * c.Description: This method is used to click on logo 
      * d.Return Type: void
@@ -134,7 +133,7 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Click Audited Suppliers
+     * a.Method Name: clickAuditedSuppliers
      * b.Author Name: Samhitha
      * c.Description: This method is used to click on audited suppliers 
      * d.Return Type: void
@@ -154,7 +153,7 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Verify Url2
+     * a.Method Name: verifyUrlSourceProducts
      * b.Author Name: Samhitha
      * c.Description: This method is used to verify the url which contains audited supplier
      * d.Return Type: void
@@ -162,18 +161,17 @@ public class MadeInChinaBuyerModulePage {
     public void verifyURLSourceProducts(){
         try {
             String url2=Base.driver.getCurrentUrl();
-            System.out.println(url2);
             String url=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 2, 0);
             Assert.assertTrue(url2.contains(url));
-            test.log(Status.PASS, "Verified Audited Suppliers");
-            LoggerHandler.info("Verified Audited Suppliers");
+            test.log(Status.PASS, "Verified url contains Audited Suppliers");
+            LoggerHandler.info("Verified url contains Audited Suppliers");
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Invalid URL");
             LoggerHandler.error("Invalid URL");
         }
     }
     /*
-     * a.Method Name: Verify Title
+     * a.Method Name: verifyTitleAudited
      * b.Author Name: Samhitha
      * c.Description: This method is used to Verify Title
      * d.Return Type: void
@@ -181,18 +179,17 @@ public class MadeInChinaBuyerModulePage {
     public void verifyTitleAuditedSupplier(){
         try {
             String title2=Base.driver.getTitle();
-            System.out.println(title2);
             String text=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 3, 0);
             Assert.assertTrue(title2.contains(text));
-            test.log(Status.PASS, "Audited Suppliers Verified Successfully");
-            LoggerHandler.info("Audites Suppliers Verified Successfully");
+            test.log(Status.PASS, "Audited Suppliers Title Verified Successfully");
+            LoggerHandler.info("Audites Suppliers Title Verified Successfully");
         } catch (AssertionError e) {
             test.log(Status.FAIL, "Couldn't verify the title Audited Suppliers");
             LoggerHandler.error("Couldn't verify the title Audited Suppliers");
         }
     }
     /*
-     * a.Method Name: Click Meet Suppliers
+     * a.Method Name: clickMeetSuppliers
      * b.Author Name: Samhitha
      * c.Description: This method is used to click on Meet suppliers
      * d.Return Type: void
@@ -212,7 +209,7 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Verify Url
+     * a.Method Name: verifyUrlPrivateSourcing
      * b.Author Name: Samhitha
      * c.Description: This method is used to verify the url which contains private sourcing meeting
      * d.Return Type: void
@@ -220,7 +217,6 @@ public class MadeInChinaBuyerModulePage {
     public void verifyURLPrivateSourcing(){
         try {
             String url3=Base.driver.getCurrentUrl();
-            System.out.println(url3);
             String url=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 4, 0);
             Assert.assertTrue(url3.contains(url));
             test.log(Status.PASS, "Verified Private sourcing meeting url");
@@ -231,7 +227,7 @@ public class MadeInChinaBuyerModulePage {
         }
     }
     /*
-     * a.Method Name: Verify Title
+     * a.Method Name: verifyTitleMeetSuppliers
      * b.Author Name: Samhitha
      * c.Description: This method is used to Verify Title
      * d.Return Type: void
@@ -239,7 +235,6 @@ public class MadeInChinaBuyerModulePage {
     public void verifyTitleMeetSuppliers(){
         try {
             String title3=Base.driver.getTitle();
-            System.out.println(title3);
             String title=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/BuyerExcel.xlsx/", "Samhitha", 5, 0);
             Assert.assertTrue(title3.contains(title));
             test.log(Status.PASS, "Meet Suppliers Verified Successfully");

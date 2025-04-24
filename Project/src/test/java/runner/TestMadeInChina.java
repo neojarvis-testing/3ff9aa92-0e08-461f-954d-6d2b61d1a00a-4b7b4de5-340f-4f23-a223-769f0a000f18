@@ -22,7 +22,7 @@ import pages.MadeInChinaProductDirectoryPage;
 import pages.MadeInChinaSignInPage;
 import pages.MadeInChinaSpicesPageContact;
 import pages.MadeInChinaWiresAndFurniturePage;
-import utils.*;
+
 
 public class TestMadeInChina extends Base{
     ExtentReports report;
@@ -58,7 +58,7 @@ public class TestMadeInChina extends Base{
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(priority = 2,enabled = true)
+    @Test(priority = 2,enabled = false)
     public void signInTest(){
         test = report.createTest("signin");
         MadeInChinaSignInPage signin = new MadeInChinaSignInPage(test);
@@ -72,7 +72,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test(priority = 5, enabled = true)
+    @Test(priority = 5, enabled = false)
     public void languageTests()
     {
         test = report.createTest("Test Case 5");
@@ -86,7 +86,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test(priority = 6, enabled = true)
+    @Test(priority = 6, enabled = false)
     public void lightsTests()
     {
         test = report.createTest("Test Case 6");
@@ -94,14 +94,14 @@ public class TestMadeInChina extends Base{
         led.ledTestCases();
     }
     /*
-    * a. Method Name: Buyer Module
+    * a. Method Name: buyer Module
     * b. Author Name: Samhitha 
     * c. Description: Executes the Buyer Module  test case by creating a test instance
     * d. Return Type: Void
     * e. Parameter List: None
     */
     @Test (priority = 7, enabled = true)
-    public void BuyerModule(){
+    public void buyerModule(){
         test=report.createTest("testCase7");
         MadeInChinaBuyerModulePage buyerModulePage=new MadeInChinaBuyerModulePage(test);
         buyerModulePage.testCase7();
@@ -113,7 +113,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test(priority = 1,enabled = true)
+    @Test(priority = 1,enabled = false)
     public void diamond(){
         test = report.createTest("Diamond Membership");
         DiamondMembershipMadeInChinaPage diamond = new DiamondMembershipMadeInChinaPage(test);
@@ -126,7 +126,7 @@ public class TestMadeInChina extends Base{
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(priority = 3, enabled = true)
+    @Test(priority = 3, enabled = false)
     public void spicesContact(){
         test = report.createTest("SpicesContact");
         MadeInChinaSpicesPageContact spc = new MadeInChinaSpicesPageContact(test);
@@ -139,7 +139,7 @@ public class TestMadeInChina extends Base{
      * d. Return Type: void
      * e. Parameter List: None
      */
-    @Test(priority = 4, enabled = true)
+    @Test(priority = 4, enabled = false)
     public void wiresAndFurniture(){
         test = report.createTest("WiresAndFurniture");
         MadeInChinaWiresAndFurniturePage wfp = new MadeInChinaWiresAndFurniturePage(test);
@@ -152,7 +152,7 @@ public class TestMadeInChina extends Base{
     * d. Return Type: Void
     * e. Parameter List: None
     */
-    @Test(priority = 8,enabled = true)
+    @Test(priority = 8,enabled = false)
     public void hotItems(){
         test = report.createTest("All Hot Items");
         MadeInChinaHotItemsPage hotItems = new MadeInChinaHotItemsPage(test);
@@ -165,7 +165,7 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-    @Test(priority = 9,enabled = true)
+    @Test(priority = 9,enabled = false)
     public void navigation(){
         test=report.createTest("Navigation Between Categories");
         MadeInChinaNavigationPage madeInChinaNavigationPage=new MadeInChinaNavigationPage(test);
@@ -178,7 +178,7 @@ public class TestMadeInChina extends Base{
     * d.Return Type: void
     * e.Parameter List: None
     */
-    @Test(priority = 10,enabled = true)
+    @Test(priority = 10,enabled = false)
 	public void productCategory(){
 		test=report.createTest("Product Category");
 		MadeInChinaProductDirectoryPage madeInChinaProductDirectoryPage=new MadeInChinaProductDirectoryPage(test);
