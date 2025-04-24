@@ -24,16 +24,14 @@ public class MadeInChinaSignInPage {
         try {
             helper.waitForElementToBeVisible(MadeInChinaSignInPageLocator.popup,6);
             helper.clickOnElement(MadeInChinaSignInPageLocator.popup);
-
             String text = helper.getText(MadeInChinaSignInPageLocator.signintext);
             Assert.assertTrue(text.contains("Sign"));
             test.log(Status.PASS,"scuuessfully verified Sign text");
-            LoggerHandler.info("scuuessfully verified Sign text");
-            
+            LoggerHandler.info("scuuessfully verified Sign text");           
         } catch (AssertionError e) {
             test.log(Status.FAIL,"SignIn verification failed");
             LoggerHandler.error("SignIn verification failed");
-        }
+       }
     }
    /*
    * MethodName: hoverSignIn
@@ -46,10 +44,8 @@ public class MadeInChinaSignInPage {
         try {
             helper.waitForElementToBeVisible(MadeInChinaSignInPageLocator.signintext,6);
             helper.hoverOverElement(MadeInChinaSignInPageLocator.signintext);
-
             test.log(Status.PASS,"Hovering SignIn success");
             LoggerHandler.info("Hovering SignIn success");
-
         } catch (Exception e) {
             test.log(Status.FAIL,"Hovering SignIn failed");
             LoggerHandler.error("Hovering SignIn failed");
@@ -68,13 +64,11 @@ public class MadeInChinaSignInPage {
             helper.clickOnElement(MadeInChinaSignInPageLocator.joinfree);
             helper.switchToNewWindow();
             test.log(Status.PASS,"Clicking SignIn success");
-            LoggerHandler.info("Clicking SignIn success");
-
-            
+            LoggerHandler.info("Clicking SignIn success");            
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking SignIn failed");
             LoggerHandler.error("Clicking SignIn failed");
-        }
+         }
     }
     /*
    * MethodName: clickOnEmailBar
@@ -142,9 +136,7 @@ public class MadeInChinaSignInPage {
             helper.clickOnElement(MadeInChinaSignInPageLocator.verify);
             helper.switchToNewWindow();
             test.log(Status.PASS,"Clicking verify box success");
-            LoggerHandler.info("Clicking verify box success");
-
-            
+            LoggerHandler.info("Clicking verify box success");           
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking verify box  failed");
             LoggerHandler.error("Clicking verify box  failed");
@@ -161,10 +153,8 @@ public class MadeInChinaSignInPage {
         try {
             helper.clickOnElement(MadeInChinaSignInPageLocator.next);
             test.log(Status.PASS,"Clicking next box success");
-            LoggerHandler.info("Clicking next box success");
-            
+            LoggerHandler.info("Clicking next box success");           
         } catch (Exception e) {
-
             test.log(Status.FAIL,"Clicking next box  failed");
             LoggerHandler.error("Clicking next box  failed");
         }
@@ -181,8 +171,7 @@ public class MadeInChinaSignInPage {
             String text = helper.getText(MadeInChinaSignInPageLocator.verificationerror);
             Assert.assertTrue(text.contains("Please enter the verification code."));
             test.log(Status.PASS,"scuuessfully verified text");
-            LoggerHandler.info("scuuessfully verified  text");
-            
+            LoggerHandler.info("scuuessfully verified  text");            
         } catch (AssertionError e) {
             test.log(Status.FAIL,"text verification failed");
             LoggerHandler.error("text verification failed");
@@ -202,7 +191,6 @@ public class MadeInChinaSignInPage {
             helper.clickOnElement(MadeInChinaSignInPageLocator.signnow);
             test.log(Status.PASS,"Clicking sign in success");
             LoggerHandler.info("Clicking sign in success");
-
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking sign in  failed");
             LoggerHandler.error("Clicking sign in failed");
@@ -220,8 +208,7 @@ public class MadeInChinaSignInPage {
             helper.clickOnElement(MadeInChinaSignInPageLocator.inputemail);
             helper.sendKeys(MadeInChinaSignInPageLocator.inputemail,"rdfghjkjhg@gmail.com");
             test.log(Status.PASS,"entering data in email success");
-            LoggerHandler.info("entering data in email success");
-     
+            LoggerHandler.info("entering data in email success");     
         } catch (Exception e) {
             test.log(Status.FAIL,"entering data in email  failed");
             LoggerHandler.error("entering data in email  failed");
@@ -239,9 +226,7 @@ public class MadeInChinaSignInPage {
             helper.clickOnElement(MadeInChinaSignInPageLocator.password);
             helper.sendKeys(MadeInChinaSignInPageLocator.password,"rdfghjk");
             test.log(Status.PASS,"entering data in password success");
-            LoggerHandler.info("entering data in password success");
-                
-
+            LoggerHandler.info("entering data in password success");                
         } catch (Exception e) {
             test.log(Status.FAIL,"entering data in password fail");
             LoggerHandler.error("entering data in password fail");
@@ -259,12 +244,10 @@ public class MadeInChinaSignInPage {
             helper.clickOnElement(MadeInChinaSignInPageLocator.signin);
             test.log(Status.PASS,"Clicking sign in success");
             LoggerHandler.info("Clicking sign in success");
-
-
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking sign in  failed");
             LoggerHandler.error("Clicking sign in failed");
-        }
+                }
     }
     /*
    * MethodName: verifyEmailErrorMessage
@@ -278,8 +261,7 @@ public class MadeInChinaSignInPage {
             String text = helper.getText(MadeInChinaSignInPageLocator.logionerror);
             Assert.assertTrue(text.contains("This Email Address is not yet registered"));
             test.log(Status.PASS,"scuuessfully verified text");
-            LoggerHandler.info("scuuessfully verified  text");
-            
+            LoggerHandler.info("scuuessfully verified  text");           
         } catch (AssertionError e) {
             test.log(Status.FAIL,"text verification failed");
             LoggerHandler.error("text verification failed");
@@ -297,13 +279,10 @@ public class MadeInChinaSignInPage {
             helper.clickOnElement(MadeInChinaSignInPageLocator.forgetpassword);
             test.log(Status.PASS,"Clicking forget password in success");
             LoggerHandler.info("Clicking forget password success");
-
-
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking forget pasword in  failed");
             LoggerHandler.error("Clicking forget password failed");
         }
-
     }
     /*
    * MethodName: clickOnContinue
@@ -317,12 +296,10 @@ public class MadeInChinaSignInPage {
             helper.clickOnElement(MadeInChinaSignInPageLocator.continued);
             test.log(Status.PASS,"Clicking continu in success");
             LoggerHandler.info("Clicking continue success");
-
-
         } catch (Exception e) {
             test.log(Status.FAIL,"Clicking continue  failed");
             LoggerHandler.error("Clicking continue failed");
-        }
+                }
     }
   /*
    * MethodName: verifyOnImageText
@@ -336,8 +313,7 @@ public class MadeInChinaSignInPage {
             String text = helper.getText(MadeInChinaSignInPageLocator.lasterror);
             Assert.assertTrue(text.contains("Please enter the text in the image"));
             test.log(Status.PASS,"scuuessfully verified text");
-            LoggerHandler.info("scuuessfully verified  text");
-            
+            LoggerHandler.info("scuuessfully verified  text");           
         } catch (AssertionError e) {
             test.log(Status.FAIL,"text verification failed");
             LoggerHandler.error("text verification failed");
@@ -353,8 +329,7 @@ public class MadeInChinaSignInPage {
         clickOnVerify();
         try {
             Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            
+        } catch (InterruptedException e) {            
             e.printStackTrace();
         }
         // switchnewwindow1();
@@ -370,7 +345,6 @@ public class MadeInChinaSignInPage {
         // switchnewwindow1();
         // clickcontinue();
         // verifyimage();
-
     }
     
 }
