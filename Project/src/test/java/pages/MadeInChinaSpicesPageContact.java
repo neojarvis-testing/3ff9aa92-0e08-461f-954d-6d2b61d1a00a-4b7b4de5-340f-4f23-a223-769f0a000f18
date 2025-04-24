@@ -229,10 +229,10 @@ public class MadeInChinaSpicesPageContact {
             helper.waitForElementToBeVisible(MadeInChinaSpicesPageContactLocators.emailInput, 10);
             helper.sendKeys(MadeInChinaSpicesPageContactLocators.emailInput, "testmic@gmail.com");
             test.log(Status.PASS, "Data sent to the emailInput");
-            LoggerHandler.info("Data sent to the emailInput");
+            LoggerHandler.info("Data has sent to the emailInput");
         } catch (Exception e) {
             test.log(Status.FAIL, "Data not sent to the emailInput");
-            LoggerHandler.info("Data not sent to the emailInput");
+            LoggerHandler.info("Data did not sent to the emailInput");
         }
     }
 

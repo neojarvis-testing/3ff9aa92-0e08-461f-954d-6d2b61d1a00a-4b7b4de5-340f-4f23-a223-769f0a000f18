@@ -50,7 +50,6 @@ public class MadeInChinaHotItemsPage {
         try {
             helper.waitForElementToBeVisible(MadeInChinaHotItemsPageLocator.logo,10);
             helper.clickOnElement(MadeInChinaHotItemsPageLocator.logo);
-            //helper.switchBackToWindow(0);
             LoggerHandler.info("Clicked On logo");
             test.log(Status.PASS, "Clicked On logo");
         } catch (Exception e) {
