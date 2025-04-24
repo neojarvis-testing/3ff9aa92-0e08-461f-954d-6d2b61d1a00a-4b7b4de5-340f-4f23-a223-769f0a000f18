@@ -30,7 +30,7 @@ public class Screenshot extends Base {
         try {
             Files.copy(file, target);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerHandler.error("captureFullScreenshot not working");
         }
     }
      /*
@@ -56,7 +56,7 @@ public class Screenshot extends Base {
         try {
             Files.copy(file, target);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerHandler.error("captureHighlightedElementScreenshot not working");
         } finally {
             js.executeScript("arguments[0].style.border=''", element);
         }
@@ -81,7 +81,7 @@ public class Screenshot extends Base {
         try {
             Files.copy(file, target);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerHandler.error("captureElementOnlyScreenshot not working");
         }
     }
 }

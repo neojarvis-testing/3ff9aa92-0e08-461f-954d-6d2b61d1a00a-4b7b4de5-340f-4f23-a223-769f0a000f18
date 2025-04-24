@@ -37,7 +37,7 @@ public class Base {
             prop.load(file);
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LoggerHandler.error("File Not Found");
 
         }
     }
@@ -55,7 +55,7 @@ public class Base {
             loadProperties();
         } catch (IOException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            LoggerHandler.error("IoException");
         }
         String executionType = prop.getProperty("executiontype");
         String browserName = prop.getProperty("browser");
@@ -70,7 +70,7 @@ public class Base {
                 
             } catch (MalformedURLException e) {
 
-                e.printStackTrace();
+                LoggerHandler.error("MalformedURLException");
             }
 
         } else if ("local".equalsIgnoreCase(executionType)) {

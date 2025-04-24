@@ -52,7 +52,7 @@ public class Reporter extends Base {
             byte[] fileContent = FileUtils.readFileToByteArray(screenshotFile);
             base64String = Base64.getEncoder().encodeToString(fileContent);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("takeScreenshotAsBase64 not working");
         }
         return base64String;
     }
@@ -73,7 +73,7 @@ public class Reporter extends Base {
                 test.log(Status.FAIL, "Screenshot capture failed.");
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("attachScreenshotToReportBase64 not working");
         }
     }
 
@@ -99,7 +99,7 @@ public class Reporter extends Base {
         try {
             Files.copy(file, target);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerHandler.error("captureScreenShot not working");
         }
         return destPath;
     }
@@ -116,7 +116,7 @@ public class Reporter extends Base {
         try {
             test.log(Status.INFO, description, MediaEntityBuilder.createScreenCaptureFromPath(captureScreenShot(filename)).build());
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error("attachScreenshotToReport not working");
         }
    
     }
